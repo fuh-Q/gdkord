@@ -1034,6 +1034,14 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     border-right: 9px solid var(--background-tertiary);
     filter: drop-shadow(0 6px 0px var(--background-tertiary));
 }
+body {
+    padding: 2px;
+    background: var(--background-tertiary);
+}
+#app-mount {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
 
 /* Gradients for the above */
 .wrapper-3NnKdC > ul > .scroller-1Bvpku > div[aria-label="Servers"] {
