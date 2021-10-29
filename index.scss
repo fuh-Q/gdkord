@@ -455,9 +455,6 @@ div[class*="colorDanger-"].focused-3afm-j:active {
 .item-1tOPte.labelContainer-1BLJti.colorDanger-2qLCe1.colorDefault-2K3EoJ.focused-3afm-j {
     filter: drop-shadow(0 0 6px rgba(var(--red)));
 }
-.item-1tOPte.labelContainer-1BLJti.colorDefault-2K3EoJ {
-    width: 205px;
-}
 
 /* Sliders */
 div[class*="barFill-"] {
@@ -965,17 +962,11 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
 .item-1tOPte.labelContainer-1BLJti.colorDefault-2K3EoJ.focused-3afm-j {
     filter: drop-shadow(0 0 6px rgba(var(--alt-color)));
 }
-.menu-3sdvDG.styleFlexible-wGDiIL.menu-1NyPgn .item-1tOPte.labelContainer-1BLJti.colorDefault-2K3EoJ {
-    width: 185px;
-}
-.scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
-    overflow: visible !important;
-}
 .tipSubtext-10zY2N {
     color: white;
 }
 
-/* Pinned home button */
+/* Pinned stuff (server list) */
 .tutorialContainer-2sGCg9,
 .tutorialContainer-11ICd5 {
     position: fixed;
@@ -983,19 +974,30 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     background: linear-gradient(var(--background-tertiary) 100%, transparent);
 }
 .guilds-1SWlCJ .scroller-1Bvpku { contain: none !important; padding-top: 0;}
-.guilds-1SWlCJ .scroller-1Bvpku > [aria-label], .guilds-1SWlCJ .scroller-1Bvpku > [style]:nth-child(2) { margin-top: 55px;}
+.guilds-1SWlCJ .scroller-1Bvpku > [aria-label], .guilds-1SWlCJ .scroller-1Bvpku > [style]:nth-child(2) { margin-top: 55px; margin-bottom: 120px;}
 .guilds-1SWlCJ .scroller-1Bvpku > [style] ~ [aria-label] { margin-top: 0px;}
 .tutorialContainer-2sGCg9 .homeIcon-FuNwkv,
 .tutorialContainer-11ICd5 .homeIcon-AaowEC {
     filter: drop-shadow(0 0 8px white);
 }
 
-/* Theme toggler */
-div[id*="pc-"] .scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
-    width: 220px;
+.tutorialContainer-32VdNI,
+.scroller-1Bvpku>.listItem-1hlISG {
+    position: fixed;
+    background: var(--background-tertiary);
+}
+.tutorialContainer-32VdNI {
+    bottom: 55px;
+
+}
+.scroller-1Bvpku>.listItem-1hlISG {
+    bottom: 0px;
+}
+.scroller-1Bvpku>.listItem-1hlISG {
+    box-shadow: 0px 15px 5px var(--background-tertiary);
 }
 
-/* Gradient for the above */
+/* Gradients for the above */
 .wrapper-3NnKdC > ul > .scroller-1Bvpku > div[aria-label="Servers"] {
     margin-top: 60px;
 }
@@ -1003,6 +1005,10 @@ div[id*="pc-"] .scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
 .tutorialContainer-2sGCg9,
 .tutorialContainer-11ICd5 {
     box-shadow: 0px 5px 5px var(--background-tertiary);
+}
+
+.tutorialContainer-32VdNI {
+    box-shadow: 0px -15px 5px var(--background-tertiary);
 }
 
 .container-3w7J-x {
