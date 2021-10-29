@@ -1,5 +1,7 @@
 :root {
 
+    /* THE HOVER AND ACTIVE VARIABLES ARE MOSTLY USED TO RESHADE BUTTONS WHEN YOU HOVER OVER/CLICK THEM */
+
     /* <---- IF YOU WANT TO CHANGE THE PINK TO ANOTHER COLOUR, JUST MESS AROUND WITH THIS ----> */
     --epik-gamr-colour: 255, 0, 255;
     --epik-gamr-colour-hover: 200, 0, 200;
@@ -21,7 +23,7 @@
     --red-hover: 186, 50, 53;
     --red-active: 150, 39, 42;
 
-    --alt-alt-color: 55, 178, 203; /* Aqua */
+    --phen-aqua: 55, 178, 203;
 
     --black: 0, 0, 0;
     --white: 255, 255, 255;
@@ -84,7 +86,7 @@ button[class*="button-38aScr lookLink-9FtZy- lowSaturationUnderline-3svVxy color
 button[class*="button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 sizeMin-1mJd1x grow-q77ONN"],
 .theme-light .lookLink-9FtZy-.colorPrimary-3b3xI6,
 .anchor-3Z-8Bb {
-    color: rgba(var(--alt-alt-color));
+    color: rgba(var(--phen-aqua));
 }
 div[class*="colorHeaderSecondary-3Sp3Ft size16-1P40sf subtitle-Nw1LLR"],
 div[class*="colorHeaderSecondary-3Sp3Ft size12-3cLvbJ optionHeader-1-5lcp"],
@@ -244,7 +246,7 @@ button[class*="lookFilled"].colorBrand-3pXr91:disabled {
     color: rgba(var(--white));
 }
 .uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .bgScale-1otPtc {
-    background-color: rgba(var(--alt-alt-color)) !important;
+    background-color: rgba(var(--phen-aqua)) !important;
 }
 .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover,
 button[class*="lookFilled"].colorGrey-2DXtkV:hover {
@@ -294,8 +296,8 @@ button[class*="lookFilled"].colorRed-1TFJan:disabled {
 .theme-dark .activeButton-rvKcqq:hover,
 .theme-light .activeButton-rvKcqq,
 .theme-light .activeButton-rvKcqq:hover {
-    background-color: rgba(var(--alt-alt-color));
-    filter: drop-shadow(0 0 6px rgba(var(--alt-alt-color)));
+    background-color: rgba(var(--phen-aqua));
+    filter: drop-shadow(0 0 6px rgba(var(--phen-aqua)));
 }
 .selectorButtonSelected-t5V9On,
 .selectorButton-EEUWed:hover {
@@ -374,17 +376,17 @@ div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"]
 .replying-1x3H0T:before,
 .ephemeral-1PsL1r:before,
 .localBot-GrCgVt:before {
-    background-color: rgba(var(--alt-alt-color)) !important;
+    background-color: rgba(var(--phen-aqua)) !important;
 }
 
 .replying-1x3H0T,
 .ephemeral-1PsL1r,
 .localBot-GrCgVt {
-    background-color: rgba(var(--alt-alt-color), 0.05) !important;
+    background-color: rgba(var(--phen-aqua), 0.05) !important;
 }
 
 .ephemeralMessage-1fEWtQ a {
-    color: rgba(var(--alt-alt-color)) !important;
+    color: rgba(var(--phen-aqua)) !important;
 }
 
 /* Playing / Streaming Background */
@@ -1063,8 +1065,8 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     overflow: visible;
 }
 .containerDefault-3tr_sE:hover::after {
-    background: linear-gradient(to right, rgba(var(--alt-alt-color)), transparent, transparent, transparent, rgba(var(--alt-alt-color)));
-    filter: drop-shadow(0 0 6px rgba(var(--alt-alt-color)));
+    background: linear-gradient(to right, rgba(var(--phen-aqua)), transparent, transparent, transparent, rgba(var(--phen-aqua)));
+    filter: drop-shadow(0 0 6px rgba(var(--phen-aqua)));
 }
 .containerDefault-3tr_sE {
     padding-bottom: 10px;
@@ -1086,8 +1088,8 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH collapsed-2-tg8y clickable-536fP
 }
 .containerDefault-3tr_sE:hover div[class="iconVisibility-fhcwiH wrapper-PY0fhH collapsed-2-tg8y clickable-536fPF"],
 div[class="iconVisibility-fhcwiH wrapper-PY0fhH collapsed-2-tg8y clickable-536fPF"]:hover {
-    border: 1px solid rgba(var(--alt-alt-color));
-    filter: drop-shadow(0 0 6px rgba(var(--alt-alt-color)));
+    border: 1px solid rgba(var(--phen-aqua));
+    filter: drop-shadow(0 0 6px rgba(var(--phen-aqua)));
 }
 div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"] {
     border: 1px solid rgba(var(--epik-gamr-colour), 0.5);
@@ -1095,8 +1097,8 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"] {
 }
 .containerDefault-3tr_sE:hover div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"],
 div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
-    border: 1px solid rgba(var(--alt-alt-color), 0.5);
-    filter: drop-shadow(0 0 6px rgba(var(--alt-alt-color), 0.5));
+    border: 1px solid rgba(var(--phen-aqua), 0.5);
+    filter: drop-shadow(0 0 6px rgba(var(--phen-aqua), 0.5));
 }
 
 /* Unread pill replace */
