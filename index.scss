@@ -7,6 +7,14 @@
     --epik-gamr-colour: 255, 0, 255;
     --epik-gamr-colour-hover: 200, 0, 200;
     --epik-gamr-colour-active: 170, 0, 170;
+
+<<<<<<< HEAD
+    --epik-gamr-colour-hsl: hsl(300, 100%, 50%); /* Discord uses HSL on a lot of their stuff so here's these as well */
+=======
+    --epik-gamr-colour-hsl: hsl(300, 100%, 50%);
+>>>>>>> 2192925a03d0dcb6f044e9d78bbd562402e7fb4a
+    --epik-gamr-colour-hover-hsl: hsl(300, 100%, 39%);
+    --epik-gamr-colour-active-hsl: hsl(300, 100%, 33%);
     /* <------------------ A LOT OF PEOPLE HAVE REQUESTED IT SO HERE IT IS -------------------> */
 
     --gray-hover: 64, 69, 77;
@@ -38,8 +46,12 @@
     --dnd: 255, 0, 0;
     --idle: 255, 255, 0;
     --online: 0, 200, 0;
+<<<<<<< HEAD
+=======
 
-    --brand-experiment: var(--epik-gamr-colour);
+    --brand-experiment: var(--epik-gamr-colour-hsl);
+    --control-brand-foreground: var(--epik-gamr-colour-hsl);
+>>>>>>> 232014f68150f4d28d48e96a0c7a5ec4b1933a7a
     --font-display: var(--font-primary) !important;
     --radio-group-dot-foreground: rgba(var(--epik-gamr-colour));
 }
@@ -1029,11 +1041,18 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     bottom: 0px;
 }
 .scroller-1Bvpku>.listItem-1hlISG {
-    box-shadow: -10px 0px 0px var(--background-tertiary);
+    box-shadow: -15px 0px 0px var(--background-tertiary);
     border-top: 0px solid var(--background-tertiary);
     border-right: 9px solid var(--background-tertiary);
-    border-bottom: 2px solid var(--background-tertiary);
-    filter: drop-shadow(0 10px 0px var(--background-tertiary));
+    filter: drop-shadow(0 6px 0px var(--background-tertiary));
+}
+body {
+    padding: 2px;
+    background: var(--background-tertiary);
+}
+#app-mount {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
 }
 
 /* Gradients for the above */
