@@ -520,17 +520,17 @@ div[class*="option-96V44q searchOption-zQ-1l6"]::after {
     background: hsl(0, 0.0%, 5.9%) !important;
 }
 
+.theme-dark .option-96V44q:hover,
+.theme-dark .option-96V44q:hover::after,
 .theme-dark .option-96V44q.selected-rZcOL- {
     background-color: hsl(0, 0.0%, 3.9%) !important;
 }
-.theme-dark .option-96V44q.selected-rZcOL-::after {
-    background: hsl(0, 0.0%, 3.9%) !important;
-}
 
-div[class="option-96V44q selected-rZcOL-"]::after,
-.theme-dark .option-96V44q.selected-rZcOL-::after
-div[class*="option-96V44q searchOption-zQ-1l6 selected-rZcOL-"]::after {
-    background: hsl(0, 0.0%, 3.9%) !important;
+.theme-dark .focused-2bY0OD {
+    background-color: hsl(0, 0.0%, 5.9%);
+}
+.theme-dark .focused-2bY0OD:hover {
+    background-color: hsl(0, 0.0%, 3.9%);
 }
 
 /* Faded things */
