@@ -1126,6 +1126,11 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
     filter: drop-shadow(0 0 6px rgba(var(--phen-aqua), 0.5));
 }
 
+/* New Messages bar */
+#---new-messages-bar .unreadPill-2HyYtt {
+    filter: drop-shadow(0 0 6px rgba(var(--red)));
+}
+
 /* Unread pill replace */
 .unread-2lAfLh {
     filter: drop-shadow(0 0 4px white);
@@ -1181,6 +1186,21 @@ div[class*="wrapper-3t9DeA"][aria-label*="Idle"]>svg[class="mask-1l8v16 svg-2V3M
 }
 div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--online), 0.75));
+}
+
+/* Custom statuses */
+.statusItem-33LqPf {
+    overflow: visible;
+}
+
+#status-picker-online .mask-1qbNWk.icon-1IxfJ2 {
+    filter: drop-shadow(0 0 4px rgba(var(--green)));
+}
+#status-picker-idle .mask-1qbNWk.icon-1IxfJ2 {
+    filter: drop-shadow(0 0 4px rgba(var(--yellow)));
+}
+#status-picker-dnd .mask-1qbNWk.icon-1IxfJ2 {
+    filter: drop-shadow(0 0 4px rgba(var(--red)));
 }
 
 /* Makes home button transparent */
