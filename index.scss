@@ -1360,6 +1360,7 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
             & + div {--connection-colour: 255 255 255;} // Steam, GitHub
         }
         &[src*="1fa6585cbb8c0fe21188e26d19fc6609"] + div {--connection-colour: 16 124 16} // Xbox Live
+        &[src*="32045743cb7670855ae726743c949e0c"] + div {--connection-colour: 59 89 152} // Facebook
         &[src*="eaeac24163b35f7526704a3d9b3c7722"] + div {--connection-colour: 30 215 96;} // Spotify
         &[src*="ca71e0b8818221eea1deebbaf8dc6518"] + div {--connection-colour: 145 70 255;} // Twitch
         &[src*="57ee9535485efae7eb923ed4893abb57"] + div {--connection-colour: 217 37 42;} // YouTube
