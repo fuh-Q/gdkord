@@ -669,9 +669,12 @@ span[class*="wanderingCubesItem-"] {
     background-color: rgba(var(--epik-gamr-colour));
 }
 
-/* Startup GIF */
+/* Startup screen */
 video[class*="ready-"] {
     filter: drop-shadow(0 0 25px white);
+}
+.container-16j22k.fixClipping-3qAKRb {
+    background: radial-gradient(var(--background-tertiary), transparent 420%);
 }
 
 /* Load More Messages */
