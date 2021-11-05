@@ -5,8 +5,8 @@
     /* <---- IF YOU WANT TO CHANGE THE PINK TO ANOTHER COLOUR, JUST MESS AROUND WITH THIS ----> */
     /* <--------------------------- NEW VALUES MUST BE IN RGB FORM ---------------------------> */
     --epik-gamr-colour: 255, 0, 255;
-    --epik-gamr-colour-hover: 255, 0, 255;
-    --epik-gamr-colour-active: 255, 0, 2055;
+    --epik-gamr-colour-hover: 200, 0, 200;
+    --epik-gamr-colour-active: 170, 0, 170;
     /* <------------------ A LOT OF PEOPLE HAVE REQUESTED IT SO HERE IT IS -------------------> */
 
     --background-image: url('https://i.vgy.me/SPEMbr.png');
@@ -712,7 +712,7 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
         filter: blur(500%);
     }
 
-    background: radial-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20));
+    background: radial-gradient(rgba(20, 20, 20) 25%, transparent 420%);
 
     div[class*="sidebarRegionScroller-"] {
         background: rgba(15, 15, 15, 0.5);
