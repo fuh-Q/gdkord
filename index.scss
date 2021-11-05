@@ -5,9 +5,11 @@
     /* <---- IF YOU WANT TO CHANGE THE PINK TO ANOTHER COLOUR, JUST MESS AROUND WITH THIS ----> */
     /* <--------------------------- NEW VALUES MUST BE IN RGB FORM ---------------------------> */
     --epik-gamr-colour: 255, 0, 255;
-    --epik-gamr-colour-hover: 200, 0, 200;
-    --epik-gamr-colour-active: 170, 0, 170;
+    --epik-gamr-colour-hover: 255, 0, 255;
+    --epik-gamr-colour-active: 255, 0, 2055;
     /* <------------------ A LOT OF PEOPLE HAVE REQUESTED IT SO HERE IT IS -------------------> */
+
+    --background-image: url('https://i.vgy.me/wrR18n.png');
 
     --gray-hover: 64, 69, 77;
     --gray-active: 51, 56, 63;
@@ -33,6 +35,8 @@
     --reaction-green: 0, 255, 0;
     --ping-red: 233, 76, 76;
     --alt-aqua: 9, 191, 210;
+
+    --nitro-pink: 244, 127, 255;
 
     --streaming: 111, 68, 185;
     --dnd: 255, 0, 0;
@@ -72,7 +76,15 @@
     overflow: visible;
 }
 
+.nowPlayingColumn-2sl4cE,
+.container-lRFx4q {
+    background: linear-gradient(to left, var(--background-primary), black);
+}
+
 /* Server invite tab */
+.inviteRow-2L02ae {
+    width: 100%;
+}
 .theme-light .root-1gCeng {
     background-color: #23272A;
 }
@@ -410,6 +422,10 @@ div[class*="headerStreaming"] {
 .content-3QAtGj {
     overflow: visible;
 }
+.container-2wlB3z,
+.members-1998pB, .members-1998pB>div {
+    background: linear-gradient(to left, var(--background-primary), black);
+}
 
 /* Roles and stuff */
 .notice-18685F {
@@ -578,6 +594,13 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
 }
 
 /* Channels UI */
+.overflow-WK9Ogt {
+    max-width: 187px;
+}
+.scroller-RmtA4e.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2,
+.scroller-1JbKMe.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2 {
+    background: linear-gradient(to right, var(--background-primary), black);
+}
 .icon-1DeIlz path[d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"] {
     filter: drop-shadow(0 0 4px white);
     overflow: visible;
@@ -646,10 +669,6 @@ span[class*="wanderingCubesItem-"] {
 video[class*="ready-"] {
     filter: drop-shadow(0 0 25px white);
 }
-video[class*="ready-"] img,
-video[class*="ready-"] source {
-    src: 'https://imgur.com/a/k6Ugtlx.gif' !important;
-}
 
 /* Load More Messages */
 .hasMore-3e72_v {
@@ -676,18 +695,64 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
     border-color: rgba(var(--epik-gamr-colour)) !important;
 }
 
+/* User + Guild Settings */
+[aria-label="USER_SETTINGS"],
+[aria-label="GUILD_SETTINGS"] {
+    & .standardSidebarView-3F1I7i,
+    & .contentRegion-3nDuYy,
+    & .contentRegionScroller-26nc1e {
+        background: transparent;
+        filter: blur(500%);
+    }
+
+    background: radial-gradient(rgba(20, 20, 20, 0.69), rgba(20, 20, 20));
+
+    div[class*="sidebarRegionScroller-"] {
+        background: rgba(15, 15, 15, 0.5);
+    }
+}
+.layer-3QrUeG.baseLayer-35bLyl[aria-hidden="true"] {
+    opacity: 1 !important;
+    transform: scale(0.93) translateX(22px) !important;
+}
+
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
-    --settings-icon-color: rgba(var(--epik-gamr-colour));
+    --settings-icon-color: rgba(var(--nitro-pink));
 }
 .side-8zPYf6 > .item-PXvHYJ[aria-selected=true][data-item-id=DiscordNitro]::before {
     --settings-icon-color: white;
 }
+.side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ[data-item-id=DiscordNitro],
+.topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ[data-item-id=DiscordNitro],
+.side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ[data-item-id=GUILD_PREMIUM],
+.topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ[data-item-id=GUILD_PREMIUM] {
+    background: linear-gradient(to right, rgba(var(--nitro-pink)), var(--background-modifier-selected));
+}
 .side-8zPYf6>.item-PXvHYJ[data-item-id=GUILD_PREMIUM]:not(.role-3wi9Tf)::before {
-    --settings-icon-color: rgba(var(--epik-gamr-colour));
+    --settings-icon-color: rgba(var(--nitro-pink));
 }
 .side-8zPYf6>.item-PXvHYJ[aria-selected=true][data-item-id=GUILD_PREMIUM]::before {
     --settings-icon-color: white;
+}
+.background-CYva7T.selectedBackground-2KQZ6B {
+    display: none;
+}
+
+.lookFilled-1Gx00P .contents-18-Yxp,
+.lookInverted-2D7oAl .contents-18-Yxp,
+.lookLink-9FtZy- .contents-18-Yxp,
+.lookOutlined-3sRXeN .contents-18-Yxp {
+    overflow: visible;
+}
+
+.premiumLabel-fDtYys {
+    width: 100%;
+
+    & svg {
+        filter: drop-shadow(0 0 6px rgba(var(--nitro-pink)));
+        overflow: visible;
+    }
 }
 
 /* Folder Icons */
@@ -739,6 +804,7 @@ div[class*="betaTag-"] {
 }
 .tag-1aipTK {
     background-color: rgba(var(--epik-gamr-colour));
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
 /* Other things on the profile page */
 button[class*="customSwatch-1axV7B swatch-3mFIiP defaultSwatch-2nDSvP button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeMedium-1AC_Sl grow-q77ONN"] {
@@ -750,7 +816,11 @@ div[class*="tierUnlocked-"] {
 }
 .premiumTabItem-1QTfBr[aria-selected=true],
 .serverBoostTabItem-2hFTIN[aria-selected=true] {
-    background-color: rgba(var(--epik-gamr-colour)) !important;
+    background-color: rgba(var(--nitro-pink)) !important;
+}
+
+.icon-3Povsy {
+    display: none;
 }
 
 /* Upload Image Button */
@@ -1010,6 +1080,24 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     overflow: visible;
 }
 
+/* Chat Area */
+.chatContent-a9vAAp,
+.peopleColumn-29fq28 {
+    background: var(--background-image) center no-repeat;
+    background-size: 1000%;
+}
+
+/* Chat box */
+div[class*="channelTextArea-"] {
+    box-shadow: 0 0 20px hsl(0, 0.0%, 3.9%);
+} 
+.theme-dark .form-2fGMdU::before {
+    display: none;
+}
+.form-2fGMdU {
+    background: linear-gradient(transparent, black);
+}
+
 /* Chat box menu */
 .item-1tOPte.labelContainer-1BLJti.colorDefault-2K3EoJ.focused-3afm-j {
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
@@ -1127,8 +1215,14 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
 }
 
 /* New Messages bar */
-#---new-messages-bar .unreadPill-2HyYtt {
-    filter: drop-shadow(0 0 6px rgba(var(--red)));
+.divider-3_HH5L.hasContent-1_DUdQ.divider-JfaTT5.hasContent-1cNJDh .content-1o0f9g {
+    background: var(--background-primary);
+}
+#---new-messages-bar .content-1o0f9g {
+    background: black;
+    & + .unreadPill-2HyYtt {
+        filter: drop-shadow(0 0 6px rgba(var(--red)));
+    }
 }
 
 /* Unread pill replace */
@@ -1250,76 +1344,42 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
     fill: rgba(var(--spotify-green));
 }
 
-/* Connections */
-.connectedAccount-36nQx7 {
-    background-color: transparent;
-    border: none;
-
-    .connectedAccountNameInner-1phBvE {
-        &::after {
-            content: '';
-            position: absolute;
-            border-radius: 2px;
-            border: solid 1px transparent;
-            margin-left: -40px;
-            height: 46px;
-            width: 260px;
+/* Connections (ported from SoftX) */
+.connectedAccount-2Jb-Z0 {
+    position: relative;
+    img {
+        &[src*="37f15a06d062bdd0fc252d2b35d0b0bb"] + div {--connection-colour: 63 143 247;} // Battle.net
+        &[src*="94dc6f30a819026fa295d85f1f72b4ab"] + div {--connection-colour: 206 161 70;} // League
+        &[src*="316ed923548387f8983e28a3804e6712"] + div {--connection-colour: 0 120 215;} // Skype
+        &[src*="d897626dfa2016ea3ad0af935acb6070"],
+        &[src*="6a853b4c87fce386cbfef4a2efbacb09"],
+        &[src*="1fa6585cbb8c0fe21188e26d19fc6609"] {
+            & + div {--connection-colour: 255 255 255;} // Steam, GitHub, Xbox Live
         }
-    }
-
-    .connectedAccountVerifiedIcon-3aZz_K {
-        .flowerStar-1GeTsn path {
-            fill: rgba(var(--white), 0.25);
-        }
-        .childContainer-1wxZNh {
-            margin-top: 1px;
-        }
-    }
-
-    .connectedAccountIcon-3P3V6F,
-    .connectedAccountName-f8AEe2,
-    .connectedAccountNameInner-1phBvE span,
-    .connectedAccountNameInner-1phBvE + .anchor-3Z-8Bb {
-        z-index: 1;
-    }
-    .connectedAccountIcon-3P3V6F {
-        margin-left: 2px;
+        &[src*="eaeac24163b35f7526704a3d9b3c7722"] + div {--connection-colour: 30 215 96;} // Spotify
+        &[src*="ca71e0b8818221eea1deebbaf8dc6518"] + div {--connection-colour: 145 70 255;} // Twitch
+        &[src*="57ee9535485efae7eb923ed4893abb57"] + div {--connection-colour: 217 37 42;} // YouTube
+        &[src*="85cf2b49d2a185c98ec8e383ad5a05d6"] + div {--connection-colour: 29 161 242;} // Twitter
+        &[src*="f3224f560c8f5974355596a4f7e9ce19"] + div {--connection-colour: 255 69 0;} // Reddit
     }
 }
-$defaultConnections:
-    'GitHub' #181b1f #d9dadb,
-    'Twitch' #3A2E5E #563194,
-    'Steam' #171a21 #2a475e,
-    'Spotify' #2C523E #1ED760,
-    'Twitter' #266994 #1DA1F2,
-    'Reddit' #7D442A #FF6314,
-    'YouTube' #772528 #EE0F0F,
-    'Battle.net' #264659 #009AE4,
-    'Xbox Live' #394E31 #5DC21E,
-    'Facebook' #14223d #3A5998,
-    'League of Legends' #424491 #676AE6,
-    'Skype' #106d8f #00AAE8;
-
-@each $name, $connectionBackground, $connectionBorder in $defaultConnections {
-    [alt="#{$name} Logo"] + .connectedAccountNameInner-1phBvE::after {
-        background: $connectionBackground;
-        border-color: $connectionBorder;
-    }
+.connectedAccountNameInner-2q3MVf {
+	overflow: visible;
+    border-top: 1px solid rgb(var(--connection-colour));
+    height: 148%;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 25%;
+		background: linear-gradient(to right, rgb(var(--connection-colour)) -100%, transparent);
+        border-left: 1px solid rgb(var(--connection-colour));
+        border-top: 1px solid rgb(var(--connection-colour));
+        border-bottom: 1px solid rgb(var(--connection-colour));
+	}
 }
-$pluginConnections:
-    'GitLab' #6E4330 #FC6D26,
-    'Minecraft' #693037 #EE303D,
-    'osu!' #5F3E51 #EE65A2,
-    'discord.bio' #3d4870 #7289da;
-
-@each $name, $connectionBackground, $connectionBorder in $pluginConnections {
-    [alt="#{$name} Logo"] + .connectedAccountNameInner-1phBvE::after {
-        background: $connectionBackground;
-        border-color: $connectionBorder;
-    }
-}
-/* BG */
-@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 /* Modals */
 .root-SR8cQa > div:not(.body-3ND3kc){
     transform: translateZ(0);
