@@ -9,7 +9,7 @@
     --epik-gamr-colour-active: 255, 0, 2055;
     /* <------------------ A LOT OF PEOPLE HAVE REQUESTED IT SO HERE IT IS -------------------> */
 
-    --background-image: url('https://i.vgy.me/wrR18n.png');
+    --background-image: url('https://i.vgy.me/SPEMbr.png');
 
     --gray-hover: 64, 69, 77;
     --gray-active: 51, 56, 63;
@@ -723,6 +723,17 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
     transform: scale(0.93) translateX(22px) !important;
 }
 
+img[class="flexChild-faoVW3"] {
+    filter: hue-rotate(69deg) saturate(250%);
+}
+.requirementsImage-tqIP2X {
+    filter: hue-rotate(69deg) saturate(250%) drop-shadow(0 0 10px rgba(var(--epik-gamr-colour)));
+}
+
+.activeCircle-1486wp.iconCircle-36YzEX {
+    filter: drop-shadow(0 0 6px rgba(var(--green)));
+}
+
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
     --settings-icon-color: rgba(var(--nitro-pink));
@@ -1088,10 +1099,16 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
 }
 
 /* Chat Area */
+.wrapper-3vR61M,
 .chatContent-a9vAAp,
 .peopleColumn-29fq28 {
     background: var(--background-image) center no-repeat;
     background-size: 1000%;
+    background-attachment: fixed;
+}
+
+.wrapper-1F5TKx.cozy-12kSNU {
+    background: transparent;
 }
 
 /* Chat box */
