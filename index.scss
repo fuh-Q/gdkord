@@ -496,7 +496,11 @@ div[class*="colorDanger-"].focused-3afm-j:active {
 
 /* Sliders */
 div[class*="barFill-"] {
-    background-color: rgba(var(--epik-gamr-colour)) !important;
+    background-color: rgba(var(--epik-gamr-colour));
+}
+
+.grabber-3mFHz2 {
+    filter: drop-shadow(0 0 6px white);
 }
 
 /* Switches */
@@ -705,7 +709,7 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
         filter: blur(500%);
     }
 
-    background: radial-gradient(rgba(20, 20, 20, 0.69), rgba(20, 20, 20));
+    background: radial-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20));
 
     div[class*="sidebarRegionScroller-"] {
         background: rgba(15, 15, 15, 0.5);
