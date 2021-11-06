@@ -260,10 +260,6 @@ button[class*="lookFilled"].colorBrand-3pXr91:disabled {
 .theme-light {
     --logo-primary: rgba(var(--epik-gamr-colour));
 }
-.pageWrapper-1PgVDX {
-    background-color: rgba(var(--black)) !important;
-    color: rgba(var(--white));
-}
 .uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .bgScale-1otPtc {
     background-color: rgba(var(--phen-aqua)) !important;
 }
@@ -941,6 +937,9 @@ div[class*="tipTitle-"] {
 }
 
 /* Discovery Thing*/
+.base-3dtUhz .sidebar-2K8pFh .thin-1ybCId.scrollerBase-289Jih {
+    background: var(--background-message-hover);
+}
 div[class*="selected"]>.itemInner-1XfZdz {
     background-color: rgba(var(--epik-gamr-colour));
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
@@ -1103,6 +1102,7 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
 .premiumContainer-2Iux5m,
 .container-19hC9u.scroller-1IIF0A.stickyScroller-24zUyY.auto-Ge5KZx.scrollerBase-289Jih,
 .scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih,
+.pageWrapper-1PgVDX,
 .chatContent-a9vAAp,
 .peopleColumn-29fq28 {
     background: var(--background-image) center no-repeat;
