@@ -1250,7 +1250,16 @@ div[class*="channelTextArea-"] {
 }
 
 form > div[aria-controls] > .wrapper-39oAo3 {
-    background: linear-gradient(rgba(var(--epik-gamr-colour), 0.5) 0%, var(--channeltextarea-background) 50%);
+    background: var(--channeltextarea-background);
+    border-radius: 7px;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 7px;
+        background: linear-gradient(rgba(var(--epik-gamr-colour), 0.5) 0%, transparent 50%);;
+    }
 }
 
 /* Chat box menu */
