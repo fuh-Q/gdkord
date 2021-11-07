@@ -50,6 +50,52 @@
     --control-brand-foreground: rgba(var(--epik-gamr-colour));
 }
 
+/* Flicker effects */
+@keyframes alt_aqua_flicker {
+    30% {
+        filter: drop-shadow(0 0 5px rgba(var(--alt-aqua)));
+    }
+    50% {
+        filter: drop-shadow(0 0 6px rgba(var(--alt-aqua)));
+    }
+    78% {
+        filter: drop-shadow(0 0 4px rgba(var(--alt-aqua)));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(var(--alt-aqua)));
+    }
+}
+
+@keyframes white_flicker {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(var(--white)));
+    }
+    50% {
+        filter: drop-shadow(0 0 4px rgba(var(--white)));
+    }
+    78% {
+        filter: drop-shadow(0 0 6px rgba(var(--white)));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(var(--white)));
+    }
+}
+
+@keyframes home_white_flicker {
+    0% {
+        filter: drop-shadow(0 0 7px rgba(var(--white)));
+    }
+    50% {
+        filter: drop-shadow(0 0 6px rgba(var(--white)));
+    }
+    78% {
+        filter: drop-shadow(0 0 8px rgba(var(--white)));
+    }
+    100% {
+        filter: drop-shadow(0 0 7px rgba(var(--white)));
+    }
+}
+
 /* Important */
 @import url("https://raw.githack.com/Snapperito/Settings-Icons/main/source.css");
 @import "./dark-discord.scss";
@@ -60,7 +106,7 @@
 /* White badges (on hover) */
 .clickable-17BDii:hover,
 .powercord-badge-wrapper:hover {
-    filter: brightness(500%) drop-shadow(0 0 6px white) !important;
+    filter: brightness(500%) drop-shadow(0 0 6px rgba(var(--white))) !important;
 }
 
 /* Friends list */
@@ -635,9 +681,14 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
 .iconWrapper-2OrFZ1 svg path {
     fill: white;
 }
-.iconWrapper-2OrFZ1 {
+.children-19S4PO {
     overflow: visible;
-    filter: drop-shadow(0 0 3px white);
+    .iconWrapper-2OrFZ1 .icon-22AiRD {
+        animation-name: white_flicker;
+        animation-duration: 0.2s;
+        animation-iteration-count: infinite;
+    
+    }
 }
 .iconVisibility-sTNpHs.wrapper-2jXpOf.modeMuted-onO3r- div a .iconContainer-1BBaeJ svg path {
     fill: black;
@@ -1093,6 +1144,12 @@ span[class*="botTagRegular"] {
     filter: drop-shadow(0 0 5px rgba(var(--alt-aqua)));
     overflow: visible;
 }
+
+span[class*="botTagRegular"] {
+    animation-name: alt_aqua_flicker;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
 section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="M0.5,0 L0.5,1.5 C0.5,5.65 2.71,9.28 6,11.3 L6,16 L21,16 L21,14 C21,11.34 15.67,10 13,10 C13,10 12.83,10 12.75,10 C8,10 4,6 4,1.5 L4,0 L0.5,0 Z M13,0 C10.790861,0 9,1.790861 9,4 C9,6.209139 10.790861,8 13,8 C15.209139,8 17,6.209139 17,4 C17,1.790861 15.209139,0 13,0 Z"] {
     fill: rgba(var(--white), 1);
 }
@@ -1132,6 +1189,51 @@ div[class*="channelTextArea-"] {
     background: linear-gradient(transparent, black);
 }
 
+@keyframes chat_box {
+    10% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.04) 100%);
+    }
+    20% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.08) 100%);
+    }
+    30% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.12) 100%);
+    }
+    40% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.16) 100%);
+    }
+    50% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.2) 100%);
+    }
+    60% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.16) 100%);
+    }
+    70% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.12) 100%);
+    }
+    80% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.08) 100%);
+    }
+    90% {
+        background: linear-gradient(var(--channeltextarea-background) 50%, rgba(var(--green), 0.04) 100%);
+    }
+    100% {
+        background: var(--channeltextarea-background);
+    }
+}
+
+.channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
+    & > .scrollableContainer-2NUZem {
+        animation-name: chat_box;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    &.channelTextAreaDisabled-8rmlrp > .scrollableContainer-2NUZem {
+        background: linear-gradient(rgba(var(--red), 0.5) 0%, var(--channeltextarea-background) 50%);
+        animation: none;
+    }
+}
+
 /* Chat box menu */
 .item-1tOPte.labelContainer-1BLJti.colorDefault-2K3EoJ.focused-3afm-j {
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
@@ -1152,7 +1254,9 @@ div[class*="channelTextArea-"] {
 .guilds-1SWlCJ .scroller-1Bvpku > [style] ~ [aria-label] { margin-top: 0px; margin-bottom: 120px;}
 .tutorialContainer-2sGCg9 .homeIcon-FuNwkv,
 .tutorialContainer-11ICd5 .homeIcon-AaowEC {
-    filter: drop-shadow(0 0 8px white);
+    animation-name: home_white_flicker;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .tutorialContainer-32VdNI,
