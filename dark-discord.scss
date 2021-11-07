@@ -1,4 +1,6 @@
-:root {
+:root,
+.theme-light,
+.theme-dark {
     /* --------- BASE THEME --------- */
     --blurple-replace: rgb(55, 178, 203);
     --background-primary: rgba(20, 20, 20);
@@ -151,12 +153,19 @@
 #app-mount .theme-light .root-1gCeng .scrollerBase-289Jih::-webkit-scrollbar-thumb {
     background-color: var(--jcs-background-secondary-alt);
 }
+.rowContainer-3AFY0S,
 #app-mount .theme-light .root-1gCeng .container-UC8Ug1 {
     background-color: var(--jcs-background-primary);
     border: 1px solid var(--jcs-background-modifier-accent);
 }
+.rowContainer-3AFY0S:hover,
 #app-mount .theme-light .root-1gCeng .container-UC8Ug1:hover {
     background-color: var(--jcs-background-modifier-hover);
+    border: 1px solid var(--jcs-background-modifier-accent);
+}
+.rowContainer-3AFY0S:active,
+#app-mount .theme-light .root-1gCeng .container-UC8Ug1:active {
+    background-color: var(--jcs-background-tertiary);
     border: 1px solid var(--jcs-background-modifier-accent);
 }
 #app-mount .theme-light .root-1gCeng .inputWrapper-31_8H8.input--jS-j2 {

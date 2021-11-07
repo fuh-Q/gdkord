@@ -175,16 +175,6 @@ h5[class*="colorStandard-2KCXvj size14-e6ZScH h5-18_1nd title-3sZWYQ formTitle-a
 h5[class*="colorStandard-2KCXvj size14-e6ZScH h5-18_1nd title-3sZWYQ defaultMarginh5-2mL-bP"] {
     color: rgba(150, 150, 150);
 }
-.container-UC8Ug1 {
-    background-color: #727d8b;
-    margin-bottom: 1px;
-}
-.container-UC8Ug1:hover {
-    background-color: #58606b;
-}
-.container-UC8Ug1:active {
-    background-color: #434b53;
-}
 .base-1x0h_U,
 .colorStandard-2KCXvj {
     color: rgba(var(--white));
@@ -192,6 +182,10 @@ h5[class*="colorStandard-2KCXvj size14-e6ZScH h5-18_1nd title-3sZWYQ defaultMarg
 
 .username-38XC76.nameTag-m8r81H {
     overflow: visible;
+}
+
+.uploadIcon-2IFzZU > .iconContainer-2B0ixr.desaturate-qhyunI > svg circle {
+    fill: rgba(var(--epik-gamr-colour));
 }
 
 /* Few more steps before joining a server */
