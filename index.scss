@@ -684,9 +684,13 @@ svg[aria-label="Discord Partner"] {
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
     overflow: visible;
 }
-svg[aria-label*="Verified"] {
+svg[aria-label="Verified"],
+svg[aria-label="Verified and Partnered"] {
     filter: drop-shadow(0 0 6px rgba(var(--green-hover)));
     overflow: visible;
+    & path {
+        fill: rgba(var(--green)) !important;
+    }
 }
 
 /* Wide Buttons */
@@ -729,6 +733,8 @@ img[class="flexChild-faoVW3"] {
 .activeCircle-1486wp.iconCircle-36YzEX {
     filter: drop-shadow(0 0 6px rgba(var(--green)));
 }
+
+.item-PXvHYJ[aria-label="Gift Inventory"] .tabBarItemContainer-3eaMv0 { width: 100%;}
 
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
@@ -896,6 +902,7 @@ div[class*="scroller-"] div[style*="background: rgb(114, 137, 218);"] {
 .checkbox-3kaeSU .checkboxInner-3yjcPe .checkboxElement-1qV33p:checked+span {
     background-color: rgba(var(--epik-gamr-colour)) !important;
     border-color: rgba(var(--epik-gamr-colour)) !important;
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
 
 /* Sync Server Template */
