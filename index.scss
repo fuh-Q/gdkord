@@ -388,7 +388,23 @@ button[class*="lookFilled"].colorRed-1TFJan:disabled {
 .embedFull-2tM8-- {
     box-shadow: var(--elevation-high);
     filter: drop-shadow(0 0 6px rgba(var(--black)));
+    border-width: 100px;
+    &::before {
+        content: "";
+        z-index: 1;
+        left: -100px;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(to right, transparent 0%, transparent 3.9%, rgba(15, 15, 15, 0.75) 4%, rgba(15, 15, 15, 0.875) 50%, rgba(15, 15, 15, 1) 100%);
+    }
 }
+
+.grid-1nZz7S {
+    margin-left: -97px;
+    z-index: 1;
+}
+
 @keyframes unhover_to_hover {
     from {
         background-color: transparent;
@@ -405,6 +421,16 @@ button[class*="lookFilled"].colorRed-1TFJan:disabled {
         background-color: transparent;
     }
 }
+
+@keyframes flash {
+    from {
+        background-color: rgba(var(--phen-aqua), 0.3);
+    }
+    to {
+        background-color: transparent !important;
+    }
+}
+
 div[class*="message-2qnXI6 cozyMessage-3V1Y8y wrapper-2a6GCs"],
 div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"] {
     animation-name: hover_to_unhover;
@@ -418,7 +444,9 @@ div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"]
     background-color: var(--background-message-hover);
 }
 .backgroundFlash-24qWLN {
-    background-color: rgba(var(--epik-gamr-colour), 0.0) !important;
+    animation-name: flash;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
 /* Date Picker */
