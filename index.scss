@@ -1248,6 +1248,10 @@ form > div[aria-controls] > .wrapper-39oAo3 {
 .guilds-1SWlCJ .scroller-1Bvpku { contain: none !important; padding-top: 0;}
 .guilds-1SWlCJ .scroller-1Bvpku > [aria-label], .guilds-1SWlCJ .scroller-1Bvpku > [style]:nth-child(2) { margin-top: 55px;}
 .guilds-1SWlCJ .scroller-1Bvpku > [style] ~ [aria-label] { margin-top: 0px; margin-bottom: 120px;}
+.tutorialContainer-2sGCg9 .homeIcon-FuNwkv,
+.tutorialContainer-11ICd5 .homeIcon-AaowEC {
+    filter: drop-shadow(0 0 10px rgba(var(--white)));
+}
 
 .tutorialContainer-32VdNI,
 .tutorialContainer-3alCZm,
