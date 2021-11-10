@@ -528,6 +528,13 @@ div[class*="colorDanger-"].focused-3afm-j:active {
     filter: drop-shadow(0 0 6px rgba(var(--red)));
 }
 
+div[id*="guild-context-"] {
+    overflow: visible;
+    & .label-22pbtT {
+        overflow: visible;
+    }
+}
+
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -577,6 +584,7 @@ div[class*="container-3auIfb"][style="opacity: 1; background-color: hsl(139, cal
 /* Server Icons */
 div[class*="subscribeTooltipWrapper-"] {
     background-color: rgba(var(--epik-gamr-colour));
+    filter: drop-shadow(0 0 10px rgba(var(--epik-gamr-colour)));
 }
 
 div[class*="subscribeTooltipWrapper-"]::after {
@@ -774,7 +782,7 @@ img[class="flexChild-faoVW3"] {
     filter: drop-shadow(0 0 6px rgba(var(--green)));
 }
 
-.item-PXvHYJ[aria-label="Gift Inventory"] .tabBarItemContainer-3eaMv0 { width: 100%;}
+.tabBarItemContainer-3eaMv0 { width: 100%;}
 
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
@@ -862,6 +870,11 @@ div[class*="betaTag-"] {
     background-color: rgba(var(--epik-gamr-colour)) !important;
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
+div[class*="textBadge-"],
+div[class*="newBadge-"] {
+    filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+    overflow: visible;
+}
 .tag-1aipTK {
     background-color: rgba(var(--epik-gamr-colour));
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
@@ -932,6 +945,16 @@ div[class*="scroller-"] div[style*="background: rgb(114, 137, 218);"] {
 .unreadMentionsIndicatorBottom-2mDYbI {
     bottom: 120px;
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+}
+
+.tutorialContainer-2sGCg9 .numberBadge-2s8kKX.base-PmTxvP.baseShapeRound-1Mm1YW,
+.tutorialContainer-11ICd5 .numberBadge-2s8kKX.base-PmTxvP.baseShapeRound-1Mm1YW {
+    filter: drop-shadow(0 0 6px rgba(var(--black)));
+    border: 1px solid black;
+}
+
+.item-3HknzM {
+    overflow: visible;
 }
 
 .numberBadge-2s8kKX.base-PmTxvP.baseShapeRound-1Mm1YW {
@@ -1327,6 +1350,7 @@ form > div[aria-controls] > .wrapper-39oAo3 {
 svg[class="arrow-gKvcEx icon-2yIBmh"] {
     left: 3px;
 }
+// muted-2JBAyG
 div[class="iconVisibility-fhcwiH wrapper-PY0fhH collapsed-2-tg8y clickable-536fPF"] {
     border: 1px solid rgba(var(--epik-gamr-colour));
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
