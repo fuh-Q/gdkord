@@ -425,6 +425,15 @@ div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"]
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='20' width='8' xmlns='http://www.w3.org/2000/svg' fill='rgba(20, 20, 20)'%3E%3Cpath d='M0 0h8v20H0zm4 2a2 2 0 00-2 2v12a2 2 0 104 0V4a2 2 0 00-2-2z' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
+div[class*="live-"] {
+    filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+}
+
+.avatarSpeaking-2IGMRN {
+    box-shadow: inset 0 0 0 2px rgba(var(--green));
+    filter: drop-shadow(0 0 6px rgba(var(--green)));
+}
+
 /* Clyde / Powercord */
 .replying-1x3H0T:before,
 .ephemeral-1PsL1r:before,
@@ -528,7 +537,7 @@ div[class*="colorDanger-"].focused-3afm-j:active {
     filter: drop-shadow(0 0 6px rgba(var(--red)));
 }
 
-div[id*="guild-context-"] {
+div[id*="guild-"] {
     overflow: visible;
     & .label-22pbtT {
         overflow: visible;
@@ -672,7 +681,8 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
 .iconVisibility-sTNpHs .wrapper-2jXpOf {
     border-radius: 10px;
 }
-.containerDefault--pIXnN:hover .iconContainer-1BBaeJ svg {
+.containerDefault--pIXnN:hover .iconContainer-1BBaeJ svg,
+.wrapper-2jXpOf:hover .iconContainer-1BBaeJ svg {
     filter: drop-shadow(0 0 6px white) !important;
 }
 .containerDefault--pIXnN:hover .iconContainer-1BBaeJ svg path {
