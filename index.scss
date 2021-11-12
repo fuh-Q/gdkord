@@ -47,6 +47,7 @@
 
     --brand-experiment: rgba(var(--epik-gamr-colour));
     --brand-experiment-500: var(--brand-experiment);
+    --brand-experiment-600: var(--brand-experiment);
     --control-brand-foreground: rgba(var(--epik-gamr-colour));
 }
 
@@ -790,8 +791,9 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
     border-color: rgba(var(--epik-gamr-colour)) !important;
 }
 
-/* User + Guild Settings */
+/* User + Channel + Guild Settings */
 [aria-label="USER_SETTINGS"],
+[aria-label="CHANNEL_SETTINGS"],
 [aria-label="GUILD_SETTINGS"] {
     & .standardSidebarView-3F1I7i,
     & .contentRegion-3nDuYy,
@@ -823,6 +825,10 @@ img[class="flexChild-faoVW3"] {
 }
 
 .tabBarItemContainer-3eaMv0 { width: 100%;}
+
+.fakeActivityIcon-2uT519 {
+    background: radial-gradient(rgba(var(--epik-gamr-colour)), var(--background-floating) 70%)
+}
 
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
