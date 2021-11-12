@@ -444,6 +444,16 @@ div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"]
     animation-iteration-count: 1;
 }
 
+.cozy-3raOZG.hasThread-2k82W0::after {
+    border-left-color: rgba(var(--white), 0.25);
+    border-bottom-color: rgba(var(--white), 0.25);
+}
+
+.repliedMessage-VokQwo::before {
+    border-left-color: rgba(var(--white), 0.25);
+    border-top-color: rgba(var(--white), 0.25);
+}
+
 /* Date Picker */
 .react-datepicker__day--keyboard-selected {
     background: rgba(var(--epik-gamr-colour)) !important;
