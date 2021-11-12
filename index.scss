@@ -272,7 +272,7 @@ button[class*="lookFilled-"].colorBrandNew-g5lmBU:active {
     border-color: rgba(var(--epik-gamr-colour-active)) !important;
 }
 button[class*="lookFilled-"].colorBrand-3pXr91:disabled {
-    background-color: rgba(var(--epik-gamr-colour));
+    background-color: rgba(var(--epik-gamr-colour-active)) !important;
     filter: none;
 }
 .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
@@ -293,6 +293,10 @@ button[class*="lookFilled-"].colorGrey-2DXtkV:hover {
 button[class*="lookFilled-"].colorGrey-2DXtkV:active {
     background-color: rgb(var(--gray-active)) !important;
 }
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:disabled,
+button[class*="lookFilled-"].colorGrey-2DXtkV:disabled {
+    background-color: rgb(var(--gray-active)) !important;
+}
 button[class*="lookFilled-"].colorGreen-29iAKY,
 .colorable-1bkp8v.green-plH-Mj {
     filter: drop-shadow(0 0 6px rgb(var(--green)));
@@ -306,6 +310,7 @@ button[class*="lookFilled-"].colorGreen-29iAKY:active,
     background-color: rgba(var(--green-active)) !important;
 }
 button[class*="lookFilled-"].colorGreen-29iAKY:disabled {
+    background-color: rgba(var(--green-active)) !important;
     filter: none;
 }
 button[class*="lookFilled-"].colorYellow-2JqYwt {
@@ -318,6 +323,7 @@ button[class*="lookFilled-"].colorYellow-2JqYwt:active {
     background-color: rgba(var(--yellow-active)) !important;
 }
 button[class*="lookFilled-"].colorYellow-2JqYwt:disabled {
+    background-color: rgba(var(--yellow-active)) !important;
     filter: none;
 }
 button[class*="lookFilled-"].colorRed-1TFJan,
@@ -333,6 +339,7 @@ button[class*="lookFilled-"].colorRed-1TFJan:active,
     background-color: rgba(var(--red-active)) !important;
 }
 button[class*="lookFilled-"].colorRed-1TFJan:disabled {
+    background-color: rgba(var(--red-active)) !important;
     filter: none;
 }
 .theme-dark .activeButton-rvKcqq,
@@ -364,6 +371,11 @@ button[class*="color"] {
     &:hover {
         transform: scale(1.05);
         transition: .2s ease-in-out;
+    }
+
+    &:disabled {
+        transform: none;
+        transition: none;
     }
 }
 
