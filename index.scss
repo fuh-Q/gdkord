@@ -293,13 +293,16 @@ button[class*="lookFilled-"].colorGrey-2DXtkV:hover {
 button[class*="lookFilled-"].colorGrey-2DXtkV:active {
     background-color: rgb(var(--gray-active)) !important;
 }
-button[class*="lookFilled-"].colorGreen-29iAKY {
+button[class*="lookFilled-"].colorGreen-29iAKY,
+.colorable-1bkp8v.green-plH-Mj {
     filter: drop-shadow(0 0 6px rgb(var(--green)));
 }
-button[class*="lookFilled-"].colorGreen-29iAKY:hover {
+button[class*="lookFilled-"].colorGreen-29iAKY:hover,
+.colorable-1bkp8v.green-plH-Mj:hover {
     background-color: rgba(var(--green-hover)) !important;
 }
-button[class*="lookFilled-"].colorGreen-29iAKY:active {
+button[class*="lookFilled-"].colorGreen-29iAKY:active,
+.colorable-1bkp8v.green-plH-Mj:active {
     background-color: rgba(var(--green-active)) !important;
 }
 button[class*="lookFilled-"].colorGreen-29iAKY:disabled {
@@ -317,13 +320,16 @@ button[class*="lookFilled-"].colorYellow-2JqYwt:active {
 button[class*="lookFilled-"].colorYellow-2JqYwt:disabled {
     filter: none;
 }
-button[class*="lookFilled-"].colorRed-1TFJan {
+button[class*="lookFilled-"].colorRed-1TFJan,
+.colorable-1bkp8v.red-33-Lnk {
     filter: drop-shadow(0 0 6px rgba(var(--red)));
 }
-button[class*="lookFilled-"].colorRed-1TFJan:hover {
+button[class*="lookFilled-"].colorRed-1TFJan:hover,
+.colorable-1bkp8v.red-33-Lnk:hover {
     background-color: rgba(var(--red-hover)) !important;
 }
-button[class*="lookFilled-"].colorRed-1TFJan:active {
+button[class*="lookFilled-"].colorRed-1TFJan:active,
+.colorable-1bkp8v.red-33-Lnk:active {
     background-color: rgba(var(--red-active)) !important;
 }
 button[class*="lookFilled-"].colorRed-1TFJan:disabled {
@@ -454,6 +460,10 @@ div[class*="live-"] {
 .avatarSpeaking-2IGMRN {
     box-shadow: inset 0 0 0 2px rgba(var(--green));
     filter: drop-shadow(0 0 6px rgba(var(--green)));
+}
+
+.container-1r6BKw.transparent-2ZlE3R {
+    background: rgba(20, 20, 20, 0.5);
 }
 
 /* Clyde / Powercord */
@@ -912,7 +922,8 @@ div[class*="checkbox-1ix_J3 flexCenter-3_1bcw flex-1O1GKY justifyCenter-3D2jYp a
 }
 /* Beta/new tag */
 div[class*="betaBadge-"],
-div[class*="betaTag-"] {
+div[class*="betaTag-"],
+.tag-1aipTK {
     background-color: rgba(var(--epik-gamr-colour)) !important;
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
@@ -920,9 +931,9 @@ div[class*="newBadge-"] {
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     overflow: visible;
 }
-.tag-1aipTK {
-    background-color: rgba(var(--epik-gamr-colour));
-    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
+div[class*="new-"] {
+    background-color: rgba(var(--ping-red));
+    filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
 }
 /* Other things on the profile page */
 button[class*="customSwatch-1axV7B swatch-3mFIiP defaultSwatch-2nDSvP button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeMedium-1AC_Sl grow-q77ONN"] {
@@ -1115,6 +1126,10 @@ path[d*="M21.707 20.293L16.314 14.9C17.403 13.504 18 11.799 18 10C18 7.863 17.16
 }
 .guildInfo-2wGKIg {
     overflow: visible;
+}
+
+.headerImage-3X1tyY {
+    filter: hue-rotate(69deg);
 }
 
 /* notif settings thing */
@@ -1667,6 +1682,20 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
 }
 .headerTagWithNickname-3l_x6x.headerTag-3GFl76.nameTag-m8r81H {
     overflow: visible;
+}
+
+.theme-dark .modal-yWgWj- {
+    background: var(--background-primary);
+
+    & h4::before,
+    & h4::after {
+        background: rgba(var(--white), 0.5);
+    }
+}
+
+.theme-dark .modal-yWgWj- div[class*="footer-"],
+.theme-dark .contentWarningPopout-n5JsIs {
+    background: var(--background-secondary);
 }
 
 /* Webkit-scrollbars */
