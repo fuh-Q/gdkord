@@ -228,8 +228,13 @@ input[class*="inputDefault-_djjkz input-cIJ7To"] {
 }
 
 /* Top section buttons */
-.icon-22AiRD:hover {
-    transform: scale(1.2);
+.icon-22AiRD {
+    transform: scale(1);
+    transition: .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 div[aria-label="Update Ready!"] .icon-22AiRD {
     filter: drop-shadow(0 0 20px rgba(var(--green)));
@@ -370,7 +375,6 @@ button[class*="color"] {
 
     &:hover {
         transform: scale(1.05);
-        transition: .2s ease-in-out;
     }
 
     &:disabled {
@@ -597,6 +601,10 @@ div[id*="guild-"] {
         overflow: visible;
     }
 }
+div[class*="focused-"]#guild-header-popout-leave:active,
+div[class*="focused-"]#guild-context-leave-guild:active {
+    background-color: rgba(var(--red)) !important;
+}
 
 /* Sliders */
 div[class*="barFill-"] {
@@ -720,6 +728,10 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
 .wrapper-2jXpOf:active .content-1x5b-n {
     background: linear-gradient(to right, rgba(var(--epik-gamr-colour)), transparent);
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
+
+    & .name-23GUGE {
+        color: rgba(var(--white));
+    }
 }
 .modeSelected-346R90 .content-1x5b-n,
 .modeSelected-346R90:hover .content-1x5b-n {
@@ -860,6 +872,9 @@ img[class="flexChild-faoVW3"] {
 
 .fakeActivityIcon-2uT519 {
     background: radial-gradient(rgba(var(--epik-gamr-colour)), var(--background-floating) 70%)
+}
+.side-8zPYf6>.item-PXvHYJ[data-item-id=DELETE]:not(.role-3wi9Tf):active::before {
+    --settings-icon-color: currentColor;
 }
 
 /* Discord Nitro Button in Settings */
