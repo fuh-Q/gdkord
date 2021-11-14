@@ -601,10 +601,6 @@ div[id*="guild-"] {
         overflow: visible;
     }
 }
-div[class*="focused-"]#guild-header-popout-leave:active,
-div[class*="focused-"]#guild-context-leave-guild:active {
-    background-color: rgba(var(--red)) !important;
-}
 
 /* Sliders */
 div[class*="barFill-"] {
