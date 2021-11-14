@@ -108,8 +108,14 @@
 }
 
 #app-mount .root-1gCeng:not(.popout-103y-5) {
-    background-color: var(--background-primary);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 0 1px var(--background-tertiary), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+
+    & .topSection-y3p-_D,
+    & .body-r6_QPy {
+        background: transparent;
+    }
 }
 #app-mount .root-1gCeng:not(.popout-103y-5) .header-1TKi98.separator-2-RRj_ {
     box-shadow: 0 1px 0 0 var(--background-tertiary), 0 1px 2px 0 rgba(24, 25, 28, 0.3);
@@ -516,30 +522,35 @@
     color: white !important;
 }
 .theme-dark .container-3ayLPN {
-    background-color: #0f0f0f !important;
+    background-color: rgba(15, 15, 15, 0.75) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 .theme-dark .option-96V44q {
-    background-color: hsl(0, 0.0%, 5.9%) !important;
+    background-color: transparent !important;
 }
 .theme-dark .option-96V44q::after,
 div[class="option-96V44q"]::after,
 div[class*="option-96V44q user-O3Czj0"]::after,
 div[class*="option-96V44q searchOption-zQ-1l6"]::after {
-    background: hsl(0, 0.0%, 5.9%) !important;
+    background: transparent !important;
 }
 
 .theme-dark .option-96V44q:hover,
-.theme-dark .option-96V44q:hover::after,
 .theme-dark .option-96V44q.selected-rZcOL- {
-    background-color: hsl(0, 0.0%, 3.9%) !important;
+    background-color: rgba(10, 10, 10, 0.75) !important;
+}
+
+.theme-dark .option-96V44q:hover::after,
+.theme-dark .option-96V44q.selected-rZcOL-::after {
+    background: transparent !important;
 }
 
 .theme-dark .focused-2bY0OD {
-    background-color: hsl(0, 0.0%, 5.9%);
+    background-color: transparent;
 }
 .theme-dark .focused-2bY0OD:hover {
-    background-color: hsl(0, 0.0%, 3.9%);
+    background-color: rgba(10, 10, 10, 0.5) !important;
 }
 
 /* Faded things */

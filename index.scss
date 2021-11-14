@@ -602,6 +602,12 @@ div[id*="guild-"] {
     }
 }
 
+.menu-3sdvDG {
+    background: rgba(var(--black), 0.65);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 6px rgba(var(--black));
+}
+
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -763,6 +769,10 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
     fill: black;
 }
 
+.spine--Wla_O {
+    color: rgba(var(--white), 0.25);
+}
+
 /* Video Player */
 div[class*="mediaBarInteractionDragging-"] .mediaBarGrabber-1FqnbN,
 .mediaBarInteraction-37i2O4:hover .mediaBarGrabber-1FqnbN,
@@ -799,19 +809,13 @@ video[class*="ready-"] {
 }
 
 /* Server Badges */
-svg[aria-label="Discord Partner"] {
-    color: rgba(var(--epik-gamr-colour)) !important;
+.partnered-3nJayh svg {
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
     overflow: visible;
 }
-svg[aria-label="Verified"],
-svg[aria-label="Verified and Partnered"],
-svg[aria-label="Verified & Partnered"] {
+.verified-1eC5dy svg {
     filter: drop-shadow(0 0 6px rgba(var(--green-hover)));
     overflow: visible;
-    & path {
-        fill: rgba(var(--green)) !important;
-    }
 }
 
 .premiumGuildTierIconBackgroundWithVisibleBanner-2EZ7p2 {
@@ -1040,6 +1044,10 @@ div[class*="unreadBar-"].mention-1f5kbO {
     & span {
         color: rgba(var(--ping-red));
     }
+}
+
+.mention-1f5kbO:active {
+    background-color: rgba(var(--black));
 }
 
 div[class*="unreadMentionsBar-"] {
@@ -1419,7 +1427,7 @@ form > div[aria-controls] > .wrapper-39oAo3 {
 }
 
 /* Gradients for the above */
-.wrapper-3NnKdC > ul > .scroller-1Bvpku > div[aria-label="Servers"] {
+.wrapper-3NnKdC > ul > .scroller-1Bvpku > div[aria-label] {
     margin-top: 60px;
     margin-bottom: 120px;
 }
@@ -1549,16 +1557,16 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
 }
 
 /* User statuses */
-div[class*="wrapper-3t9DeA"][aria-label*="Streaming"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="streaming"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--streaming)));
 }
-div[class*="wrapper-3t9DeA"][aria-label*="Do Not Disturb"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="dnd"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--dnd)));
 }
-div[class*="wrapper-3t9DeA"][aria-label*="Idle"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="idle"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--idle), 0.75));
 }
-div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="online"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--online), 0.75));
 }
 
@@ -1696,21 +1704,12 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
 /* Pop-outs */
 .userPopout-xaxa6l {
     .header-2BwW8b {transform: translateZ(0)}
+    background: rgba(var(--black), 0.65);
+    backdrop-filter: blur(10px);
 
-    .wrapper-3t9DeA::after {
-        content: "";
-        position: fixed;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        pointer-events: none;
-        opacity: .5;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: var(--user-popout-position) center;
-        background-image: var(--user-background);
+    & .bodyInnerWrapper-26fQXj,
+    & div[class*="footer-"] {
+        background: transparent;
     }
 }
 .headerTagWithNickname-3l_x6x.headerTag-3GFl76.nameTag-m8r81H {
