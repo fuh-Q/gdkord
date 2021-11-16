@@ -71,8 +71,6 @@
 @import url("https://raw.githack.com/Snapperito/Settings-Icons/main/source.css");
 @import "./dark-discord.scss";
 @import "./old-icon.scss"; // Put it in a seperate file cuz the error in my IDE was annoying LOL
-/* Title bar font */
-@import url('https://fonts.cdnfonts.com/css/white-rabbit-2');
 
 /* White badges (on hover) */
 .clickable-17BDii:hover,
@@ -236,7 +234,7 @@ input[class*="inputDefault-_djjkz input-cIJ7To"] {
         transform: scale(1.2);
     }
 }
-div[aria-label="Update Ready!"] .icon-22AiRD {
+div[class*="iconWrapper-"][aria-label*="!"] .icon-22AiRD {
     filter: drop-shadow(0 0 20px rgba(var(--green)));
 }
 .updateIconForeground-3tnNZn {
@@ -492,6 +490,24 @@ div[class*="live-"] {
     background: rgba(20, 20, 20, 0.5);
 }
 
+.controlIcon-35oS15 {
+    color: rgba(var(--white));
+    filter: drop-shadow(0 0 20px rgba(var(--white)));
+}
+
+.wrapper-3EGhDO,
+.controlButton-2MhVEL.contextMenuContainer-2HlOMK {
+    overflow: visible;
+
+    & svg {
+        overflow: visible;
+    }
+}
+
+.bottomControls-lIJyYL.controlSection-2h3cS0 {
+    overflow: visible;
+}
+
 /* Clyde / Powercord */
 .replying-1x3H0T:before,
 .ephemeral-1PsL1r:before,
@@ -526,6 +542,7 @@ div[class*="headerStreaming"] {
 .container-2wlB3z,
 .members-1998pB, .members-1998pB>div {
     background: linear-gradient(to left, var(--background-primary), black);
+    z-index: 1;
 }
 
 /* Roles and stuff */
@@ -773,6 +790,11 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
     color: rgba(var(--white), 0.25);
 }
 
+.wrapper-2jXpOf[role="listitem"]:active .icon-1DeIlz {
+    color: rgba(var(--white));
+    filter: drop-shadow(0 0 6px rgba(var(--white)));
+}
+
 /* Video Player */
 div[class*="mediaBarInteractionDragging-"] .mediaBarGrabber-1FqnbN,
 .mediaBarInteraction-37i2O4:hover .mediaBarGrabber-1FqnbN,
@@ -816,6 +838,11 @@ video[class*="ready-"] {
 .verified-1eC5dy svg {
     filter: drop-shadow(0 0 6px rgba(var(--green-hover)));
     overflow: visible;
+}
+
+.partnered-3nJayh.disableColor-20r_Xe svg,
+.verified-1eC5dy.disableColor-20r_Xe svg {
+    filter: none;
 }
 
 .premiumGuildTierIconBackgroundWithVisibleBanner-2EZ7p2 {
@@ -1181,11 +1208,6 @@ path[d*="M21.707 20.293L16.314 14.9C17.403 13.504 18 11.799 18 10C18 7.863 17.16
 .selected-mKYnfr.option-n0icdO {
     background-color: rgba(var(--epik-gamr-colour)) !important;
     border-color: rgba(var(--epik-gamr-colour)) !important;
-}
-
-/* Link underlines */
-.lookLink-9FtZy-.colorBrand-3pXr91:hover .contents-18-Yxp {
-    background-image: linear-gradient(0deg,transparent,transparent 1px, rgba(var(--epik-gamr-colour)) 0,rgba(var(--epik-gamr-colour)) 2px,transparent 0);
 }
 
 /* Date Picker */
@@ -1712,7 +1734,8 @@ div[class*="wrapper-3t9DeA"][data-bsi-status="online"]>svg[class="mask-1l8v16 sv
         background: transparent;
     }
 }
-.headerTagWithNickname-3l_x6x.headerTag-3GFl76.nameTag-m8r81H {
+.headerTagWithNickname-3l_x6x.headerTag-3GFl76.nameTag-m8r81H,
+.nameTag-m8r81H {
     overflow: visible;
 }
 
