@@ -1580,16 +1580,20 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
 }
 
 /* User statuses */
-div[class*="wrapper-3t9DeA"][data-bsi-status="streaming"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="streaming"]>svg[class="mask-1l8v16 svg-2V3M55"],
+div[class*="wrapper-3t9DeA"][aria-label*="Streaming"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--streaming)));
 }
-div[class*="wrapper-3t9DeA"][data-bsi-status="dnd"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="dnd"]>svg[class="mask-1l8v16 svg-2V3M55"],
+div[class*="wrapper-3t9DeA"][aria-label*="Do Not Disturb"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--dnd)));
 }
-div[class*="wrapper-3t9DeA"][data-bsi-status="idle"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="idle"]>svg[class="mask-1l8v16 svg-2V3M55"],
+div[class*="wrapper-3t9DeA"][aria-label*="Idle"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--idle), 0.75));
 }
-div[class*="wrapper-3t9DeA"][data-bsi-status="online"]>svg[class="mask-1l8v16 svg-2V3M55"] {
+div[class*="wrapper-3t9DeA"][data-bsi-status="online"]>svg[class="mask-1l8v16 svg-2V3M55"],
+div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V3M55"] {
     filter: drop-shadow(0 0 6px rgb(var(--online), 0.75));
 }
 
