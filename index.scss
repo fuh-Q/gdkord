@@ -1334,9 +1334,23 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
 }
 
 /* Chat box */
+@keyframes expand_attachment_area {
+    from {
+        height: 0;
+    }
+    to {
+        height: 218px;
+    }
+}
+
 div[class*="channelTextArea-"] {
     box-shadow: 0 0 20px hsl(0, 0.0%, 3.9%);
-} 
+}
+ul[class*="channelAttachmentArea-"] {
+    animation-name: expand_attachment_area;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
 .theme-dark .form-2fGMdU::before {
     display: none;
 }
