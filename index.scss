@@ -902,6 +902,15 @@ img[class="flexChild-faoVW3"] {
     --settings-icon-color: currentColor;
 }
 
+.side-8zPYf6>.item-PXvHYJ:not(.role-3wi9Tf)::before, .sidebar-CFHs9e .ui-tab-bar-item::before {
+    filter: drop-shadow(0 0 6px white);
+    box-shadow: 0 0 6px white;
+}
+
+.container-3B1TbJ {
+    width: 100%;
+}
+
 /* Discord Nitro Button in Settings */
 .side-8zPYf6 > .item-PXvHYJ[data-item-id=DiscordNitro]:not(.role-3wi9Tf)::before {
     --settings-icon-color: rgba(var(--nitro-pink));
