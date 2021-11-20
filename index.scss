@@ -1555,7 +1555,8 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
     }
 
     & span {
-        filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+        border-left: 3px solid rgba(var(--ping-red));
+        border-right: 3px solid rgba(var(--ping-red));
     }
 }
 
