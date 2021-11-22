@@ -885,7 +885,7 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
 img[class="flexChild-faoVW3"] {
     filter: hue-rotate(69deg) saturate(250%);
 }
-.requirementsImage-tqIP2X {
+img[class*="requirementsImage-"] {
     filter: hue-rotate(69deg) saturate(250%) drop-shadow(0 0 10px rgba(var(--epik-gamr-colour)));
 }
 
@@ -948,6 +948,13 @@ img[class="flexChild-faoVW3"] {
         filter: drop-shadow(0 0 6px rgba(var(--nitro-pink)));
         overflow: visible;
     }
+}
+
+.perksModal-1pSu7w {
+    background-color: var(--background-primary) !important;
+}
+.perk-2YwViL {
+    background-color: var(--background-secondary) !important;
 }
 
 /* Folder Icons */
