@@ -1556,9 +1556,10 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
 #---new-messages-bar {
     & .content-1o0f9g {
         background: var(--background-primary);
-        & + .unreadPill-2HyYtt {
-            filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
-        }
+    }
+    
+    .unreadPill-2HyYtt {
+        filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     }
 
     & span {
