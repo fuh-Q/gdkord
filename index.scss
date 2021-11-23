@@ -619,6 +619,10 @@ div[id*="guild-"] {
     }
 }
 
+.menu-3sdvDG {
+    background: radial-gradient(black, rgba(10, 10, 10, 0.8) 100%);
+}
+
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -1440,7 +1444,7 @@ form > div[aria-controls] > .wrapper-39oAo3 {
     color: white;
 }
 
-/* Pinned stuff (server list) */
+/* Pinned stuff */
 .tutorialContainer-2sGCg9,
 .tutorialContainer-11ICd5 {
     position: fixed;
@@ -1477,6 +1481,21 @@ form > div[aria-controls] > .wrapper-39oAo3 {
     border-top: 0px solid var(--background-tertiary);
     border-right: 9px solid var(--background-tertiary);
     filter: drop-shadow(0 10px 0px var(--background-tertiary));
+}
+
+.messagesPopoutWrap-1MQ1bW {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    width: 69%;
+    left: 50%;
+
+    & div[class*="header-"] {
+        background: rgba(10, 10, 10, 0.65);
+    }
+
+    & div[class*="messageGroupWrapper-"] {
+        background: rgba(20, 20, 20, 0.65);
+    }
 }
 
 /* Gradients for the above */
@@ -1557,7 +1576,7 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
     & .content-1o0f9g {
         background: var(--background-primary);
     }
-    
+
     .unreadPill-2HyYtt {
         filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     }
