@@ -619,10 +619,6 @@ div[id*="guild-"] {
     }
 }
 
-.menu-3sdvDG {
-    background: radial-gradient(black, rgba(10, 10, 10, 0.8) 100%);
-}
-
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -1444,7 +1440,7 @@ form > div[aria-controls] > .wrapper-39oAo3 {
     color: white;
 }
 
-/* Pinned stuff */
+/* Pinned stuff (server list) */
 .tutorialContainer-2sGCg9,
 .tutorialContainer-11ICd5 {
     position: fixed;
@@ -1561,7 +1557,7 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
     & .content-1o0f9g {
         background: var(--background-primary);
     }
-
+    
     .unreadPill-2HyYtt {
         filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     }
