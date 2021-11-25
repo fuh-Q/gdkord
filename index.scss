@@ -619,10 +619,13 @@ div[id*="guild-"] {
     }
 }
 
+<<<<<<< HEAD
 .activeIcon-2Xlk3z circle {
     fill: rgba(var(--epik-gamr-colour)) !important;
 }
 
+=======
+>>>>>>> 3c113c17386f0cc03448b8a3d62a46e83eca25cd
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -1006,20 +1009,31 @@ div[class*="checkbox-1ix_J3 flexCenter-3_1bcw flex-1O1GKY justifyCenter-3D2jYp a
 div[class*="betaBadge-"],
 div[class*="betaTag-"],
 .tag-1aipTK {
+<<<<<<< HEAD
     background-color: rgba(var(--ping-red)) !important;
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     overflow: visible;
     z-index: 1;
+=======
+    background-color: rgba(var(--epik-gamr-colour)) !important;
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
+>>>>>>> 3c113c17386f0cc03448b8a3d62a46e83eca25cd
 }
 div[class*="newBadge-"] {
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
     overflow: visible;
+<<<<<<< HEAD
     z-index: 1;
+=======
+>>>>>>> 3c113c17386f0cc03448b8a3d62a46e83eca25cd
 }
 div[class*="new-"] {
     background-color: rgba(var(--ping-red));
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+<<<<<<< HEAD
     z-index: 1;
+=======
+>>>>>>> 3c113c17386f0cc03448b8a3d62a46e83eca25cd
 }
 /* Other things on the profile page */
 button[class*="customSwatch-1axV7B swatch-3mFIiP defaultSwatch-2nDSvP button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeMedium-1AC_Sl grow-q77ONN"] {
