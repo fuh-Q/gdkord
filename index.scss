@@ -51,22 +51,6 @@
     --control-brand-foreground: rgba(var(--epik-gamr-colour));
 }
 
-/* Flicker effects */
-@keyframes green_flicker {
-    0% {
-        filter: drop-shadow(0 0 5px rgba(var(--green)));
-    }
-    50% {
-        filter: drop-shadow(0 0 4px rgba(var(--green)));
-    }
-    78% {
-        filter: drop-shadow(0 0 6px rgba(var(--green)));
-    }
-    100% {
-        filter: drop-shadow(0 0 5px rgba(var(--green)));
-    }
-}
-
 /* Important */
 @import url("https://raw.githack.com/Snapperito/Settings-Icons/main/source.css");
 @import "./dark-discord.scss";
@@ -1696,11 +1680,9 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
 }
 
 /* Spotify thing in status */
-.spotifyIcon-2J9kSv {
+.spotifyIcon-2J9kSv,
+.platformIcon-32kXeN {
     filter: drop-shadow(0 0 6px rgba(var(--spotify-green)));
-    animation-name: green_flicker;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
     overflow: visible;
 }
 .timeBarUserPopout-AWPFf2 {
