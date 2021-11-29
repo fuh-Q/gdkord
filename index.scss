@@ -1460,7 +1460,6 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
 
 /* Chat Area */
 .wrapper-3vR61M::before,
-.premiumContainer-2Iux5m::before,
 .container-19hC9u.scroller-1IIF0A.stickyScroller-24zUyY.auto-Ge5KZx.scrollerBase-289Jih::before,
 .scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih::before,
 .pageWrapper-1PgVDX::before,
@@ -1471,6 +1470,15 @@ section[class="container-1r6BKw themed-ANHk51"] .iconWrapper-2OrFZ1 svg path[d="
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(var(--black), 0.8), transparent 5%, rgba(var(--black), 0.8) 95%);
+}
+
+div[class="scroller-9moviB auto-Ge5KZx scrollerBase-289Jih"]::before {
+    content: "";
+    position: fixed !important;
+    width: 100%;
+    height: 2500px;
+    background: linear-gradient(to right, rgba(var(--black), 0.8), transparent 5%, rgba(var(--black), 0.8) 95%);
+    z-index: 1;
 }
 
 .wrapper-3vR61M,
@@ -1834,6 +1842,19 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
 }
 .spotifyButtonLogo-3uT57D path {
     fill: rgba(var(--spotify-green));
+}
+
+/* Account Switcher */
+.list-1hif6B {
+    background: transparent;
+}
+
+.theme-dark form[class*="authBox-"],
+.theme-light form[class*="authBox-"],
+.theme-dark div[class*="navRow-"],
+.theme-light div[class*="navRow-"] {
+    background: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(10px);
 }
 
 /* Connections (ported from SoftX) */
