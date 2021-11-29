@@ -4,9 +4,9 @@
 
     /* <---- IF YOU WANT TO CHANGE THE PINK TO ANOTHER COLOUR, JUST MESS AROUND WITH THIS ----> */
     /* <--------------------------- NEW VALUES MUST BE IN RGB FORM ---------------------------> */
-    --epik-gamr-colour: 255, 0, 255;
-    --epik-gamr-colour-hover: 200, 0, 200;
-    --epik-gamr-colour-active: 170, 0, 170;
+    --epik-gamr-colour: 255, 0, 255; // 55, 178, 203; // (Phen's aqua also looks quite nice)
+    --epik-gamr-colour-hover: 200, 0, 200; // 48, 150, 170; // (Phen's aqua also looks quite nice)
+    --epik-gamr-colour-active: 170, 0, 170; // 40, 123, 147; // (Phen's aqua also looks quite nice)
     /* <------------------ A LOT OF PEOPLE HAVE REQUESTED IT SO HERE IT IS -------------------> */
 
     --background-image: url('https://i.vgy.me/SPEMbr.png');
@@ -334,6 +334,12 @@ div[id*="message-accessories-"] {
             overflow: visible;
         }
     }
+}
+
+.theme-dark .contentWrapper-3WC1ID,
+.theme-light .contentWrapper-3WC1ID {
+    background: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(10px);
 }
 
 .wrapper-35wsBm {
