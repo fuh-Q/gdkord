@@ -63,6 +63,7 @@
 }
 
 html.theme-light {
+    .tools-3-3s-N { display: none;}
 	.layer-3QrUeG {
         transition: 0.5s ease-in-out;
         top: 30px;
@@ -82,7 +83,6 @@ html.theme-light {
         align-items: center;
         justify-items: center;
         border-radius: 10px;
-        border-left: 2px solid #F04747;
         background: linear-gradient(to right, rgba(var(--ping-red)), transparent 20%, transparent 80%, rgba(var(--ping-red)) 100%);
         filter: drop-shadow(0 0 6px #F04747);
 	}
