@@ -56,10 +56,43 @@
 @import "./dark-discord.scss";
 @import "./old-icon.scss"; // Put it in a seperate file cuz the error in my IDE was annoying LOL
 
+@keyframes warning {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+html.theme-light {
+	.layer-3QrUeG {
+        transition: 0.5s ease-in-out;
+        top: 30px;
+    }
+    &::before {
+        content: 'AYO WHAT THE FU- Turn off light theme right now or else im crying man';
+        transition: 0.5s ease-in-out;
+        animation: warning;
+        animation-duration: 1.5s;
+        opacity: 1;
+        color: rgba(var(--ping-red), .65);
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        top: 25px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        border-radius: 10px;
+        border-left: 2px solid #F04747;
+        background: linear-gradient(to right, rgba(var(--ping-red)), transparent 20%, transparent 80%, rgba(var(--ping-red)) 100%);
+        filter: drop-shadow(0 0 6px #F04747);
+	}
+}
+
 /* Top section buttons */
 .icon-22AiRD {
     transform: scale(1);
     transition: .2s ease-in-out;
+    overflow: visible;
 
     &:hover {
         transform: scale(1.2);
