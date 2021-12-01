@@ -63,22 +63,23 @@
 }
 
 html.theme-light {
-    .tools-3-3s-N { display: none;}
+    //.tools-3-3s-N { display: none;}
 	.layer-3QrUeG {
         transition: 0.5s ease-in-out;
         top: 30px;
     }
     &::before {
-        content: 'AYO WHAT THE FU- Turn off light theme right now or else im crying man';
+        content: 'AYO WHAT THE FU- Turn the light theme off right now or else im crying man';
         transition: 0.5s ease-in-out;
         animation: warning;
         animation-duration: 1.5s;
-        opacity: 1;
         color: rgba(var(--ping-red), .65);
         position: absolute;
-        width: 100%;
+        width: 98%;
         z-index: 10;
         top: 25px;
+        margin-left: 20px;
+        margin-right: 100px;
         display: grid;
         align-items: center;
         justify-items: center;
@@ -86,6 +87,32 @@ html.theme-light {
         background: linear-gradient(to right, rgba(var(--ping-red)), transparent 20%, transparent 80%, rgba(var(--ping-red)) 100%);
         filter: drop-shadow(0 0 6px #F04747);
 	}
+    [aria-label="USER_SETTINGS"] [tabindex="-1"] + [class="marginTop40-i-78cZ"] .item-26Dhrx:nth-of-type(1) {
+        &::after {
+            content: "Revert";
+            transition: .2s ease-in-out;
+            animation: warning;
+            animation-duration: 1.5s;
+            width: 100px;
+            height: 15px;
+            position: fixed;
+            margin-top: -444px;
+            margin-left: 530px;
+            border: 1.5px solid rgba(var(--red));
+            z-index: 5;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 15px;
+            font-family: sans-serif;
+            color: rgba(var(--ping-red));
+            filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
+        }
+        &:hover::after {
+            background: rgba(var(--white));
+            border-color: rgba(var(--white));
+            filter: none;
+        }
+    }
 }
 
 /* Top section buttons */
