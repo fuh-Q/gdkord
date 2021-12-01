@@ -389,7 +389,8 @@ h5[class*="colorStandard-2KCXvj size14-e6ZScH h5-18_1nd title-3sZWYQ defaultMarg
 
 div[id*="message-accessories-"] {
     & .wrapper-35wsBm {
-        background: transparent;
+        background: var(--background-primary);
+        filter: drop-shadow(0 0 6px var(--background-primary));
         & div[class*="flex-"] h3 {
             overflow: visible;
         }
@@ -407,9 +408,10 @@ div[id*="message-accessories-"] {
     &:hover {
         transform: translateX(5px);
         background: rgba(5, 5, 5) !important;
+        filter: none !important;
     }
 
-    & div[class*="guildIcon-"]::before {
+    &>.content-2U5lSY>div[class*="guildIcon-"]::before {
         content: "";
         border: 1px solid rgba(var(--invite-border-colour), 0.75);
         filter: drop-shadow(0 0 3px rgba(var(--invite-border-colour)));
