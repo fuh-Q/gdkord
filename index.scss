@@ -87,7 +87,7 @@ html.theme-light {
         background: linear-gradient(to right, rgba(var(--ping-red)), transparent 20%, transparent 80%, rgba(var(--ping-red)) 100%);
         filter: drop-shadow(0 0 6px #F04747);
 	}
-    [aria-label="USER_SETTINGS"] [tabindex="-1"] + [class="marginTop40-i-78cZ"] .item-26Dhrx:nth-of-type(1) {
+    [aria-label="USER_SETTINGS"] [tabindex="-1"] + [class*="marginTop"] .item-26Dhrx:nth-of-type(1) {
         &::after {
             content: "Revert";
             transition: .2s ease-in-out;
@@ -96,7 +96,7 @@ html.theme-light {
             width: 100px;
             height: 15px;
             position: fixed;
-            margin-top: -444px;
+            margin-top: -450px;
             margin-left: 530px;
             border: 1.5px solid rgba(var(--red));
             z-index: 5;
