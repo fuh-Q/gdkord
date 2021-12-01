@@ -145,32 +145,32 @@ div[class*="iconWrapper-2OrFZ1 clickable-3rdHwn"]>svg>path[d="M14.8834 11.9077C1
 }
 
 /* Buttons */
-div[class*="themeDefault"].valueChecked-m-4IJZ,
-button[class*="lookFilled-"].colorBrand-3pXr91,
-button[class*="lookFilled-"].colorBrandNew-g5lmBU {
+.theme-dark div[class*="themeDefault"].valueChecked-m-4IJZ,
+.theme-dark button[class*="lookFilled-"].colorBrand-3pXr91,
+.theme-dark button[class*="lookFilled-"].colorBrandNew-g5lmBU {
     background-color: rgba(var(--epik-gamr-colour));
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
     color: rgba(var(--white));
     border-color: rgba(var(--epik-gamr-colour));
 }
-button[class*="lookFilled-"].colorBrand-3pXr91:hover,
-button[class*="lookFilled-"].colorBrandNew-g5lmBU:hover {
+.theme-dark button[class*="lookFilled-"].colorBrand-3pXr91:hover,
+.theme-dark button[class*="lookFilled-"].colorBrandNew-g5lmBU:hover {
     background-color: rgba(var(--epik-gamr-colour-hover));
     color: rgba(var(--white));
     border-color: rgba(var(--epik-gamr-colour-hover));
 }
-button[class*="lookFilled-"].colorBrand-3pXr91:active,
-button[class*="lookFilled-"].colorBrandNew-g5lmBU:active {
+.theme-dark button[class*="lookFilled-"].colorBrand-3pXr91:active,
+.theme-dark button[class*="lookFilled-"].colorBrandNew-g5lmBU:active {
     background-color: rgba(var(--epik-gamr-colour-active));
     color: rgba(var(--white));
     border-color: rgba(var(--epik-gamr-colour-active));
 }
-button[class*="lookFilled-"].colorBrand-3pXr91:disabled {
+.theme-dark button[class*="lookFilled-"].colorBrand-3pXr91:disabled {
     background-color: rgba(var(--epik-gamr-colour-active));
     filter: none;
 }
-.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
-.button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp {
+.theme-dark .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp,
+.theme-dark .button-1YfofB .buttonColor-7qQbGO.buttonActive-3FrkXp {
     background-color: rgba(var(--epik-gamr-colour));
 }
 .theme-light {
@@ -180,59 +180,59 @@ button[class*="lookFilled-"].colorBrand-3pXr91:disabled {
     background-color: rgba(var(--phen-aqua));
 }
 .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover,
-button[class*="lookFilled-"].colorGrey-2DXtkV:hover {
+.theme-dark button[class*="lookFilled-"].colorGrey-2DXtkV:hover {
     background-color: rgb(var(--gray-hover));
 }
 .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:active,
-button[class*="lookFilled-"].colorGrey-2DXtkV:active {
+.theme-dark button[class*="lookFilled-"].colorGrey-2DXtkV:active {
     background-color: rgb(var(--gray-active));
 }
 .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:disabled,
-button[class*="lookFilled-"].colorGrey-2DXtkV:disabled {
+.theme-dark button[class*="lookFilled-"].colorGrey-2DXtkV:disabled {
     background-color: rgb(var(--gray-active));
 }
-button[class*="lookFilled-"].colorGreen-29iAKY,
+.theme-dark button[class*="lookFilled-"].colorGreen-29iAKY,
 .colorable-1bkp8v.green-plH-Mj {
     filter: drop-shadow(0 0 6px rgb(var(--green)));
 }
-button[class*="lookFilled-"].colorGreen-29iAKY:hover,
+.theme-dark button[class*="lookFilled-"].colorGreen-29iAKY:hover,
 .colorable-1bkp8v.green-plH-Mj:hover {
     background-color: rgba(var(--green-hover));
 }
-button[class*="lookFilled-"].colorGreen-29iAKY:active,
+.theme-dark button[class*="lookFilled-"].colorGreen-29iAKY:active,
 .colorable-1bkp8v.green-plH-Mj:active {
     background-color: rgba(var(--green-active));
 }
-button[class*="lookFilled-"].colorGreen-29iAKY:disabled {
+.theme-dark button[class*="lookFilled-"].colorGreen-29iAKY:disabled {
     background-color: rgba(var(--green-active));
     filter: none;
 }
-button[class*="lookFilled-"].colorYellow-2JqYwt {
+.theme-dark button[class*="lookFilled-"].colorYellow-2JqYwt {
     filter: drop-shadow(0 0 6px rgba(var(--yellow)));
 }
-button[class*="lookFilled-"].colorYellow-2JqYwt:hover {
+.theme-dark button[class*="lookFilled-"].colorYellow-2JqYwt:hover {
     background-color: rgba(var(--yellow-hover));
 }
-button[class*="lookFilled-"].colorYellow-2JqYwt:active {
+.theme-dark button[class*="lookFilled-"].colorYellow-2JqYwt:active {
     background-color: rgba(var(--yellow-active));
 }
-button[class*="lookFilled-"].colorYellow-2JqYwt:disabled {
+.theme-dark button[class*="lookFilled-"].colorYellow-2JqYwt:disabled {
     background-color: rgba(var(--yellow-active));
     filter: none;
 }
-button[class*="lookFilled-"].colorRed-1TFJan,
+.theme-dark button[class*="lookFilled-"].colorRed-1TFJan,
 .colorable-1bkp8v.red-33-Lnk {
     filter: drop-shadow(0 0 6px rgba(var(--red)));
 }
-button[class*="lookFilled-"].colorRed-1TFJan:hover,
+.theme-dark button[class*="lookFilled-"].colorRed-1TFJan:hover,
 .colorable-1bkp8v.red-33-Lnk:hover {
     background-color: rgba(var(--red-hover));
 }
-button[class*="lookFilled-"].colorRed-1TFJan:active,
+.theme-dark button[class*="lookFilled-"].colorRed-1TFJan:active,
 .colorable-1bkp8v.red-33-Lnk:active {
     background-color: rgba(var(--red-active));
 }
-button[class*="lookFilled-"].colorRed-1TFJan:disabled {
+.theme-dark button[class*="lookFilled-"].colorRed-1TFJan:disabled {
     background-color: rgba(var(--red-active));
     filter: none;
 }
@@ -243,22 +243,22 @@ button[class*="lookFilled-"].colorRed-1TFJan:disabled {
     background-color: rgba(var(--phen-aqua));
     filter: drop-shadow(0 0 6px rgba(var(--phen-aqua)));
 }
-.selectorButtonSelected-t5V9On,
-.selectorButton-EEUWed:hover {
+.theme-dark .selectorButtonSelected-t5V9On,
+.theme-dark .selectorButton-EEUWed:hover {
     background-color: rgba(var(--epik-gamr-colour));
 }
-.selectorButton-EEUWed:active {
+.theme-dark .selectorButton-EEUWed:active {
     background-color: rgba(var(--epik-gamr-colour-active));
 }
-.activeButton-rvKcqq,
-.activeButton-rvKcqq:hover {
+.theme-dark .activeButton-rvKcqq,
+.theme-dark .activeButton-rvKcqq:hover {
     background-color: rgba(var(--epik-gamr-colour));
 }
-.container-1v9gV9 {
+.theme-dark .container-1v9gV9 {
     overflow: visible;
 }
 
-button[class*="color"] {
+.theme-dark button[class*="color"] {
     transform: scale(1);
     transition: .2s ease-in-out;
 
