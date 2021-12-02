@@ -1332,6 +1332,10 @@ div[class*="unreadMentionsBar-"] {
     filter: drop-shadow(0 0 6px rgba(var(--ping-red)));
 }
 
+rect[id*="-lower_badge_masks"] {
+    fill: black;
+}
+
 /* Another Darned Checkbox */
 .checkbox-3kaeSU .checkboxInner-3yjcPe .checkboxElement-1qV33p:checked+span {
     background-color: rgba(var(--epik-gamr-colour)) !important;
@@ -1823,17 +1827,14 @@ div[class="iconVisibility-fhcwiH wrapper-PY0fhH clickable-536fPF"]:hover {
 .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 {
     width: 45px;
     height: 45px;
-    background-color: rgba(var(--epik-gamr-colour)) !important;
     border-radius: 15px;
-    filter: drop-shadow(0 0 2px rgba(var(--epik-gamr-colour)));
     overflow: visible;
+    box-shadow: 0 0 6px rgba(var(--epik-gamr-colour));
+    background: radial-gradient(transparent, rgba(var(--epik-gamr-colour)) 90%) !important;
 }
 .tutorialContainer-2sGCg9 .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
 .tutorialContainer-11ICd5 .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 {
     filter: drop-shadow(0 0 8px rgba(var(--epik-gamr-colour)));
-}
-.childWrapper-anI2G9 {
-    transition: none !important;
 }
 .svg-1X37T1 foreignObject,
 .listItemWrapper-t7zeg3 {
