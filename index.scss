@@ -1885,7 +1885,8 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
 }
 
 /* Makes home button transparent */
-.childWrapper-anI2G9 {
+.tutorialContainer-11ICd5 .childWrapper-anI2G9,
+.tutorialContainer-2sGCg9 .childWrapper-anI2G9 {
     --props: .35s ease-in-out;  
     color: white;
     background-color: rgba(var(--black), 0) !important;
