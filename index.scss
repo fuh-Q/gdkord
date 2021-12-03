@@ -813,6 +813,7 @@ div[class*="headerStreaming"] {
 div[class*="colorDefault-"]:active:not(.hideInteraction-1iHO1O),
 div[class*="colorDefault-"].focused-3afm-j {
     background-color: rgba(var(--epik-gamr-colour)) !important;
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
     color: #fff !important;
 }
 div[class*="colorDefault-"].focused-3afm-j:active {
