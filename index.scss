@@ -751,10 +751,45 @@ div[class*="headerStreaming"] {
 }
 
 /* Members list */
-.clickable-1JJAn8:hover span[class*="roleColor-"],
-.icon-15YQ1T {
-    filter: drop-shadow(0 0 3px currentColor);
+@keyframes colour_in {
+    from {
+        left: 300px;
+    }
+    to {
+        left: 0;
+    }
 }
+.member-3-YXUe.clickable-1JJAn8:not(.offline-3nJYBR):hover,
+.member-3-YXUe.clickable-1JJAn8:not(.offline-3nJYBR):focus,
+.member-3-YXUe.selected-aXhQR6 {
+    .layout-2DM8Md {
+        background: transparent;
+    }
+    & span[class*="roleColor-"] {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 98%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            animation: colour_in 0.2s;
+            background: linear-gradient(to right, transparent, currentColor 125%);
+            border-radius: 10px;
+            opacity: 0.3;
+            filter: drop-shadow(0 0 6px currentColor);
+        }
+    }
+}
+
+.member-3-YXUe.selected-aXhQR6 span[class*="roleColor-"]::after {
+    background: linear-gradient(to right, transparent, currentColor 125%);
+}
+
+.member-3-YXUe.clickable-1JJAn8:not(.offline-3nJYBR):active span[class*="roleColor-"]::after {
+    background: linear-gradient(to right, transparent, currentColor 75%);
+}
+
 .content-3QAtGj {
     overflow: visible;
 }
@@ -762,6 +797,11 @@ div[class*="headerStreaming"] {
 .members-1998pB, .members-1998pB>div {
     background: linear-gradient(to left, var(--background-primary), black);
     z-index: 1;
+}
+
+.activity-525YDR.subtext-1RtU34 svg {
+    filter: drop-shadow(0 0 3px currentColor);
+    overflow: visible;
 }
 
 /* Roles and stuff */
@@ -1576,6 +1616,9 @@ span[class*="botTagRegular"] {
     color: #fff !important;
     border-color: rgba(0, 0, 0) !important;
     filter: drop-shadow(0 0 5px rgba(var(--alt-aqua)));
+    overflow: visible;
+}
+.textContainer-2rzLui {
     overflow: visible;
 }
 span[class*="botTagRegular"] {
