@@ -895,6 +895,36 @@ div[id*="guild-"] {
     fill: rgba(var(--epik-gamr-colour)) !important;
 }
 
+.lookFilled-22uAsw.select-2fjwPw {
+    background: transparent;
+
+    &[class*="open-"] {
+        background: var(--background-tertiary);
+    }
+}
+
+.wrapper-2yc6Ud {
+    background: rgba(10, 10, 10, 0.35);
+}
+
+.popout-VcNcHB {
+    background: rgba(10, 10, 10, 0.35);
+    backdrop-filter: blur(20px);
+    & .option-3KoAJB {
+        &:hover,
+        &:focus {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.35) !important;
+        }
+        &[aria-selected="true"],
+        &.focused-1T6PE5 {
+            background: rgba(0, 0, 0, 0.65);
+        }
+    }
+}
+/*
+.option-3KoAJB.focused-1T6PE5, .option-3KoAJB:focus, .option-3KoAJB:hover*/
+
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
@@ -1255,14 +1285,19 @@ div[class*="folder-"] div[style*="background-color: rgba(88, 101, 242, 0.4);"] {
 }
 
 /* Checkbox Button (1 of 1000) */
-label[class*="checkboxWrapper-"] div[style*="border-color: var(--control-brand-foreground);"],
+label[class*="checkboxWrapper-"] div,
 .box-mmYMsp {
     border-color: rgba(var(--epik-gamr-colour)) !important;
     color: white !important;
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
-div[class*="checkbox-1ix_J3 flexCenter-3_1bcw flex-1O1GKY justifyCenter-3D2jYp alignCenter-1dQNNs box-mmYMsp checked-3_4uQ9"] {
+div[class*="checkbox-"][class*="checked-"] {
     background-color: rgba(var(--epik-gamr-colour)) !important;
+
+    & svg {
+        filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
+        & path { fill: white;}
+    }
 }
 path[fill*="hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)"] {
     fill: white !important;
