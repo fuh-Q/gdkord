@@ -925,10 +925,39 @@ div[id*="guild-"] {
 /* Sliders */
 div[class*="barFill-"] {
     background-color: rgba(var(--epik-gamr-colour));
+    border-radius: 5px;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: inherit;
+        color: rgba(var(--epik-gamr-colour));
+        background: rgba(var(--epik-gamr-colour), 1);
+        filter: drop-shadow(0 0 6px currentColor);
+        border-radius: 5px;
+    }
 }
 
 .grabber-3mFHz2 {
-    filter: drop-shadow(0 0 6px white);
+    filter: drop-shadow(0 0 5px white);
+}
+
+.userSettingsVoice-iwdUCU .sliderBar-3DezvM {
+    background: var(--interactive-muted) !important;
+    &.speaking-2bFhO4::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: rgba(var(--green));
+        background: currentColor;
+        filter: drop-shadow(0 0 6px currentColor);
+        border-radius: 5px;
+    }
+}
+
+.bar-2Qqk5Z {
+    overflow: visible;
 }
 
 /* Switches */
@@ -938,8 +967,15 @@ div[class*="container-3auIfb"][style="opacity: 1; background-color: hsl(139, cal
 
 /* Video background (VC) */
 .backgroundOptionSelected-33AYZn {
-    border: 2px solid rgba(var(--epik-gamr-colour));
     filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
+}
+
+.backgroundOptionRing-3uvncP {
+    border-color: rgba(var(--epik-gamr-colour));
+}
+
+.title-31JmR4 {
+    overflow: visible;
 }
 
 /* Reactions */
