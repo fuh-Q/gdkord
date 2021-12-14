@@ -466,8 +466,9 @@ div[id*="message-accessories-"] {
 }
 
 /* Few more steps before joining a server */
-div[class*="notice-3uyY6c notice-3bPHh-"] {
+div[class*="notice-3bPHh-"] {
     background-color: rgba(var(--epik-gamr-colour));
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
 button[class*="button-2TV-eO backButton-3aYUcc button-38aScr lookOutlined-3sRXeN colorWhite-rEQuAQ grow-q77ONN"]:active,
 button[class*="button-2TV-eO button-38aScr lookOutlined-3sRXeN colorWhite-rEQuAQ grow-q77ONN"]:active,
@@ -1166,11 +1167,42 @@ span[class*="wanderingCubesItem-"] {
 }
 
 /* Startup screen */
+@keyframes startupBackground {
+    0% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(150%) scale(0.1);
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 video[class*="ready-"] {
     filter: drop-shadow(0 0 25px white);
 }
 .container-16j22k.fixClipping-3qAKRb {
     background: radial-gradient(var(--background-tertiary), transparent 420%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml;utf-8;,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 100' style='transform: rotate(180deg)'><path d='M 0 0 l 500 0 l 0 14 c -0.9,0 -4.2,-0.2 -5.9,0.4 c -1.7,0.6 -3.6,1.9 -4.3,3.6 c -0.6,1.7 0.1,5.5 0.1,6.6 l -10 12 c 0.9,0 4.2,0.2 5.9,-0.4 c 1.7,-0.6 3.6,-1.9 4.3,-3.6 c 0.6,-1.7 -0.1,-5.5 -0.1,-6.6 l -10 10.6 c -0.9,0 -4.2,-0.2 -5.9,0.4 c -1.7,0.6 -3.6,1.9 -4.3,3.6 c -0.6,1.7 0.1,5.5 0.1,6.6 l -10 12 c 0.9,0 4.2,0.2 5.9,-0.4 c 1.7,-0.6 3.6,-1.9 4.3,-3.6 c 0.6,-1.7 -0.1,-5.5 -0.1,-6.6 l -10 10.6 c -0.9,0 -4.2,-0.2 -5.9,0.4 c -1.7,0.6 -3.6,1.9 -4.3,3.6 c -0.6,1.7 0.1,5.5 0.1,6.6 l -10 12 c 0.9,0 4.2,0.2 5.9,-0.4 c 1.7,-0.6 3.6,-1.9 4.3,-3.6 c 0.6,-1.7 -0.1,-5.5 -0.1,-6.6 l -10 10.6 c -0.9,0 -4.2,-0.2 -5.9,0.4 c -1.7,0.6 -3.6,1.9 -4.3,3.6 c -0.6,1.7 0.1,5.5 0.1,6.6 l -10 12 c 0.9,0 4.2,0.2 5.9,-0.4 c 1.7,-0.6 3.6,-1.9 4.3,-3.6 c 0.6,-1.7 -0.1,-5.5 -0.1,-6.6 l -10 10.6 L 0 100 L 0 0' fill='rgb(25, 25, 25)' stroke='rgb(25, 25, 25)'/></svg>");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        animation: startupBackground 10s 1 ease-out;
+        margin-bottom: 50%;
+        margin-left: 500%;
+        opacity: 0;
+        transform: scale(7);
+    }
 }
 
 /* Load More Messages */
@@ -1619,6 +1651,7 @@ path[d*="M21.707 20.293L16.314 14.9C17.403 13.504 18 11.799 18 10C18 7.863 17.16
 /* Preview mode */
 .notice-2X5hT5 {
     background-color: rgba(var(--epik-gamr-colour));
+    filter: drop-shadow(0 0 6px rgba(var(--epik-gamr-colour)));
 }
 button[class*="button-2PWmas button-38aScr lookOutlined-3sRXeN colorWhite-rEQuAQ grow-q77ONN"]:active,
 button[class*="button-2PWmas back-1Ess-_ button-38aScr lookOutlined-3sRXeN colorWhite-rEQuAQ grow-q77ONN"]:active {
@@ -1665,12 +1698,8 @@ polyline[stroke*="7289da"] {
 .lookLink-9FtZy-.colorBrand-3pXr91,
 .colorDefault-2K3EoJ .checkbox-3s5GYZ,
 .colorDefault-2K3EoJ.focused-3afm-j .check-1JyqgN,
-div[class*="colorBrand"] {
+div[class*="colorBrand"]:not(.notice-3bPHh-) {
     color: rgba(var(--epik-gamr-colour)) !important;
-}
-
-div[class="notice-3bPHh- notice-18685F colorBrand-2zeG8h"] {
-    color: white !important;
 }
 
 div[class*="topSectionPlaying-"],
