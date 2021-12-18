@@ -1350,7 +1350,7 @@ div[class*="folder-"] div[style*="background-color: rgba(88, 101, 242, 0.4);"] {
 }
 
 /* Checkbox Button (1 of 1000) */
-label[class*="checkboxWrapper-"] div,
+label[class*="checkboxWrapper-"] div[class*="checkbox-"],
 .box-mmYMsp {
     border-color: rgba(var(--epik-gamr-colour)) !important;
     color: white !important;
@@ -1364,8 +1364,13 @@ div[class*="checkbox-"][class*="checked-"] {
         & path { fill: white;}
     }
 }
+svg[class*="flowerStar-"] { overflow: visible;}
 path[fill*="hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)"] {
-    fill: white !important;
+    fill: rgba(var(--green)) !important;
+    filter: drop-shadow(0 0 3px rgba(var(--green)));
+}
+.childContainer-1wxZNh {
+    margin-top: 1px;
 }
 .selectedIcon-3uS11H {
     color: rgba(var(--epik-gamr-colour)) !important;
