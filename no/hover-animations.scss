@@ -1,0 +1,20 @@
+:root {
+    --button-hover: scale(1) !important;
+    --media-hover: var(--button-hover) !important;
+}
+
+.member-3-YXUe.clickable-1JJAn8:not(.offline-3nJYBR):hover,
+.member-3-YXUe.clickable-1JJAn8:not(.offline-3nJYBR):focus,
+.member-3-YXUe.selected-aXhQR6 {
+    & span[class*="roleColor-"]::after {
+        animation: none !important;
+    }
+}
+.embedFull-2tM8--:hover {
+    transform: none !important;
+    border-color: white !important;
+}
+
+.wrapper-35wsBm {
+    transform: none !important;
+}

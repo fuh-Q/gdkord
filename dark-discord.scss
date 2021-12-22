@@ -50,6 +50,9 @@
     --background-accent-1: rgb(15, 15, 15, 0.1);
     --background-accent-3: rgb(15, 15, 15, 0.3);
     --background-floating-2: rgba(0, 0, 0, 0.2);
+
+    --background-secondary-raw: 15, 15, 15 !important;
+    --voice-n-video-notches: rgba(64, 64, 64);
 }
 
 /* Codeblocks [AMOLED] */
@@ -484,43 +487,6 @@
     border-color: var(--background-tertiary);
 }
 
-/* New [AMOLED] watermark */
-
-.titleBar-AC4pGV {
-    &.typeWindows-1za-n7::after {
-        content: "";
-        position: absolute;
-        pointer-events: none;
-        background: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256zm0-464c12.985 0 25.689 1.201 38.016 3.478-54.76 31.163-91.693 90.042-91.693 157.554 0 113.848 103.641 199.2 215.252 177.944C402.574 433.964 344.366 464 279.135 464c-114.875 0-208-93.125-208-208s93.125-208 208-208z"></path></svg>') center/100% no-repeat;
-        filter: drop-shadow(0 0 2px white);
-        width: 16px;
-        height: 16px;
-        left: 5px;
-        top: 3px;
-    }
-
-    .wordmark-2iDDfm {
-        svg {
-            width: 0;
-        }
-    
-        &::after {
-            content: "GDKORD";
-            position: absolute;
-            font-family: sans-serif;
-            background: white;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 13px;
-            font-weight: 550;
-            top: 5px;
-            left: 25px;
-            width: 135px;
-        }
-    }
-}
-
 /* Fucked search bar */
 .searchLearnMore-3SQUAj a {
     color: white !important;
@@ -578,4 +544,93 @@ div[class*="option-96V44q searchOption-zQ-1l6"]::after {
 
 .updateIconForeground-3tnNZn {
     fill: rgba(62, 177, 99);
+}
+
+/* Chat Area */
+.wrapper-3vR61M::before,
+.container-19hC9u.scroller-1IIF0A.stickyScroller-24zUyY.auto-Ge5KZx.scrollerBase-289Jih::before,
+.scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih::before,
+.pageWrapper-1PgVDX::before,
+.chatContent-a9vAAp::before,
+.peopleColumn-29fq28::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(var(--black), 0.8), transparent 5%, rgba(var(--black), 0.8) 95%);
+}
+
+div[class="scroller-9moviB auto-Ge5KZx scrollerBase-289Jih"]::before {
+    content: "";
+    position: fixed !important;
+    width: 100%;
+    height: 2500px;
+    background: linear-gradient(to right, rgba(var(--black), 0.8), transparent 5%);
+    z-index: 1;
+}
+
+.wrapper-3vR61M,
+.premiumContainer-2Iux5m,
+.container-19hC9u.scroller-1IIF0A.stickyScroller-24zUyY.auto-Ge5KZx.scrollerBase-289Jih,
+.scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih,
+.pageWrapper-1PgVDX,
+.chatContent-a9vAAp,
+.peopleColumn-29fq28 {
+    background: var(--background-image) center no-repeat;
+    background-size: 1000%;
+    background-attachment: fixed;
+}
+
+.wrapper-1F5TKx.cozy-12kSNU {
+    background: transparent;
+}
+
+/* Chat Box */
+.form-2fGMdU {
+    background: linear-gradient(transparent, black);
+}
+
+/* Channels List */
+.scroller-RmtA4e.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2,
+.scroller-1JbKMe.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2 {
+    background: linear-gradient(to right, var(--background-primary), black) !important;
+}
+
+/* Members List */
+.container-2wlB3z,
+.members-1998pB, .members-1998pB>div {
+    background: linear-gradient(to left, var(--background-primary), black);
+    z-index: 1;
+}
+
+/* User + Channel + Guild Settings */
+[aria-label="USER_SETTINGS"],
+[aria-label="CHANNEL_SETTINGS"],
+[aria-label="GUILD_SETTINGS"] {
+    & .standardSidebarView-3F1I7i,
+    & .contentRegion-3nDuYy,
+    & .contentRegionScroller-26nc1e {
+        background: transparent;
+        filter: blur(500%);
+    }
+
+    background: radial-gradient(var(--background-primary), transparent 420%);
+
+    div[class*="sidebarRegionScroller-"] {
+        background: rgba(10, 10, 10, 0.5) !important;
+    }
+}
+
+/* Friends List */
+.nowPlayingColumn-2sl4cE,
+.container-lRFx4q {
+    background: linear-gradient(to left, var(--background-primary), black);
+}
+
+/* Voice and Video Stuff */
+.theme-dark .progress-1IcQ3A {
+    background-color: #404040;
+}
+.theme-dark .notches-1sAcEM.gray-3_LNYR {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='20' width='8' xmlns='http://www.w3.org/2000/svg' fill='rgba(20, 20, 20)'%3E%3Cpath d='M0 0h8v20H0zm4 2a2 2 0 00-2 2v12a2 2 0 104 0V4a2 2 0 00-2-2z' fill-rule='evenodd'/%3E%3C/svg%3E");
 }

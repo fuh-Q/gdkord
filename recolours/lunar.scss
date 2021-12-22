@@ -1,0 +1,23 @@
+:root {
+    --__: 100% !important;
+    --___: 0% !important;
+}
+
+.theme-dark button.colorBrand-3pXr91:not([aria-label]):not([aria-controls]),
+.categoryItem-ONe8JV.selectedCategoryItem-28UllF,
+.theme-dark .premiumIndicator-1XvbfM,
+div[class*="colorDefault-"].focused-3afm-j,
+div[class*="colorDefault-"].focused-3afm-j .subtext-13Lvrj {
+    color: rgba(var(--black)) !important;
+}
+
+.partnered-3nJayh div svg path,
+.wrapper-1BJsBx.selected-bZ3Lue .homeIcon-AaowEC path,
+path[class*="check-"],
+path[fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"] {
+    fill: rgba(var(--black)) !important;
+}
+
+img[class*="requirementsImage-"] {
+    filter: invert(1) brightness(169%) saturate(0) !important;
+}
