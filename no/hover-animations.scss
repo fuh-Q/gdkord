@@ -1,5 +1,6 @@
 :root {
-    --button-hover: scale(1) !important;
+    --top-button-hover: scale(1) !important;
+    --button-hover: var(--top-button-hover) !important;
     --media-hover: var(--button-hover) !important;
 }
 

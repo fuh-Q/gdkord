@@ -46,6 +46,7 @@
 
     --background-secondary-raw: 47, 49, 54;
 
+    --top-button-hover: scale(1.2);
     --button-hover: scale(1.04);
     --media-hover: scale(1.02);
 
@@ -122,7 +123,7 @@ html.theme-light {
     overflow: visible;
 
     &:hover {
-        transform: scale(var(--button-hover));
+        transform: var(--top-button-hover);
     }
 }
 
