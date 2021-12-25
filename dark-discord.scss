@@ -552,7 +552,8 @@ div[class*="option-96V44q searchOption-zQ-1l6"]::after {
 .scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih::before,
 .pageWrapper-1PgVDX::before,
 .chatContent-a9vAAp::before,
-.peopleColumn-29fq28::before {
+.peopleColumn-29fq28::before,
+.gatedContent-3-B7qB::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -575,7 +576,8 @@ div[class="scroller-9moviB auto-Ge5KZx scrollerBase-289Jih"]::before {
 .scroller-2XE8rp.auto-Ge5KZx.scrollerBase-289Jih,
 .pageWrapper-1PgVDX,
 .chatContent-a9vAAp,
-.peopleColumn-29fq28 {
+.peopleColumn-29fq28,
+.gatedContent-3-B7qB {
     background: var(--background-image) center no-repeat;
     background-size: 1000%;
     background-attachment: fixed;
