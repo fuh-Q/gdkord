@@ -650,8 +650,10 @@ div[class*="message-2qnXI6 cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs"]
     border-top-color: rgba(var(--white), 0.25);
 }
 
-div[class*="messageAttachment-"],
-a[class*="embedMedia-"] {
+a[class*="embedMedia-"],
+span[class*="clickableSticker-"],
+div[class*="messageAttachment-"] div[class*="imageWrapper-"],
+div[class*="messageAttachment-"] a {
     transition: .2s ease-in-out;
     &:hover {
         transform: var(--media-hover);
