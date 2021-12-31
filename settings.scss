@@ -60,6 +60,17 @@
 
 
 // ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Pinned Home Button
+// ┃ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+// ┃
+// ┣─> It makes it easier to click over to DMs, but breaks
+// ┃   certain plugins such as DM Typing Indicator, etc.
+// ╰───────────────────────────────────────────────────────── >> >
+
+    @use "./pinned-home-button.scss";
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
 // ┣─> ⛔ DO NOT REMOVE THIS ⛔
 // ╰───────────────────────────────────────────────────────── >> >
 
