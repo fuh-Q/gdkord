@@ -1230,7 +1230,9 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
 /* User + Channel + Guild Settings */
 [aria-label="USER_SETTINGS"],
 [aria-label="CHANNEL_SETTINGS"],
-[aria-label="GUILD_SETTINGS"] {
+[aria-label="GUILD_SETTINGS"],
+.theme-dark .perksModal-12XaFK,
+.theme-light .perksModal-12XaFK {
     & .standardSidebarView-3F1I7i,
     & .contentRegion-3nDuYy,
     & .contentRegionScroller-26nc1e {
