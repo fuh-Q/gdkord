@@ -1107,7 +1107,7 @@ button[class*="lookGhost-"].colorBrand-3pXr91 {
 .containerDefault--pIXnN:hover .iconContainer-1BBaeJ svg path {
     fill: rgba(var(--white));
 }
-.iconWrapper-2OrFZ1 svg path:not(path[d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z"]) {
+.iconWrapper-2OrFZ1 svg path:not(path[d="M16.293 9.293L17.707 10.707L12 16.414L6.29297 10.707L7.70697 9.293L11 12.586V2H13V12.586L16.293 9.293ZM18 20V18H20V20C20 21.102 19.104 22 18 22H6C4.896 22 4 21.102 4 20V18H6V20H18Z"]) {
     fill: rgba(var(--white));
 }
 .children-19S4PO {
@@ -1274,6 +1274,36 @@ img[class*="requirementsImage-"] {
 
 .container-3B1TbJ {
     width: 100%;
+}
+
+.item-PXvHYJ[data-item-id=pc-updater] {
+    height: 4.65rem;
+    align-items: unset !important;
+}
+
+.item-PXvHYJ[data-item-id=pc-updater]:hover {
+  background: linear-gradient(180deg,
+    var(--background-modifier-hover) 0%, var(--background-modifier-hover) 43%,
+    var(--background-secondary) 43.01%, var(--background-secondary) 100%) !important;
+}
+.item-PXvHYJ[data-item-id=pc-updater][class*=selected] {
+  background: linear-gradient(180deg, 
+    var(--background-modifier-selected) 0%, var(--background-modifier-selected) 43%,
+    var(--background-secondary) 43.01%, var(--background-secondary) 100%) !important;
+}
+.item-PXvHYJ[data-item-id=pc-updater]:after {
+  position: absolute;
+  margin-top: 2.19rem;
+
+  border-top: 1px solid var(--background-modifier-accent);
+  line-height: 2.6rem;    
+  width: 89.5%;
+
+  content: "Plugin Settings";
+    color: rgb(159, 159, 159);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
 }
 
 /* Discord Nitro Button in Settings */
@@ -2046,7 +2076,8 @@ div[class*="wrapper-3t9DeA"][aria-label*="Online"]>svg[class="mask-1l8v16 svg-2V
     filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(var(--spotify-green)));
     overflow: visible;
 }
-.timeBarUserPopout-AWPFf2 {
+.timeBarUserPopout-AWPFf2,
+.timeBarProfile-10b-fm {
     filter: drop-shadow(0 0 var(--default-drop-shadow) white);
 }
 .spotifyButtonLogo-3uT57D path {
