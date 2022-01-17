@@ -3,7 +3,7 @@
 
 Anyhow if you wanna use it with BetterDiscord or something just put this in your code<br/>
 ```css
-@import url("https://raw.githubusercontent.com/GDKID69/gdkord/core/gdkord.css");
+@import url("https://raw.githubusercontent.com/GDKID69/gdkord/main/core/gdkord.css");
 ```
 
 ![amogus](https://i.vgy.me/hqY28A.png)
