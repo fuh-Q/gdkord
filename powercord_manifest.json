@@ -1,0 +1,8 @@
+{
+    "name": "GDKORD",
+    "description": "Compiling Sum Styling (CSS) :P",
+    "version": "2.0.0",
+    "author": "˞˞#0069",
+    "theme": "core/index.scss",
+    "license": "MIT"
+}

@@ -1,0 +1,198 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Settings
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- User / Channel / Guild Settings --> //
+[aria-label=USER_SETTINGS],
+[aria-label=CHANNEL_SETTINGS],
+[aria-label=GUILD_SETTINGS],
+[aria-label=GUILD_IDENTITY_SETTINGS],
+[class*=perksModal-] {
+    [class*=standardSidebarView-],
+    [class*=contentRegion-],
+    [class*=contentRegionScroller-] {
+        background: transparent;
+    }
+
+    background: radial-gradient(var(--background-primary) 25%, transparent 420%) !important;
+
+    [class*="sidebarRegionScroller-"] {
+        background: hsla(var(--background-secondary-raw), 0.75);
+    }
+}
+
+[class*=layer-][class*=baseLayer-][aria-hidden=true] {
+    opacity: 1 !important;
+    transform: scale(0.93) translateX(22px) !important;
+}
+
+// <-- That Green Bar Thing in the Voice Tab --> //
+[class*=userSettingsVoice] [class*=sliderBar-] {
+    background: var(--interactive-muted) !important;
+    &[class*=speaking-]::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: hsla(var(--green));
+        background: currentColor;
+        filter: drop-shadow(0 0 var(--default-drop-shadow) currentColor);
+        border-radius: 5px;
+    }
+}
+
+// <-- Mic Test --> //
+button[class*=micTestButton-] + [class*=wrapper-] [class*=progress-] {
+    background: var(--interactive-muted);
+    & + [class*=notches-] { background: var(--mic-test-notches-svg);}
+}
+
+// <-- Video Background Preview --> //
+[class*=backgroundOptionSelected-] {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+}
+
+[class*=backgroundOptionRing-] {
+    border-color: hsla(var(--awesome-colour));
+}
+
+// <-- Discord Nitro Button --> //
+[class*=side-] > [class*=item-][class*=selected-][data-item-id=DiscordNitro],
+[class*=topPill-] > [class*=item-][class*=selected-][data-item-id=DiscordNitro],
+[class*=side-] > [class*=item-][class*=selected-][data-item-id=GUILD_PREMIUM],
+[class*=topPill-] > [class*=item-][class*=selected-][data-item-id=GUILD_PREMIUM] {
+    &[class*=serverBoostTabItem-][aria-selected=true],
+    & > [class*=premiumLabel-] + [class*=selectedBackground-] { background: transparent;}
+
+    background: linear-gradient(to right, hsla(var(--nitro-pink)), var(--background-modifier-selected)) !important;
+}
+
+[aria-label=USER_SETTINGS] [class*=premiumLabel-],
+[data-item-id=GUILD_PREMIUM] > [class*=tabBarItemContainer-] {
+    width: 100%;
+    svg { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--nitro-pink)));}
+}
+
+// <-- Payment History --> //
+[class*=paymentHistory-] {
+    [class*=paymentPane-],
+    [class*=paymentRow-],
+    [class*=paginator-] {
+        background: transparent;
+
+        [class*=expandedInfo-] {
+            background: hsla(var(--background-secondary-raw), 0.75);
+        }
+    }
+
+    & + [class*=codeRedemptionRedirect] {
+        background: hsla(var(--background-secondary-raw), 0.75);
+        border-color: transparent;
+    }
+}
+
+// <-- Switches --> //
+[class*=container-][style="opacity: 1; background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);"] {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green-hover)));
+}
+
+// <-- Checkboxes --> //
+[class*=checkbox-] [class*=checkboxInner-] [class*=checkboxElement-]:checked + span {
+    background-color: hsla(var(--awesome-colour)) !important;
+    border-color: hsla(var(--awesome-colour)) !important;
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+}
+
+[class*=colorDefault-] [class*=checkbox-] {
+    color: hsla(var(--awesome-colour));
+}
+
+label[class*=checkboxWrapper-] div[class*=checkbox-],
+span[class*=itemCheckbox-] {
+    border-color: hsla(var(--awesome-colour)) !important;
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+}
+
+[class*=checkbox-][class*=checked-] {
+    & svg {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+        & path { fill: white;}
+    }
+
+    &[style] { background: hsla(var(--awesome-colour)) !important;}
+}
+
+[class*=selectedIcon-] { color: hsla(var(--awesome-colour)) !important;}
+
+[class*=item-][class*=labelContainer-][class*=colorDefault-][class*=focused-]:hover {
+    [class="iconContainer-"] svg circle {
+        fill: hsla(var(--awesome-colour)) !important;
+    }
+}
+
+svg[class*=flowerStar-] { overflow: visible;}
+path[fill*="hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)"] {
+    fill: hsla(var(--green));
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 3px) hsla(var(--green)));
+}
+
+// <-- Radio Groups (the circular selection thingies) --> //
+[class*=radioBar-] div svg {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+    &[aria-hidden=false] circle { fill: hsla(var(--awesome-colour));}
+}
+div[class*=checkbox-][class*=round-][class*=checked-3_4uQ9] {
+    background-color: hsla(var(--awesome-colour)) !important;
+}
+[class*=itemFilled-][role=radio] {
+    background: hsla(var(--background-tertiary-raw), 0.35);
+}
+
+// <-- Select Menus --> //
+[class*=lookFilled-][class*=select-] {
+    background: hsla(var(--background-tertiary-raw), 0.5);
+
+    &[class*=open-] { background: var(--background-tertiary);}
+}
+
+[class*=layerContainer-] > [class*=layer-] > [class*=scrollerBase-][role=listbox],
+[class*=layerContainer-] > [class*=layer-] > [class*=scrollerBase-] > [role=listbox] {
+    background: hsla(var(--background-tertiary-raw), 0.35);
+    backdrop-filter: blur(20px);
+    & > [class*=option-] {
+        &:hover,
+        &:focus {
+            border-radius: 5px;
+            background: hsla(0, 0%, 0%, 0.35) !important;
+        }
+        &[aria-selected=true] {
+            background: transparent;
+        }
+    }
+}
+
+[class*=layerContainer-] > [class*=layer-] > [class*=popout-][class*=searchableSelect-] { background: transparent;}
+
+// <-- Partner Program Image --> //
+img[class*=requirementsImage-] {
+    filter: hue-rotate(69deg) saturate(250%) drop-shadow(0 0 calc(var(--default-drop-shadow) + 4px) hsla(var(--awesome-colour)));
+}
+
+// <-- Welcome Screen Preview --> //
+[class*=enableContainer-] {
+    background: hsla(var(--background-tertiary-raw), 0.35);
+
+    & > svg[class*=activeCircle-] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green)));
+    }
+}
+
+[class*=enableContainer-] + [class*=previewContainer-] {
+    background: hsla(var(--background-secondary-raw), 0.5);
+}
+
+// <-- Role Permissions --> //
+[role=radiogroup] > [class*=item-][aria-checked] {
+    &[class*=deny-][aria-checked=true] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--red)));}
+    &[class*=allow-][aria-checked=true] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green)));}
+}

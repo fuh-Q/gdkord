@@ -1,0 +1,137 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Guilds (List)
+// ╰───────────────────────────────────────────────────────── >> >
+
+nav[class*=guilds-] {
+    // <-- Pill Icon --> //
+    [class*=pill-] {
+        overflow: visible;
+
+        [class*=item-] {
+            background: hsla(var(--awesome-colour));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+        }
+    }
+
+    [class*=scroller-] {
+        // <-- Home Icon --> //
+        padding-top: 0;
+        & > div:not(
+            [aria-label]):not(
+            :nth-last-of-type(3)):not(
+            :nth-last-of-type(2)):not(
+            :last-of-type
+        ) {
+            background: var(--background-tertiary);
+            &[class*=listItem-] { box-shadow: 0 8px 10px var(--background-tertiary);}
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+
+            &:not([class]):not([aria-hidden]) { box-shadow: 0 5px 10px var(--background-tertiary);}
+
+            &:not([class*=tutorialContainer-]) { top: 63px;}
+            &[class*=tutorialContainer-] {
+                padding-top: 8px;
+                box-shadow: -5px 20px 10px var(--background-tertiary);
+
+                [class*=selected-] > [class*=childWrapper-] {
+                    border-radius: 16px;
+                    background: hsla(var(--awesome-colour));
+                    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+                }
+
+                [class*=lowerBadge-] > div {
+                    background: black !important;
+                    border: 1px ridge hsla(var(--ping-red));
+                    color: hsla(var(--ping-red));
+                    filter: none;
+                    transform: scale(1.2);
+                }
+
+                [class*=childWrapper-] {
+                    background: var(--background-tertiary);
+                    transition: none;
+                }
+                
+                [class*=homeIcon-] {
+                    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 4px) white);
+                    & > path { opacity: 0;}
+                    background: var(--discord-logo-svg);
+                }
+
+                svg[class*=svg-] foreignObject { overflow: visible;}
+                svg[class*=svg-] mask { display: none;}
+
+                rect[id*="-lower_badge_masks"] {
+                    fill: black;
+                }
+            }
+        }
+
+        [class*=listItem-] > [class*=guildSeparator-] { opacity: 0;}
+        
+        // <-- Server Discovery + Join --> //
+        & > div[aria-label] {
+            margin-bottom: 115px;
+        }
+
+        & > div[aria-label] {
+            & + [class*=tutorialContainer-],
+            & + [class*=tutorialContainer-] + [class*=listItem-] {
+                background: var(--background-tertiary);
+                position: fixed;
+            }
+
+            & + [class*=tutorialContainer-] {
+                bottom: 55px;
+                box-shadow: 0px -10px 5px var(--background-tertiary);
+            }
+
+            & + [class*=tutorialContainer-] + [class*=listItem-] {
+                bottom: 0;
+                box-shadow: -15px 0px 0px var(--background-tertiary);
+                filter: drop-shadow(0 10px 0px var(--background-tertiary));
+            }
+        }
+
+        // <-- Servers --> //
+        & > [aria-label] {
+            // <-- No Server Icon --> //
+            [class*=listItem-] foreignObject [class*=wrapper-] {
+                &[class*=selected-] > [class*=childWrapper-],
+                &:hover > [class*=childWrapper-] {
+                    background: transparent;
+                    box-shadow: inset 0 0 22px hsla(var(--awesome-colour));
+                }
+            }
+        }
+
+        // <-- Icon Badges --> //
+        [class*=lowerBadge-] > [class*=numberBadge-] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));}
+        [class*=upperBadge-] > [class*=iconBadge-][class*=participating-] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green)));}
+    }
+}
+
+// <-- Server Badges --> //
+[class*=partnered-]:not([class*=disableColor-]) > svg {
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 0px) hsla(var(--awesome-colour)));
+    overflow: visible;
+}
+
+[class*=verified-]:not([class*=disableColor-]) > svg {
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 0px) hsla(var(--green)));
+    overflow: visible;
+}
+
+[class*=flowerStarContainer-] {
+    & > [class*=childContainer-] > svg[class*=iconTierThree-] {
+        color: hsla(var(--nitro-pink));
+    }
+
+    &[class*=boostedGuildTierIconBackgroundWithVisibleBanner-] > svg {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) white);
+    }
+}
+
+[class*=layerContainer-] [class*=tooltipContent-] > [class*=tierTooltipTitle-] { color: hsla(var(--awesome-colour));}

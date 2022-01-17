@@ -1,0 +1,85 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Core of the Core
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Yoink --> //
+
+@use "darkness";
+
+@use "svgs";
+
+@use "../chicken-mcnuggets";
+
+// <-- Variables --> //
+
+:root {
+    --h: 300;
+    --s: 100%;
+    --l: 50%;
+
+    --awesome-colour: var(--h, 300), var(--s, 100%), var(--l, 50%);
+    --awesome-colour-hover: var(--h, 300), var(--s, 100%), calc(var(--l, 50%) - 10%);
+    --awesome-colour-active: var(--h, 300), var(--s, 100%), calc(var(--l, 50%) - 20%);
+    --awesome-colour-alt: 190, 59%, 51%;
+
+    --background-image: url("https://i.vgy.me/SPEMbr.png");
+
+    --gray-l: 34%;
+    --gray: 217, 8%, var(--gray-l);
+    --gray-hover: 217, 8%, calc(var(--gray-l, 34%) - 10%);
+    --gray-active: 217, 8%, calc(var(--gray-l, 34%) - 20%);
+
+    --green-l: 47%;
+    --green: 139, 48%, var(--green-l, 47%);
+    --green-hover: 139, 48%, calc(var(--green-l, 47%) - 10%);
+    --green-active: 139, 48%, calc(var(--green-l, 47%) - 20%);
+
+    --yellow-l: 54%;
+    --yellow: 38, 96%, var(--yellow-l, 54%);
+    --yellow-hover: 38, 96%, calc(var(--yellow-l, 54%) - 10%);
+    --yellow-active: 38, 96%, calc(var(--yellow-l, 54%) - 20%);
+
+    --red-l: 59%;
+    --red: 359, 83%, var(--red-l, 59%);
+    --red-hover: 359, 58%, calc(var(--red-l, 59%) - 10%);
+    --red-active: 359, 59%, calc(var(--red-l, 59%) - 20%);
+
+    --spotify-green: 141, 76%, 48%;
+    --reaction-green: 120, 100%, 50%;
+    --ping-red: 0, 78%, 61%;
+    --nitro-pink: 295, 100%, 75%;
+
+    --streaming: 262, 46%, 50%;
+    --dnd: 0, 100%, 50%;
+    --idle: 60, 100%, 50%;
+    --online: 120, 100%, 39%;
+    --font-display: var(--font-primary) !important;
+
+    --radio-group-dot-foreground: hsla(var(--awesome-colour));
+
+    --top-button-hover: scale(1.2);
+    --button-hover: scale(1.04);
+    --media-hover: scale(1.02);
+
+    --default-drop-shadow: 6px;
+}
+
+@mixin brandExperiments {
+    :root {
+        --control-brand-foreground: hsla(var(--awesome-colour));
+        --control-brand-foreground-new: hsla(var(--awesome-colour));
+        --brand-experiment: hsla(var(--awesome-colour));
+        $counter: 0;
+        @for $i from 0 to 100 {
+            $counter: $counter + 10;
+            --brand-experiment-#{$counter}: hsla(var(--awesome-colour));
+        }
+        $counter: 0;
+        @for $i from 0 to 20 {
+            $counter: $counter + 5;
+            --brand-experiment-#{$counter}a: hsla(var(--awesome-colour));
+        }
+    }
+}
+
+@include brandExperiments;

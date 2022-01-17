@@ -1,0 +1,23 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Scrollbars
+// ╰───────────────────────────────────────────────────────── >> >
+
+#app-mount {
+    [class*=scrollerBase-] {
+        &[class*=disabledScrollAnchor-],
+        &[class*=auto-] {
+            &::-webkit-scrollbar {
+                width: 8px;
+                &-thumb { background: hsla(0, 0%, 100%, 0.2);}
+                &-track { background: var(--background-modifier-accent);}
+            }
+        }
+
+        &[class*=thin-]::-webkit-scrollbar {
+            width: 4px;
+            &-thumb { background: hsla(0, 0%, 100%, 0.2);}
+        }
+    }
+
+    [class*=rolesList-]::-webkit-scrollbar-thumb { background: hsla(0, 0%, 100%, 0.2);}
+}

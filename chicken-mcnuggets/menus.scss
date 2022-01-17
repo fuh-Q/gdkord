@@ -1,0 +1,319 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Menus
+// ╰───────────────────────────────────────────────────────── >> >
+
+#app-mount [class*=layerContainer-] {
+    // <-- Context Menus --> //
+    [class*=menu-] {
+        background: radial-gradient(
+            var(--background-tertiary),
+            hsla(var(--background-tertiary-raw), 0.75) 100%
+        );
+
+        #guild-header-popout-invite-people[class*=focused-] {
+            color: var(--header-primary) !important;
+        }
+
+        [class*=colorDefault-]:active:not([class*=hideInteraction-]),
+        [class*=item-][class*=labelContainer-][class*=focused-]:active {
+            background: hsla(var(--awesome-colour-active));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-active)));
+
+            &[class*=colorDanger-] {
+                background: hsla(var(--red-active));
+                filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--red-active)));
+            }
+        }
+
+        [class*=item-][class*=labelContainer-][class*=focused-] {
+            background: hsla(var(--awesome-colour));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+            color: white;
+
+            &[class*=colorDanger-] {
+                background: hsla(var(--red));
+                filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--red)));
+            }
+        }
+    }
+
+    // <-- Slide in from Left-type Popouts idk --> //
+    [class*=animatorRight-][class*=translate-][class*=didRender-] [class*=popout],
+    [class*=animatorRight-][class*=translate-][class*=didRender-] > div > [class*=streamPreview-],
+    [class*=animatorRight-][class*=translate-][class*=didRender-] > [class*=container-][style] {
+        background: hsla(0, 0%, 0%, 0.65);
+        backdrop-filter: blur(10px);
+
+        [class*=row-]:not(button):hover { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));}
+        [class*=row-]:not(button):active {
+            background: hsla(var(--awesome-colour-active));
+            color: white;
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-active)));
+
+            [class*=timestamp-] { color: white;}
+        }
+
+        & > [class*=emojiSection] + [class*=guildSection] { background: hsla(var(--background-secondary-raw), 0.5);}
+    }
+
+    // <-- Slide in from Bottom-type Popouts idk --> //
+    [class*=animatorBottom-][class*=translate-][class*=didRender-] > [class*=container-] {
+        background: transparent;
+        backdrop-filter: blur(20px);
+    }
+
+    // <-- Popups --> //
+    [class*=layer-] [class*=focusLock-] {
+        & > div {
+            background: transparent !important;
+            box-shadow: 0 0 1px var(--background-primary);
+
+            &[class*=phoneVerificationModal-] {
+                backdrop-filter: blur(20px);
+
+                [class*=title] { backdrop-filter: none;}
+            }
+
+            // <-- Join a Server --> //
+            & > [class*=container-] > [style] > [style*=translate3d] {
+                opacity: 1;
+                & > [class*=header-] {
+                    & > h3 { color: var(--interactive-active);}
+                    & > div { color: var(--text-normal);}
+                }
+
+                & > [class*=templatesList-],
+                & > [class*=optionsList-] {
+                    & > [class*=optionHeader-] { color: var(--text-normal);}
+                    & > button {
+                        background: hsla(var(--background-primary-raw), 0.5);
+                        &:hover { background: var(--background-modifier-hover);}
+                        &:active { background: var(--background-modifier-active);}
+                    }
+                }
+
+                [class*=rowContainer-] {
+                    background: hsla(var(--background-primary-raw), 0.5);
+                    &:hover { background: var(--background-modifier-hover);}
+                    &:active { background: var(--background-modifier-active);}
+                }
+
+                [class*=examplesForm-] [class*=sampleLink-] {
+                    color: var(--text-link);
+                    cursor: pointer;
+                    width: max-content;
+                }
+
+                [class*=footer-] > [class*=lookLink-],
+                [class*=footer-] > [class*=backButton-],
+                [class*=footer-] > [class*=lookBlank-] {
+                    color: var(--text-link);
+                }
+
+                [class*=uploadIcon-] svg > circle { fill: hsla(var(--awesome-colour));}
+            }
+
+            // <-- Agree to Server Rules --> //
+            [class*=animatedNode-] {
+                & > [class*=scroller-] { background: transparent;}
+                [class*=formFieldWrapper-] { background: hsla(var(--background-primary-raw), 0.5);}
+            }
+
+            // <-- Transfer Boost --> //
+            [class*=subscription-]:not([class*=transferToGuildCard-]) { background: hsla(var(--background-secondary-raw), 0.5);}
+
+            // <-- Other things --> //
+            &[class*=main-][class*=root-][class*=small-][style],
+            &[class*=container-][class*=root-][style] { backdrop-filter: blur(20px);}
+
+            &[class*=container-][class*=root-][style] > [class*=guildSidebar-] {
+                background: linear-gradient(
+                    to left,
+                    hsla(var(--background-secondary-raw), 0.5),
+                    hsla(var(--background-secondary-raw), 0.15)
+                );
+                & + [class*=modal-] { background: hsla(var(--background-secondary-raw), 0.15);}
+            }
+
+            & > * { backdrop-filter: blur(20px);}
+
+            [class*=header-] {
+                box-shadow: none;
+                background: transparent;
+            }
+
+            [class*=footer-] {
+                background: hsla(var(--background-secondary-raw), 0.25);
+                box-shadow: none;
+            }
+
+            [class*=contentWrapper-] {
+                background: transparent;
+            }
+
+            & > [class*=content-] > [class*=colorStandard-] { margin-top: 12px;}
+
+            // <-- Embedded Items --> //
+            [class*=perks-],
+            [class*=message-] { background: hsla(var(--background-secondary-raw), 0.5);}
+
+            // <-- Server Event Invites --> //
+            [class*=contentContainer-] { background: transparent;}
+
+            // <-- Reactors --> //
+            [class*=scroller-] {
+                background: hsla(var(--background-primary-raw), 0.25);
+                & + [class*=reactors-] { background: transparent;}
+            }
+
+            // <-- Sidebar in Popups --> //
+            [class*=sidebarContainer-] {
+                background: hsla(var(--background-primary-raw), 0.25);
+            }
+        }
+    }
+
+    [class*=recentMentionsPopout][class*=container-] {
+        background: transparent !important;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 1px var(--background-primary);
+
+        & > [class*=header-] {
+            background: hsla(var(--background-secondary-raw), 0.25);
+        }
+
+        [class*=scroller] {
+            & > [class*=tutorial-] { background: hsla(var(--background-primary-raw), 0.5);}
+
+            [class*=channel] > [class*=channelHeader-] {
+                background: transparent;
+
+                & + [class*=messages-] { background: hsla(var(--background-tertiary-raw), 0.5);}
+            }
+        }
+    }
+
+    [class*=browser-][class*=container-],
+    [class*=browser-][class*=container-] [class*=header-] {
+        backdrop-filter: blur(20px);
+        background: transparent !important;
+    }
+
+    // <-- Threads List --> //
+    [class*=browser-][class*=container-] [class*=scrollerBase-] [class*=container-] {
+        background: hsla(var(--background-tertiary-raw), 0.5);
+        border-color: transparent;
+        &:hover { background: var(--background-modifier-hover)}
+    }
+
+    // <-- Pinned Messages --> //
+    [class*=messagesPopoutWrap-] {
+        background: hsla(var(--background-tertiary-raw), 0.5);
+        backdrop-filter: blur(20px);
+
+        & > [class*=header-] {
+            background: hsla(var(--background-secondary-raw), 0.25);
+
+            & + [class*=messagesPopout-] [class*=messageGroupWrapper-] {
+                background: hsla(var(--background-primary-raw), 0.5);
+            }
+        }
+    }
+
+    // <-- Noise Suppresion Tab --> //
+    [class*=noiseCancellationPopout-] {
+        background: transparent !important;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 1px var(--background-primary);
+    }
+
+    // <-- Search --> //
+    [class*=container-][class*=elevationBorderHigh][aria-activedescendant] {
+        background: hsla(var(--background-secondary-raw), 0.75);
+        backdrop-filter: blur(20px);
+
+        & > [class*=focused-] {
+            background: transparent;
+
+            &:hover { background: hsla(var(--background-tertiary-raw), 0.5);}
+        }
+
+        [class*=searchLearnMore-] a { color: white;}
+        [class*=option-] {
+            background: transparent;
+
+            &::after,
+            &[class*=user-]::after,
+            &[class*=searchOption-]::after { background: transparent;}
+
+            &:hover,
+            &[class*=selected-] {
+                background: hsla(var(--background-tertiary-raw), 0.5);
+
+                &::after { background: transparent;}
+            }
+        }
+    }
+
+    // <-- Date Picker --> //
+    [class*=calendarPicker-] .react-datepicker {
+        background: transparent;
+        backdrop-filter: blur(20px);
+
+        .react-datepicker__header {
+            background: transparent;
+        }
+
+        .react-datepicker__month .react-datepicker__day--disabled,
+        .react-datepicker__month .react-datepicker__day--outside-month:not([class*=disabled]) {
+            background: hsla(var(--gray-active), 0.5);
+        }
+
+        .react-datepicker__month .react-datepicker__day:not([class*=disabled]) {
+            background: hsla(var(--background-primary-raw), 0.5);
+            &:hover { background: hsla(var(--awesome-colour)); color: white;}
+        }
+    }
+
+    // <-- Invite People --> //
+    [class*=inviteRow-] > button { transform: translateX(-10px);}
+    [class*=copyInput-] > input[name=invite]:focus { border-color: transparent;}
+
+    // <-- Emoji / Sticker Picker --> //
+    [class*=emojiPicker] > [class*=inspector-],
+    #sticker-picker-grid [class*=inspector-] { background: var(--background-tertiary);}
+}
+
+// <-- Search Results --> //
+main[class*=chatContent-] + section[class*=searchResultsWrap-] ul[class*=searchResultGroup-] {
+    [class*=colorHeaderPrimary-] { background: transparent;}
+    [class*=searchResult-] { background: hsla(var(--background-primary-raw), 0.5);}
+}
+
+// <-- Upload Popup --> //
+[class*=chat-] > [class*=uploadArea-] [class*=bgScale-] {
+    background: hsla(var(--awesome-colour-alt));
+    box-shadow: 0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-alt));
+}
+
+// <-- Beta / New Badge --> //
+#status-picker-switch-account > [class*=label] { overflow: visible;}
+[class*=status]
+[class*=betaBadge-],
+[class*=betaTag-],
+[class*=tag-] {
+    background: hsla(var(--ping-red)) !important;
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+    overflow: visible;
+    z-index: 1;
+}
+div[class*=newBadge-] {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+    overflow: visible;
+    z-index: 1;
+}
+div[class*=new-] {
+    background: hsla(var(--ping-red));
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+    z-index: 1;
+}

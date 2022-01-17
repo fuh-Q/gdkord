@@ -1,0 +1,115 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Channels List
+// ╰───────────────────────────────────────────────────────── >> >
+
+nav[class*=guilds-] + [class*=base-] [class*=sidebar-] [class*=scroller-]#channels {
+    // <-- Channels --> //
+    [class*=containerDefault-] [class*=modeSelected-]:active > [class]:not([class*=unread-]),
+    [class*=containerDefault-] [class*=modeSelected-] > [class]:not([class*=unread-]) {
+        background: linear-gradient(to right, hsla(var(--awesome-colour), 0.5), transparent) !important;
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+
+        [class*=name-] > *,
+        [class*=iconContainer-] svg { color: white;}
+        [class*=iconContainer-] svg { filter: drop-shadow(0 0 var(--default-drop-shadow) white);}
+
+        [class*=iconLive-] { color: white !important;}
+    }
+
+    [class*=containerDefault-] > [class*=modeUnread-] > [class*=unread-] {
+        filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 2px) white);
+        overflow: visible;
+    }
+
+    [class*=containerDefault-] [class*=wrapper-]:not([class*=clickable-]) {
+        &:hover > [class]:not([class*=unread-]),
+        &:focus > [class]:not([class*=unread-]) {
+            background: linear-gradient(to right, hsla(var(--awesome-colour), 0.5), transparent);
+            [class*=iconContainer-] svg { filter: drop-shadow(0 0 var(--default-drop-shadow) white);}
+            [class*=name-] > *,
+            [class*=iconContainer-] svg { color: white;}
+
+            [class*=iconLive-] { color: white !important;}
+        }
+
+        &:active > [class]:not([class*=unread-]) {
+            background: linear-gradient(to right, hsla(var(--awesome-colour)), transparent);
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+            [class*=iconContainer-] svg { filter: drop-shadow(0 0 var(--default-drop-shadow) white);}
+            [class*=name-],
+            [class*=iconContainer-] svg { color: white;}
+        }
+
+        [class*=name-] + [class*=children-] { overflow: visible;}
+    }
+
+    // <-- Categories --> //
+    [class*=containerDefault-] > [class] > [class*=mainContent-] {
+        color: hsla(var(--awesome-colour));
+        border-radius: 5px;
+        height: 15px;
+        margin-left: -8px;
+        margin-bottom: 12px;
+        padding-bottom: 5px;
+        opacity: 0.99;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 7px;
+            width: 90%;
+            left: 6%;
+            height: 4px;
+            border-radius: 15px;
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+            background: hsla(var(--awesome-colour));
+            opacity: 0.65;
+        }
+
+        [class*=overflow-] {
+            color: hsla(var(--awesome-colour));
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            transform: translateY(-5px);
+        }
+
+        svg[class*=arrow-] {
+            z-index: 1;
+            margin-top: -5px;
+            left: 16px
+        }
+
+        & + [class*=children-] svg[class*=addButtonIcon-] {
+            color: hsla(var(--awesome-colour));
+            transform: translateY(-5px) scale(0.75);
+        }
+
+        &:hover {
+            &::after {
+                filter: drop-shadow(0 0 var(--default-drop-shadow) var(--interactive-normal));
+                background: var(--interactive-normal);
+            }
+            [class*=overflow-],
+            & + [class*=children-] svg[class*=addButtonIcon-] { color: white;}
+        }
+    }
+}
+
+// <-- Speaking Ring --> //
+#channels [class*=avatarSpeaking-][style] {
+    box-shadow: inset 0 0 0 2px hsla(var(--green));
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green)));
+}
+
+foreignObject > img + [class*=border-][class*=speaking-] {
+    border: 2px solid hsla(var(--green));
+    box-shadow: 0 0 calc(var(--default-drop-shadow) + 6px) hsla(var(--green));
+}
+
+// <-- Live Badge --> //
+[class*=live-][class*=textBadge-][style] {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+}

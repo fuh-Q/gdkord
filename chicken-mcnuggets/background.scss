@@ -1,0 +1,100 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Basic Background Customizations
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Title Bar --> //
+.container-ZMc96U.themed-Hp1KC_ {
+    box-shadow: 0 10px 20px black;
+}
+
+// <-- Channels List --> //
+[class*=sidebar-] > nav,
+[class*=sidebar-] [class*=scroller-] {
+    background: linear-gradient(to right, var(--background-primary), black);
+    .container-1-ERn5 {
+        background: var(--background-secondary);
+        box-shadow: 0 20px 20px black;
+        z-index: 2;
+    }
+}
+
+.searchBar-3TnChZ {
+    box-shadow: 0 20px 20px black;
+    z-index: 1;
+}
+
+// <-- Chat Area --> //
+ol[data-list-id=chat-messages] > div[class*=wrapper-],
+nav[class*=guilds-] + [class*=base-] > [class*=content-] > [class*=wrapper-],
+[class*=chat-],
+[class*=chat-] [class*=callContainer-],
+main[class*=chatContent-],
+main[class*=chatContent-] + section[class*=searchResultsWrap-],
+[class*=peopleColumn-],
+section[class*=libraryHeader-] ~ div[class*=scroller-][class*=stickyScroller-],
+[class*=applicationStore-] [class*=scrollerBase-],
+.scroller-RfJjkV.thin-31rlnD.scrollerBase-_bVAAt,
+nav[class*=guilds-] + [class*=base-] [class*=sidebar-] + [class*=pageWrapper-],
+[class*=videoGridWrapper-],
+section[class*=libraryHeader-] + [class*=scroller-] {
+    background: var(--background-image) center no-repeat fixed;
+    background-color: var(--background-secondary);
+    background-size: 1000%;
+}
+
+ol[data-list-id=chat-messages] > div[class*=wrapper-]::before,
+nav[class*=guilds-] + [class*=base-] > [class*=content-] > [class*=wrapper-]::before,
+[class*=chat-]::before,
+[class*=chat-] [class*=callContainer-]::before,
+main[class*=chatContent-]::before,
+main[class*=chatContent-] + section[class*=searchResultsWrap-]::before,
+[class*=peopleColumn-]::before,
+section[class*=libraryHeader-] ~ div[class*=scroller-][class*=stickyScroller-]::before,
+[class*=applicationStore-] [class*=scrollerBase-]::before,
+.scroller-RfJjkV.thin-31rlnD.scrollerBase-_bVAAt::before,
+nav[class*=guilds-] + [class*=base-] [class*=sidebar-] + [class*=pageWrapper-]::before,
+[class*=videoGridWrapper-]::before,
+section[class*=libraryHeader-] + [class*=scroller-]::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 50px 150px 1000px black;
+    z-index: 0;
+}
+
+.wrapper-15CKyy {
+    background: transparent;
+}
+
+// <-- Stage --> //
+[class*=chat-] [class*=callContainer-] > [class*=root-] > [class*=scroller-] {
+    background: transparent;
+    & > [class*=content-] {
+        & > [class*=container-],
+        & > [class*=rowContainer-] { background: transparent;}
+    }
+}
+
+// <-- Members List --> //
+main[class*=chatContent-]{
+    & + [class*=container-] {
+        background: linear-gradient(to left, var(--background-primary), black);
+
+        [class*=members-],
+        [class*=members-] > div {
+            background: linear-gradient(to left, var(--background-primary), black);
+            z-index: 1;
+        }
+    }
+}
+
+[class*=nowPlayingColumn-] > [class*=container-] {
+    background: linear-gradient(to right, var(--background-primary), black);
+}
+
+// <-- User Area --> //
+section[class*=panels-] {
+    background: var(--background-tertiary);
+    box-shadow: 0 -20px 20px var(--background-tertiary);
+}

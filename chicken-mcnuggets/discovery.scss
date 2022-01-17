@@ -1,0 +1,44 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Server Discovery
+// ┃
+// ┣─> "Glowverflow": When glow effects are masked by overflow: hidden
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Server Badge Glowverflow™ --> //
+section[class*=guildListSection-] > [class*=guildList-] [class*=card-] {
+    background: var(--background-primary);
+
+    &:hover { background: var(--background-tertiary);}
+
+    & > [class*=cardHeader-] { margin-bottom: 0;}
+    & > [class*=guildInfo-] {
+        padding: 26px 16px 16px;
+    }
+}
+
+// <-- Discovery Sidebar --> //
+h2[class*=discoverHeader-] {
+    & ~ [class*=categoryItem-] {
+        width: 93%;
+        &[class*=selected-] {
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+        }
+    }
+}
+
+// <-- Discovery Sidebar --> //
+nav[class*=guilds-] + [class*=base-] > [class*=content-][style] > [class*=sidebar-] {
+    background: linear-gradient(to right, var(--background-primary), black);
+}
+
+// <-- Search Results Page --> //
+[class*=searchHeader-] ~ [class*=categories-] > [class*=categoryPill-][class*=selected-] {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+}
+
+// <-- Fix Student Hubs Tab --> //
+[class*=sidebar-] + [class*=scroller-][class*=scrollerBase-][style] {
+    padding: 0;
+
+    & > [class*=viewWrapper-] { padding: 32px;}
+}

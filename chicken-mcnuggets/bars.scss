@@ -1,0 +1,42 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Progress / Slider Bars
+// ╰───────────────────────────────────────────────────────── >> >
+
+[class*=slider-] {
+    & > [class*=bar-] {
+        overflow: visible;
+        & > [class*="barFill-"] {
+            background: hsla(var(--awesome-colour));
+            border-radius: 5px;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: inherit;
+                color: hsla(var(--awesome-colour));
+                background: hsla(var(--awesome-colour));
+                filter: drop-shadow(0 0 var(--default-drop-shadow) currentColor);
+                border-radius: 5px;
+            }
+        }
+    }
+
+    [class*=grabber-] { filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 1px) white);}
+}
+
+// <-- Uploading File --> //
+[class*=progress-][style] > [class*=progressBar-][class*=animating-] {
+    background-color: hsla(var(--awesome-colour)) !important;
+}
+
+// <-- Video Player --> //
+[class*=mediaBarInteraction-] {
+    &:hover [class*=mediaBarGrabber-],
+    [class*=mediaBarGrabber-],
+    [class*=mediaBarProgress-],
+    [class*=mediaBarProgress-]::after,
+    [class*=mediaBarProgress-]::before {
+        background-color: hsla(var(--awesome-colour)) !important;
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour))) !important;
+    }
+}

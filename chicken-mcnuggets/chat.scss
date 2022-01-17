@@ -1,0 +1,119 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Chat
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Keyframe Animations --> //
+@keyframes expandAttachmentTray {
+    from { height: 0;}
+    to { height: 218px;}
+}
+
+// <-- Chat Input Box --> //
+main[class*=chatContent-] > form[class*=form-] {
+    
+    background: linear-gradient(transparent, black);
+
+    &::before {
+        opacity: 0;
+    }
+
+    [class*=channelTextArea-] { box-shadow: 0 0 20px hsla(0, 0%, 3.9%);}
+
+    [class*=scrollableContainer-] {
+        background: linear-gradient(var(--channeltextarea-background) 50%, hsla(var(--green), 0.2) 100%);
+    }
+
+    [class*=channelTextAreaDisabled-] > [class*=scrollableContainer-] {
+        background: linear-gradient(hsla(var(--red), 0.5) 0%, var(--channeltextarea-background) 50%);
+        animation: none;
+    }
+
+    ul[class*=channelAttachmentArea-] {
+        animation: expandAttachmentTray 0.5s;
+        animation-iteration-count: 1;
+    }
+
+    & > div[aria-controls] > [class*=wrapper-] {
+        background: var(--background-secondary);
+        border-radius: 7px;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 7px;
+            background: linear-gradient(hsla(var(--awesome-colour), 0.3) 0%, transparent 50%);
+        }
+    }
+
+    [class*=replyBar-] [class][role=switch] {
+        &[aria-checked=true] > div { color: hsla(var(--green));}
+        &[aria-checked=false] > div { color: hsla(var(--red));}
+    }
+
+    // Slash Commands List and Similar Popups //
+    [class*=channelTextArea-] {
+        [class*=infoWrapper-] {
+            overflow: visible;
+            & > [class*=usageWrapper-] > [class*=clickable-] > [class*=colorHeaderPrimary-][class*=active-] {
+                filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+            }
+        }
+
+        & > [class*=autocomplete-] {
+            background: hsla(var(--background-secondary-raw), 0.25);
+            backdrop-filter: blur(20px);
+
+            & > [class*=autocompleteInner-] {
+                & > [class*=rail-],
+                & > [class*=rail-] > [class] { background: hsla(var(--background-tertiary-raw), 0.35);}
+
+                [class*=autocompleteRow-] > [class*=selectable-][class*=selected-] {
+                    background: hsla(var(--background-secondary-raw), 0.65);
+                }
+
+                [class*=categoryHeader-] {
+                    background: black;
+                    width: max-content;
+                    top: 10px;
+                    border-radius: 15px;
+                    &::after { display: none;}
+                }
+            }
+        }
+    }
+}
+
+// <-- New Messages Bar (Top of Chat) --> //
+main[class*=chatContent-] [class*=messagesWrapper] > [class*=newMessagesBar] {
+    background: hsla(var(--awesome-colour-alt));
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 2px) hsla(var(--awesome-colour-alt)));
+}
+
+// <-- New Messages Bar (in Chat) --> //
+#---new-messages-bar {
+    span[class*=content-] { background: var(--background-primary);}
+    span {
+        border-left: 3px solid hsla(var(--ping-red));
+        border-right: 3px solid hsla(var(--ping-red));
+    }
+    [class*=unreadPill-] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+
+        svg { left: -10px;}
+    }
+}
+
+// <-- Channel Topic Unmask Glows --> //
+section[class*=container-] > [class*=children-] {
+    height: 40px;
+    & > [class*=topic-] {
+        height: 40px;
+        padding-top: 10px;
+    }
+
+    & > [class*=iconWrapper-] {
+        filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 1px) white) brightness(200%);
+    }
+}

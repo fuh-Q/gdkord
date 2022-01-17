@@ -1,0 +1,19 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Reactions
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Reactions --> //
+[id*=message-accessories] [class*=reactions-] > div > [class*=reaction-] {
+    background: var(--background-secondary-alt);
+    border-color: transparent;
+
+    &[class*=reactionMe-] {
+        background: black;
+
+        & [class*=reactionCount-] {
+            color: hsla(var(--reaction-green));
+            background: radial-gradient(hsla(var(--reaction-green), 0.1), transparent);
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 2px) hsla(var(--reaction-green)));
+        }
+    }
+}

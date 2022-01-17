@@ -1,0 +1,129 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Members List
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Hover Highlight --> //
+aside[class*=membersWrap-] {
+    height: 100%;
+
+    & > [class*=members-][class*=scrollerBase-] [class*=member-] {
+        &:not([class*=offline-]) > [class*=layout-] { background: transparent;}
+        &:not([class*=offline-]):hover,
+        &:not([class*=offline-]):focus-visible,
+        &[class*=selected-] {
+            span[class*=roleColor-]::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: linear-gradient(to right, transparent, currentColor 125%);
+                border-radius: 10px;
+                opacity: 0.3;
+            }
+        }
+
+        &:not([class*=offline-]):active span[class*=roleColor-]::after,
+        &[class*=selected-] span[class*=roleColor-]::after,
+        &[class*=selected-]:hover span[class*=roleColor-]::after,
+        &[class*=selected-]:focus-visible span[class*=roleColor-]::after {
+            opacity: 0.5;
+        }
+
+        // <-- Weird blinking, not sure what it is but this fixes it --> //
+        span[class*=roleColor-] { opacity: 0.99;}
+    }
+}
+
+// <-- Bot Tags --> //
+span[class*=botTagRegular-] {
+    background: hsla(var(--awesome-colour-alt));
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-alt)));
+}
+
+[class*=peopleColumn]#blocked-tab,
+[class*=peopleColumn]#all-tab,
+[class*=peopleColumn]#online-tab,
+[class*=peopleColumn]#pending-tab {
+    [class*=peopleListItem-][class*=active-],
+    [class*=peopleListItem-]:hover {
+        padding-top: 0;
+        [class*=userInfo-] { height: 104%;}
+
+        [class*=actionButton-] { margin-top: 14px;}
+    }
+
+    [class*=subtext-] { transform: translateY(-8px);}
+
+    [class*=userInfo-],
+    [class*=userInfo-][class*=hovered-] {
+        height: 100%;
+        width: 100%;
+        & > [class*=avatar-] { margin-top: 14px !important;}
+        & > [class*=text-] { padding-bottom: 10px !important;}
+    }
+
+    [class*=nameTag-] { padding-top: 10px; padding-bottom: 10px;}
+}
+
+[class*=zalgo-][class*=cozy-] h2[class*=header-],
+[class*=avatar-] + [class*=text-],
+[class*=discordTag-][class*=nameTag-],
+[class*=avatar-] + [class*=content-] { overflow: visible;}
+
+[class*=userPopout-] > [class*=headerTop-] {
+    padding-top: 54px;
+    margin-bottom: 20px;
+    & > [class*=headerText-] {
+        height: 50px;
+        span[class*=headerBotTag-] { margin-left: 13px;}
+    }
+}
+
+[class*=userPopout-] [class*=nameTag-]:not([class*=headerTagWithNickname-]),
+[class*=layerContainer-] [class*=nameTag-]:not([class*=headerTagWithNickname-]) { padding-top: 10px; padding-bottom: 10px;}
+
+[class*=userPopout-] [class*=headerTagWithNickname-] {
+    height: 30px;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+// <-- Owner / Booster etc. Icons --> //
+[class*=nameAndDecorators-] {
+    & > [class*=name-] + svg[class*=ownerIcon-] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--yellow)));
+    }
+
+    & > [class*=name-] ~ div > svg[class*=premiumIcon-] {
+        filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 1px) hsla(var(--nitro-pink)));
+    }
+
+    & + [class*=subText-] svg[class*=icon-] {
+        filter: brightness(2) drop-shadow(0 0 calc(var(--default-drop-shadow) - 4px) white);
+    }
+}
+
+// <-- Role Dividers --> //
+[class*=members-][class*=scrollerBase-][data-list-id*=members-] {
+    [class*=membersGroup-] {
+        margin-bottom: 10px;
+        padding-top: 15px;
+        text-align: center;
+        color: hsla(var(--awesome-colour));
+        opacity: .65;
+
+        & span::before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            left: 12.5%;
+            border-radius: 10px;
+            margin-top: 16px;
+            width: 80%;
+            box-shadow: 0 0 var(--default-drop-shadow) hsla(var(--awesome-colour));
+            background: hsla(var(--awesome-colour));
+        }
+    }
+}

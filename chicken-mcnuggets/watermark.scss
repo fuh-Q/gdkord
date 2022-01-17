@@ -1,0 +1,33 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Watermark
+// ╰───────────────────────────────────────────────────────── >> >
+
+#app-mount > [class*=titleBar-] {
+    &[class*=typeWindows-]::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        background: var(--lunar-icon-svg) center/100% no-repeat;
+        filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 4px) white);
+        width: 16px;
+        height: 16px;
+        left: 5px;
+        top: 3px;
+    }
+
+    [class*=wordmark-] {
+        svg { width: 0;}
+
+        &::after {
+            content: "GDKORD";
+            position: absolute;
+            font-family: sans-serif;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            top: 5px;
+            left: 25px;
+            width: 135px;
+        }
+    }
+}

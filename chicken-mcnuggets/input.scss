@@ -1,0 +1,65 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Type Boxes
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Type Boxes --> //
+[class*=input-][class*=focused-],
+[class*=input-]:focus,
+[class*=input-]:hover,
+[class*=channelTextAreaInner-][class*=channelTextAreaInnerFocused-],
+[class*=channelTextAreaInner-]:hover {
+    border-color: hsla(var(--awesome-colour));
+}
+
+[class*=channelTextAreaInner-] { background: var(--background-tertiary);}
+
+// <-- Exclusions --> //
+[class*=addFriendInputWrapper-] {
+    & > div > [class*=inputDefault-] {
+        opacity: 1;
+        background: transparent !important;
+        border-color: transparent !important;
+        animation: none !important;
+    }
+
+    &:focus-within {
+        border-color: hsla(var(--awesome-colour));
+        box-shadow: 0 0 10px hsla(var(--awesome-colour));
+    }
+}
+
+// <-- Server Discovery Search --> //
+[class*=search-] > [class*=searchBox-] {
+    background: black;
+    border-color: transparent;
+
+    input { color: white !important;}
+
+    svg[class*=clearIcon-] {
+        color: var(--interactive-muted);
+        &:hover { color: var(--interactive-normal);}
+    }
+
+    &:focus,
+    &:focus-within {
+        box-shadow: 0 0 0 1px hsla(var(--awesome-colour)),
+                    0 0 0 2px hsla(var(--awesome-colour), 0.5),
+                    0 0 0 4px hsla(var(--awesome-colour), 0.5);
+    }
+
+    & > div > [class*=inputDefault-] {
+        animation: none !important;
+    }
+}
+
+// <-- Text Input w/ Copy Button --> //
+[class*=input-][class*=focused-] { border-color: hsla(var(--awesome-colour));}
+[class*=copyInputDefault-] {
+    border-color: black !important;
+    overflow: visible;
+
+    input {
+        background: transparent !important;
+        border-color: transparent !important;
+    }
+}

@@ -1,0 +1,252 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Buttons
+// ╰───────────────────────────────────────────────────────── >> >
+
+.theme-dark,
+.theme-light {
+    // <-- Hover Scaling Effect --> //
+    button[class*=color] {
+        transform: scale(1);
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transform: var(--button-hover);
+        }
+
+        &:disabled {
+            transform: none;
+            transition: none;
+        }
+    }
+
+    // <-- Default Buttons --> //
+    button[class*=lookFilled-][class*=colorBrand] {
+        background: hsl(var(--awesome-colour));
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--awesome-colour)));
+        color: var(--interactive-active);
+        border-color: hsl(var(--awesome-colour));
+
+        &:hover {
+            background: hsl(var(--awesome-colour-hover));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--awesome-colour-hover)));
+            border-color: hsl(var(--awesome-colour-hover));
+        }
+
+        &:active {
+            background: hsl(var(--awesome-colour-active));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--awesome-colour-active)));
+            border-color: hsl(var(--awesome-colour-active));
+        }
+
+        &:disabled {
+            background: hsl(var(--awesome-colour-active));
+            filter: none;
+        }
+    }
+
+    button[class*=lookOutlined-][class*=colorBrand] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--awesome-colour)));
+
+        &:hover { color: var(--interactive-active);}
+    }
+
+    button[class*=lookInverted-][class*=colorBrand] {
+        &:hover { background: var(--interactive-hover);}
+        &:active { background: hsla(219, 3%, 77%);}
+        &:disabled { background: white;}
+    }
+
+    // <-- Green Buttons --> //
+    button[class*=lookBlank-][class*=green-],
+    button[class*=lookFilled-][class*=colorGreen] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--green)));
+        color: var(--interactive-active);
+
+        &:hover {
+            background: hsl(var(--green-hover));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--green-hover)));
+            border-color: hsl(var(--green-hover));
+        }
+
+        &:active {
+            background: hsl(var(--green-active));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--green-active)));
+            border-color: hsl(var(--green-active));
+        }
+
+        &:disabled {
+            background: hsl(var(--green-active));
+            filter: none;
+        }
+    }
+
+    button[class*=lookOutlined-][class*=colorGreen] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--green)));
+
+        &:hover { color: var(--interactive-active);}
+    }
+
+    // <-- Red Buttons --> //
+    button[class*=lookBlank-][class*=red-]:not([class*=emojiButton-]),
+    button[class*=lookFilled-][class*=colorRed] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--red)));
+        color: var(--interactive-active);
+
+        &:hover {
+            background: hsl(var(--red-hover));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--red-hover)));
+            border-color: hsl(var(--red-hover));
+        }
+
+        &:active {
+            background: hsl(var(--red-active));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--red-active)));
+            border-color: hsl(var(--red-active));
+        }
+
+        &:disabled {
+            background: hsl(var(--red-active));
+            filter: none;
+        }
+    }
+
+    button[class*=lookOutlined-][class*=colorRed] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--red)));
+
+        &:hover { color: var(--interactive-active);}
+    }
+
+    // <-- Yellow Buttons --> //
+    button[class*=lookFilled-][class*=colorYellow] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--yellow)));
+        color: var(--interactive-active);
+
+        &:hover {
+            background: hsl(var(--yellow-hover));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--yellow-hover)));
+            border-color: hsl(var(--yellow-hover));
+        }
+
+        &:active {
+            background: hsl(var(--yellow-active));
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--yellow-active)));
+            border-color: hsl(var(--yellow-active));
+        }
+
+        &:disabled {
+            background: hsl(var(--yellow-active));
+            filter: none;
+        }
+    }
+
+    button[class*=lookOutlined-][class*=colorYellow] {
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--yellow)));
+
+        &:hover { color: var(--interactive-active);}
+    }
+
+    // <-- Gray Buttons --> //
+    button[class*=lookFilled-][class*=colorPrimary],
+    button[class*=lookFilled-][class*=colorGrey] {
+        background: hsla(var(--gray));
+        color: var(--interactive-active);
+
+        &:hover {
+            background: hsl(var(--gray-hover));
+            border-color: hsl(var(--gray-hover));
+        }
+
+        &:active {
+            background: hsl(var(--gray-active));
+            border-color: hsl(var(--gray-active));
+        }
+
+        &:disabled {
+            background: hsl(var(--gray-active));
+        }
+    }
+
+    button[class*=lookOutlined-][class*=colorGrey] {
+        &:hover { color: var(--interactive-active);}
+    }
+
+    // <-- Those Circular Page Button Things --> //
+    nav[class*=pageControl-] > [class*=activeButton-],
+    nav[class*=pageControl-] > [class*=activeButton-]:hover {
+        background: hsla(var(--awesome-colour-alt));
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-alt)));
+    }
+}
+
+// <-- Header Section Buttons --> //
+section[class*=title-],
+section[class*=headerBar-],
+section[class*=libraryHeader-],
+section[class*=container-] {
+    // <-- Channel Icon --> //
+    & > [class*=children-] > [class*=iconWrapper-] {
+        filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 4px) white) brightness(200%);
+        transform: scale(1.05);
+    }
+    // <-- Icon-Button thingies -->
+    & > [class*=toolbar-] [class*=iconWrapper-][role=button][aria-label] {
+        & > svg {
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 14px) white);
+            color: white;
+            transform: scale(1);
+            transition: .2s ease-in-out;
+            overflow: visible;
+
+            &:hover {
+                transform: var(--top-button-hover);
+            }
+
+            & > foreignObject > svg { color: white;}
+
+            & + span[class*=iconBadge-] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));}
+        }
+
+        &:nth-child(1) svg path:nth-child(2) {
+            fill: hsl(var(--awesome-colour));
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 1px) hsla(var(--awesome-colour)));
+        }
+
+        &:nth-child(2) svg path:nth-child(1):not(
+            [d*="M21.526 8.149"]):not(
+            [class*=updateIconForeground-]):not(
+            [d*="M19 3"]):not(
+            [d*="M22 12"]):not(
+            [d*="M21 3"]
+        ) {
+            fill: hsl(var(--awesome-colour));
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 1px) hsla(var(--awesome-colour)));
+        }
+
+        &:nth-child(4) svg path:nth-child(3),
+        &:nth-child(4) svg path:nth-child(4) {
+            fill: hsl(var(--awesome-colour));
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 1px) hsla(var(--awesome-colour)));
+        }
+
+        & > svg > [class*=updateIconForeground-]{
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 2px) hsla(var(--green)));
+        }
+
+        & + div > button[class*=eventsButton-] svg[class*=controlIcon-] {
+            filter: drop-shadow(0 0 calc(var(--default-drop-shadow) + 14px) white);
+            & > path:first-child {
+                fill: hsla(var(--awesome-colour));
+                filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour)));
+            }
+        }
+    }
+
+    // <-- Search Filter Blobs (ik its unrelated but im putting it here anyways smd) --> //
+    & > [class*=toolbar-] [class*=searchFilter-],
+    & > [class*=toolbar-] [class*=searchAnswer-] { background: var(--background-secondary-alt);}
+}
+
+// <-- Send Button --> //
+[class*=activeButtonChild-]#children {
+    color: hsla(var(--awesome-colour));
+}

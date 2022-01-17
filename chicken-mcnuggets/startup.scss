@@ -1,0 +1,30 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Loading Screen
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- Background --> //
+[class*=app-] > [class*=app-] + [class*=fixClipping-][style] {
+    background: radial-gradient(var(--background-primary) 25%, transparent 420%);
+}
+
+// <-- Startup GIF --> //
+.content-3AIQZv {
+    opacity: 1;
+    & > video {
+        opacity: 0;
+        // <-- Did You Know --> //
+        & + [class*=text-] > [class*=tipTitle-] {
+            color: hsla(var(--awesome-colour));
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: url("https://i.vgy.me/SwvLl7.gif") center no-repeat;
+        background-size: 150%;
+        transform: translateY(-20px);
+    }
+}

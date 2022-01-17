@@ -1,0 +1,18 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Server Boosting Tab
+// ╰───────────────────────────────────────────────────────── >> >
+
+[class*=hero-] + [class*=contentWrapper-] {
+    [class*=progressBar-] + [class*=planCards-] > [class*=planCard-] {
+        background: hsla(var(--background-primary-raw), 0.75);
+    }
+
+    & > table {
+        background: hsla(var(--background-primary-raw), 0.75);
+
+        & > tbody > [class*=perksTableRow-]:hover,
+        & > tbody > [class*=perksTableRow-][class*=perksTableRowFocused-] {
+            background: hsla(var(--background-tertiary-raw), 0.75);
+        }
+    }
+}

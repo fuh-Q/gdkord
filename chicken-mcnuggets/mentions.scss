@@ -1,0 +1,82 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Mentions
+// ╰───────────────────────────────────────────────────────── >> >
+
+// <-- For Ping Hover Glow --> //
+[class*=zalgo-] [class*=messageContent-] { overflow: visible;}
+
+// <-- User + Channel Mentions --> //
+[class*=mention]:not(
+    [class*=mentioned-]):not(
+    [class*=mentionButton-]):not(
+    [class*=mentionIcon-]):not(
+    [class*=mentionsBadge-]):not(
+    [class*=unreadMentionsBar-]):not(
+    [class*=unreadBar-]):not(
+    [data-guild-name]
+) {
+    color: hsla(var(--ping-red));
+    background: hsla(var(--ping-red), 0.1);
+
+    &:not([class*=roleMention-]):hover {
+        background: hsla(var(--awesome-colour-alt));
+        color: white;
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--awesome-colour-alt)));
+    }
+}
+
+// <-- Role Mentions --> //
+[class*=roleMention-]:hover {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) currentColor);
+}
+
+[class*=roleMention]:not([style]):hover {
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+    background: hsla(var(--ping-red), 0.1);
+    color:hsla(var(--ping-red));
+}
+
+// <-- Mentions Badge --> //
+[class*=mentionsBadge-][class*=iconBase-],
+[class*=numberBadge-][class*=baseShapeRound-] { filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));}
+[data-item-id=PENDING] { overflow: visible;}
+
+// <-- Mention Indicator Bars --> //
+[class*=unreadBar-] {
+    border: 1px solid hsla(var(--reaction-green), 0.25);
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 3px) hsla(var(--reaction-green), 0.25));
+    background: hsla(0, 0%, 0%, 0.5);
+}
+
+[class*=unreadBar-][class*=mention-] {
+    filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 3px) hsla(var(--ping-red)));
+    border: 1px solid hsla(var(--ping-red));
+    background: hsla(0, 0%, 0%, 0.5);
+
+    & span {
+        color: hsla(var(--ping-red));
+    }
+}
+
+[class*=mention-]:active {
+    background-color: black;
+}
+
+[class*=unreadMentionsBar-] {
+    background: hsla(0, 0%, 0%, 0.9);
+    border: 1px solid hsla(var(--ping-red));
+
+    & span {
+        color: hsla(var(--ping-red));
+    }
+}
+
+[class*=unreadMentionsIndicatorTop-] {
+    top: 50px;
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+}
+
+[class*=unreadMentionsIndicatorBottom-] {
+    bottom: 120px;
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--ping-red)));
+}
