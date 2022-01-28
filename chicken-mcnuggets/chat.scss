@@ -117,3 +117,8 @@ section[class*=container-] > [class*=children-] {
         filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 1px) white) brightness(200%);
     }
 }
+
+// <-- Chat Bar Buttons --> //
+.expression-picker-chat-input-button::before {
+    opacity: 0;
+}

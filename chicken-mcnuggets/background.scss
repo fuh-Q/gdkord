@@ -3,7 +3,7 @@
 // ╰───────────────────────────────────────────────────────── >> >
 
 // <-- Title Bar --> //
-.container-ZMc96U.themed-Hp1KC_ {
+section[class*=container-][class*=themed-] {
     box-shadow: 0 10px 20px black;
 }
 
@@ -11,14 +11,14 @@
 [class*=sidebar-] > nav,
 [class*=sidebar-] [class*=scroller-] {
     background: linear-gradient(to right, var(--background-primary), black);
-    .container-1-ERn5 {
+    [class*=container-][data-guild-id] {
         background: var(--background-secondary);
         box-shadow: 0 20px 20px black;
         z-index: 2;
     }
 }
 
-.searchBar-3TnChZ {
+nav > [class*=searchBar-] {
     box-shadow: 0 20px 20px black;
     z-index: 1;
 }
@@ -26,7 +26,7 @@
 // <-- Chat Area --> //
 ol[data-list-id=chat-messages] > div[class*=wrapper-],
 nav[class*=guilds-] + [class*=base-] > [class*=content-] > [class*=wrapper-],
-[class*=chat-],
+[class*=chat-]:not(.expression-picker-chat-input-button),
 [class*=chat-] [class*=callContainer-],
 main[class*=chatContent-],
 main[class*=chatContent-] + section[class*=searchResultsWrap-],
