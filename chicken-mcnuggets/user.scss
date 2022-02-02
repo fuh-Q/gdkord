@@ -68,8 +68,9 @@
             &[src*="94dc6f30a819026fa295d85f1f72b4ab"] + div {--connection-colour: 40, 58%, 54%;} // League
             &[src*="316ed923548387f8983e28a3804e6712"] + div {--connection-colour: 207, 100%, 42%;} // Skype
             &[src*="d897626dfa2016ea3ad0af935acb6070"],
-            &[src*="6a853b4c87fce386cbfef4a2efbacb09"] {
-                & + div {--connection-colour: 0, 0%, 100%;} // Steam, GitHub
+            &[src*="6a853b4c87fce386cbfef4a2efbacb09"],
+            &[src*="7bab4490382024b0c8c29b5378eeaf8f"] {
+                & + div {--connection-colour: 0, 0%, 100%;} // Steam, GitHub, Playstation
             }
             &[src*="1fa6585cbb8c0fe21188e26d19fc6609"] + div {--connection-colour: 120, 77%, 27%;} // Xbox Live
             &[src*="32045743cb7670855ae726743c949e0c"] + div {--connection-colour: 221, 44%, 41%;} // Facebook
