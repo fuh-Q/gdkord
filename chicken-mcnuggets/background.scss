@@ -24,7 +24,7 @@ nav > [class*=searchBar-] {
 }
 
 // <-- Chat Area --> //
-ol[data-list-id=chat-messages] > div[class*=wrapper-],
+ol[data-list-id=chat-messages] > div[class*=wrapper-]:not([data-list-item-id*=chat-messages___Uploader]),
 nav[class*=guilds-] + [class*=base-] > [class*=content-] > [class*=wrapper-],
 [class*=chat-]:not(.expression-picker-chat-input-button),
 [class*=chat-] [class*=callContainer-],
@@ -42,7 +42,7 @@ section[class*=libraryHeader-] + [class*=scroller-] {
     background-size: 1000%;
 }
 
-ol[data-list-id=chat-messages] > div[class*=wrapper-]::before,
+ol[data-list-id=chat-messages] > div[class*=wrapper-]:not([data-list-item-id*=chat-messages___Uploader])::before,
 nav[class*=guilds-] + [class*=base-] > [class*=content-] > [class*=wrapper-]::before,
 [class*=chat-]::before,
 [class*=chat-] [class*=callContainer-]::before,
