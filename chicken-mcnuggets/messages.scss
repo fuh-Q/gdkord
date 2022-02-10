@@ -105,7 +105,7 @@ li[class*=messageListItem-] {
 
         // <-- Mentioned Messages --> //
         &[class*=mentioned-] {
-            background: linear-gradient(to right, var(--background-mentioned) 80%, transparent) !important;
+            background: linear-gradient(to right, transparent -30%, var(--background-mentioned) 80%, transparent) !important;
         }
 
         // <-- Buttons --> //
