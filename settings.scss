@@ -1,0 +1,79 @@
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈              ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈                  ┈┈┈┈┈┈┈┈╮
+// ┃ Uhhh ._.                                                                                              ┃
+// ┃                                                                                                       ┃
+// ┃ Hi! These are the settings for my theme, I totally didn't steal the concept from CreArts ;)           ┃
+// ┃ ____
+// ┃ |⛔| => DO NOT TOUCH
+// ┃ ¯¯¯¯
+// ╰─────────────────────────────────────────────────────────                ─────────────────────
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈              ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈                  ┈┈┈┈┈┈┈┈╮
+// ┃ Enabling / Disabling stuff                                                                            ┃
+// ┃ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯                                                                            ┃
+// ┣─> Add "//" without the quotes at the start of a line to disable it                                    ┃
+// ┃           ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+// ┣─> Take away the // from the start of the line to make it's code take effect
+// ╰─────────────────────────────────────────────────────────                ─────────────────────
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Dark GDKORD
+// ┃ ¯¯¯¯¯¯¯¯¯¯¯
+// ┃
+// ┣─> True Dark Theme
+// ╰───────────────────────────────────────────────────────── >> >
+
+@use "./dark-discord"; // When "Dark Theme" isn't enough
+@use "./settings-icons.scss";
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Recolours
+// ┃ ¯¯¯¯¯¯¯¯¯
+// ┃
+// ┣─> Changes the main colour on the theme
+// ╰───────────────────────────────────────────────────────── >> >
+
+    @use "recolours/default.scss"; // The default purple
+
+//    @use "recolours/cheetahh.scss"; // https://youtube.com/c/Cheetahhh
+
+//    @use "recolours/halloween.scss"; // Halloween orange
+
+//    @use "recolours/deep-sea.scss"; // Deep sea blue
+
+//    @use "recolours/noumenon.scss"; // Noumenon aqua
+
+//    @use "recolours/lunar.scss"; // Lunar white
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ LDM (Low Detail Mode)
+// ┃ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+// ┃
+// ┣─> Removes some stuff if your Discord's lagging
+// ╰───────────────────────────────────────────────────────── >> >
+
+//    @use "no/hover-animations"; // Removes some animations when hovering on certain things
+
+    @use "no/chat-pulse.scss"; // Removes that green thing pulsing in the chat box
+
+//    @use "no/glow"; // Removes all added glow throughout the theme
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┃ Pinned Home Button
+// ┃ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+// ┃
+// ┣─> It makes it easier to click over to DMs, but
+// ┃   certain plugins that add elements around the home button
+// ┃   area might break (DM Typing Indicator does work though)
+// ╰───────────────────────────────────────────────────────── >> >
+
+    @use "./pinned-home-button.scss";
+
+
+// ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
+// ┣─> ⛔ DO NOT REMOVE THIS ⛔
+// ╰───────────────────────────────────────────────────────── >> >
+
+    @use "./base"; // ⛔ NO TOUCH >:(

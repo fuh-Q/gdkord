@@ -1,0 +1,21 @@
+:root {
+    --top-button-hover: scale(1) !important;
+    --button-hover: var(--top-button-hover) !important;
+    --media-hover: var(--button-hover) !important;
+}
+
+.member-2gU6Ar.clickable-28SzVr:not(.offline-22aM7E):hover,
+.member-2gU6Ar.clickable-28SzVr:not(.offline-22aM7E):focus,
+.member-2gU6Ar.selected-1-Z6gm {
+    & span[class*="roleColor-"]::after {
+        animation: none !important;
+    }
+}
+.embedFull-1HGV2S:hover {
+    transform: none !important;
+    border-color: white !important;
+}
+
+.wrapper-1HIH0j {
+    transform: none !important;
+}
