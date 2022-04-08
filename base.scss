@@ -46,6 +46,7 @@
     --control-brand-foreground: hsl(var(--epik-gamr-colour));
 
     --background-secondary-raw: 47, 49, 54;
+    --button-outline-danger-text: var(--red);
 
     --top-button-hover: scale(1.2);
     --button-hover: scale(1.04);
@@ -184,6 +185,17 @@ svg[class*="threadIcon-"],
         }
     }
 
+    // <-- Outlined Buttons --> //
+    button.lookOutlined-3yKVGo {
+        color: rgba(var(--button-outline-danger-text));
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: unset;
+        }
+    }
+
     // <-- Default Buttons --> //
     button.lookFilled-yCfaCM.colorBrand-I6CyqQ {
         background: hsl(var(--epik-gamr-colour));
@@ -225,6 +237,7 @@ svg[class*="threadIcon-"],
     button[class*=lookBlank-][class*=green-],
     button.lookFilled-yCfaCM.colorGreen-3y-Z79 {
         filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(var(--green)));
+        background: rgba(var(--green));
         color: var(--interactive-active);
 
         &:hover {
@@ -541,26 +554,10 @@ button[class*="button-1mXrIh button-f2h6uQ lookOutlined-3yKVGo colorWhite-1H92hK
 }
 
 /* Type Boxes */
-@keyframes grey_to_black {
-    from {
-        background-color: #23272A;
-    }
-    to {
-        background-color: black;
-    }
+input.inputDefault-3FGxgL.input-2g-os5:hover {
+    border-color: black;
 }
-@keyframes black_to_grey {
-    from {
-        background-color: black;
-    }
-    to {
-        background-color: #23272A;
-    }
-}
-input[class*="inputDefault-3FGxgL input-2g-os5"]:hover {
-    border-color: rgba(0, 0, 0);
-}
-input[class*="inputDefault-3FGxgL input-2g-os5 inputInner-1Z3Tui"] {
+input.inputDefault-3FGxgL.input-2g-os5.inputInner-1Z3Tui {
     color: rgba(200, 200, 200);
     background-color: #23272A;
     border: 1px solid rgba(200, 200, 200, 0.2);
@@ -568,8 +565,8 @@ input[class*="inputDefault-3FGxgL input-2g-os5 inputInner-1Z3Tui"] {
     padding: 10px;
 }
 .channelTextArea-3TZH74,
-textarea[class*="inputDefault-3FGxgL input-2g-os5 textArea-3WXAeD scrollbarDefault-2w-Dyz scrollbar-3vVt8d"],
-input[class*="inputDefault-3FGxgL input-2g-os5"] {
+textarea.inputDefault-3FGxgL.input-2g-os5.textArea-3WXAeD.scrollbarDefault-2w-Dyz.scrollbar-3vVt8d,
+input.inputDefault-3FGxgL.input-2g-os5 {
     color: rgba(200, 200, 200);
 }
 .channelTextArea-3TZH74,
@@ -582,15 +579,28 @@ input[class*="inputDefault-3FGxgL input-2g-os5"] {
     filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var(--epik-gamr-colour)));
     overflow: visible;
 }
-.input-2g-os5:focus {
-    animation-name: grey_to_black;
-    animation-duration: 0.40s;
-    background-color: black;
+.input-2z42oC { background: var(--input-background);}
+.input-2g-os5 {
+    border: 1px solid transparent;
+    &.focused-1AtTHC,
+    &:focus {
+        border-color: hsl(var(--epik-gamr-colour)) !important;
+    }
+
+    &:disabled {
+        background-color: #23272A;
+    }
 }
 .input-2g-os5:disabled {
     animation-name: black_to_grey;
     animation-duration: 0.40s;
     background-color: #23272A;
+}
+
+.note-Go5ZP2 > textarea {
+    border: none !important;
+    background: transparent !important;
+    color: rgba(200, 200, 200);
 }
 
 /* Embeds & Messages */
@@ -1589,7 +1599,7 @@ svg circle[fill="#7289DA"] {
 /* Permissions Sync Text */
 .message-1WzYhw strong {
     color: hsl(var(--epik-gamr-colour)) !important;
-    background-color: hsl(var(--epik-gamr-colour), 0.1)e;
+    background-color: hsl(var(--epik-gamr-colour), 0.1);
 }
 
 /* Changelog */
@@ -1813,12 +1823,6 @@ button[class*="lookOutlined"].colorBrand-I6CyqQ {
 
 button[class*="lookOutlined"].colorBrand-I6CyqQ:hover {
     border-color: hsl(var(--epik-gamr-colour), 50%);
-}
-
-[class^="regionSelectModalOption-"]:hover,
-.input-2g-os5.focused-1AtTHC,
-.input-2g-os5:focus {
-    border-color: hsl(var(--epik-gamr-colour)) !important;
 }
 
 circle[class^="radioSelection-"],
