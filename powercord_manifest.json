@@ -1,8 +1,17 @@
 {
     "name": "GDKORD",
+<<<<<<< HEAD
     "description": "My Discord theme... :P",
     "version": "1.0.0",
     "author": "˞˞#0069",
     "theme": "index.scss",
     "license": "unknown"
+=======
+    "description": "L (stands for lag)",
+    "version": "3.0.2",
+    "author": "gdkid#0111",
+    "theme": "settings.scss",
+    "license": "MIT",
+    "repo": "https://github.com/GDKID69/gdkord"
+>>>>>>> 2a7efdae4ec033a1d771b8ec082d6a2e2941cadd
 }

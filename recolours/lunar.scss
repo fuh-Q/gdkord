@@ -1,0 +1,27 @@
+:root {
+    --__: 100% !important;
+    --___: 0% !important;
+}
+
+.theme-dark button.colorBrand-I6CyqQ:not([aria-label]):not([aria-controls]):not(.lookLink-15mFoz),
+.categoryItem-Kc_HK_.selectedCategoryItem-ZjqSui,
+.theme-dark .premiumIndicator-22GgcZ,
+div[class*="colorDefault-"].focused-3qFvc8,
+div[class*="colorDefault-"].focused-3qFvc8 .subtext-2GlkbE {
+    color: rgba(var(--black)) !important;
+}
+
+.partnered-23cXFN div svg path,
+.wrapper-3kah-n.selected-1Drb7Z .homeIcon-r0w4ny path,
+path[class*="check-"],
+path[fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"] {
+    fill: rgba(var(--black)) !important;
+}
+
+img[class*="requirementsImage-"] {
+    filter: invert(1) brightness(169%) saturate(0) !important;
+}
+
+div[class*="checkbox-"][class*="checked-"] svg path {
+    fill: rgba(var(--black)) !important;
+}

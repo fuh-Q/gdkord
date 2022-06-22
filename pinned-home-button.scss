@@ -1,0 +1,53 @@
+ul.tree-3agP2X {
+    .unreadMentionsIndicatorTop-2bTgUU { display: none;}
+    
+    .scroller-3X7KbA>.listItem-1d8GP4 {
+        position: sticky;
+        background: var(--background-tertiary);
+    }
+
+    .guilds-2JjMmN .scroller-3X7KbA > [aria-label], .guilds-2JjMmN .scroller-3X7KbA > [style]:nth-child(2) { margin-top: 55px;}
+
+    .tutorialContainer-2sGCg9,
+    .tutorialContainer-1pL9QS {
+        position: sticky;
+        top: 0;
+        padding-top: 5px;
+        z-index: 3;
+        background: linear-gradient(var(--background-tertiary) 100%, transparent);
+
+        & ~ [style] {
+            position: sticky;
+            padding-top: 5px;
+            top: 56px;
+            z-index: 1;
+            background: var(--background-tertiary);
+            box-shadow: 0 10px 15px var(--background-tertiary),
+                        0 -5px 10px var(--background-tertiary);
+        }
+    }
+
+    .listItem-1d8GP4 {
+        position: sticky;
+        padding-top: 5px;
+        top: 56px;
+        z-index: 2;
+        background: var(--background-tertiary);
+        box-shadow: 0 10px 15px var(--background-tertiary),
+                    0 -15px 15px var(--background-tertiary),
+                    -10px -10px 15px var(--background-tertiary);
+        
+        & ~ [style] {
+            top: 92px;
+        }
+    }
+
+    .wrapper-1_HaEi > ul > .scroller-3X7KbA > div[aria-label] {
+        margin-top: 60px;
+    }
+
+    .tutorialContainer-2sGCg9,
+    .tutorialContainer-1pL9QS {
+        box-shadow: 0px 15px 10px var(--background-tertiary);
+    }
+}
