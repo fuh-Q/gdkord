@@ -22,7 +22,7 @@
 // ┣─> True Dark Theme
 // ╰───────────────────────────────────────────────────────── >> >
 
-@use "./dark-discord"; // When "Dark Theme" isn't enough
+    @use "./dark-discord"; // When "Dark Theme" isn't enough
 
 
 // ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
@@ -32,7 +32,7 @@
 // ┣─> Icons in your Settings
 // ╰───────────────────────────────────────────────────────── >> >
 
-@use "./settings-icons.scss";
+    @use "./settings-icons.scss";
 
 
 // ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ >> >
