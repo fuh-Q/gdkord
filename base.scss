@@ -1216,7 +1216,7 @@ button[class*="lookGhost-"].colorBrand-I6CyqQ {
     filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(139,calc(var(--saturation-factor, 1)*47.3%),43.9%));
 }
 
-/* Channels UI */
+/* Channels */
 .overflow-1wOqNV {
     max-width: 187px;
 }
@@ -1262,6 +1262,7 @@ button[class*="lookGhost-"].colorBrand-I6CyqQ {
 }
 .containerDefault-YUSmu3:hover .iconContainer-21RCa3 svg,
 .wrapper-NhbLHG:hover .iconContainer-21RCa3 svg {
+    color: white;
     filter: drop-shadow(0 0 var(--default-drop-shadow) white) !important;
 }
 .containerDefault-YUSmu3:hover .iconContainer-21RCa3 svg path {
@@ -1447,7 +1448,7 @@ div[class*="cardPrimaryEditable-"] div[style*="border-color: rgb(114, 137, 218)"
     background: radial-gradient(var(--background-primary) 25%, transparent 420%);
 
     div[class*="sidebarRegionScroller-"] {
-        background: rgba(15, 15, 15, 0.75);
+        background: rgba(47, 47, 51, 0.5);
     }
 }
 .layer-86YKbF.baseLayer-W6S8cY[aria-hidden="true"] {
