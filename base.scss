@@ -677,6 +677,10 @@ input.inputDefault-3FGxgL.input-2g-os5 {
     z-index: 1;
 }
 
+.justifyAuto-BLgJ2X {
+    justify-self: start !important;
+}
+
 @keyframes unhover_to_hover {
     from {
         background-color: transparent;
@@ -701,6 +705,12 @@ input.inputDefault-3FGxgL.input-2g-os5 {
     to {
         background-color: transparent !important;
     }
+}
+
+.messageContent-2t3eCI {
+    margin-top: -6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg,
@@ -752,8 +762,6 @@ div[class*="messageAttachment-"] a {
 
     .container-3Sqbyb { overflow: visible;}
 }
-
-.zalgo-26OfGz .messageContent-2t3eCI { overflow: visible;}
 
 pre > code:not(.inline) {
     background: hsla(0, 0%, 2%);
