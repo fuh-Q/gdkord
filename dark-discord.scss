@@ -54,9 +54,9 @@
     --voice-n-video-notches: rgba(64, 64, 64);
 }
 
-code {
-    background-color: rgb(28, 28, 28);
-    border: 0px solid rgb(44, 47, 51);
+code.inline,
+.jumpButton-1ZwI_j {
+    background-color: rgb(28, 28, 28) !important;
 }
 
 .input-2g-os5:focus {
@@ -574,6 +574,45 @@ section.container-ZMc96U {
 #app-mount [aria-label=USER_SETTINGS] .card-2ART2V::before {
     background-color: var(--background-secondary);
     border-color: var(--background-tertiary);
+}
+
+/* Emoji menu */
+.wrapper-22rqw6,
+.container-2oNtJn,
+.container-1SX9VC,
+.wrapper-1NNaWG {
+    background-color: transparent;
+}
+
+.header-1XpmZs.interactive-MpGq2z {
+    box-shadow: 0 0 30px black;
+    background-color: black;
+}
+
+.inspector-DFKXwB,
+.standardStickerShortcut-ObSns3,
+.unicodeShortcut-3N8oDe {
+    background-color: black;
+    box-shadow: 0 -10px 10px black;
+}
+
+.categoryItemDefaultCategorySelected-2YeRUu,
+.emojiItemSelected-2Lg50V { background-color: var(--background-tertiary) !important;} 
+
+.emojiPicker-6YCk8a,
+.contentWrapper-3vHNP2 {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px black;
+}
+
+/* Radio bar thingies */
+.banReasonOtherClickable-8EKPlQ {
+    background-color: rgba(10, 10, 10, 0.5);
+
+    &:active {
+        background-color: var(--background-modifier-active);
+    }
 }
 
 /* Fucked search bar */

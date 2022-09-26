@@ -141,16 +141,21 @@ svg[class*="threadIcon-"],
     overflow: visible;
 }
 
-.browser-mnQ1T7.container-18GwIk {
-    background: rgba(15, 15, 15, 0.65);
+.modal-ZdazA8 { background: transparent !important;}
+
+[class*=browser-].container-18GwIk {
+    background: transparent !important;
     backdrop-filter: blur(10px);
+
+    .header-3_zmOb { background: transparent;}
 }
 
 .container-2rzKKA {
-    background: rgba(15, 15, 15, 0.5);
-    &:hover {
-        background: var(--background-modifier-hover);
-    }
+    background: transparent;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
 }
 
 .search-39IXmY+.iconWrapper-2awDjA .icon-2xnN2Y {
@@ -520,15 +525,20 @@ div[id*="message-accessories-"] {
         filter: none !important;
     }
 
-    &>.content-1r-J1r>div[class*="guildIcon-"]::before {
+    &>.content-1r-J1r [class*=guildIcon-]::before {
         content: "";
         border: 1px solid rgba(var(--invite-border-colour), 0.75);
         filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 3px) rgba(var(--invite-border-colour)));
         box-shadow: 0 0 2px rgba(var(--invite-border-colour));
         position: absolute;
         border-radius: 5px;
-        height: 108px;
+        height: 106px;
         width: 431px;
+    }
+
+    &>.inviteSplash-2nkLRX~.content-1r-J1r [class*=guildIcon-]::before {
+        margin-top: -65px;
+        height: 172px;
     }
 
     &.clickable-1X-Pj8 {
@@ -672,6 +682,12 @@ input.inputDefault-3FGxgL.input-2g-os5 {
     }
 }
 
+.spoilerWarning-8ovW0v + div > .embedFull-1HGV2S {
+    border-width: 0;
+
+    &::before { display: none !important;}
+}
+
 .gridContainer-1cF_Ic { z-index: 1;}
 
 .grid-1aWVsE {
@@ -709,10 +725,17 @@ input.inputDefault-3FGxgL.input-2g-os5 {
     }
 }
 
+.timestampVisibleOnHover-9PEuZS {
+    padding-top: 16px;
+}
 .messageContent-2t3eCI {
-    margin-top: -6px;
-    padding-top: 6px;
-    padding-bottom: 3px;
+    margin-top: -16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+}
+.header-2jRmjb {
+    z-index: 1;
 }
 
 .message-2CShn3.cozyMessage-1DWF9U.wrapper-30-Nkg,
@@ -801,7 +824,14 @@ div[class*="messagesPopoutWrap-"] {
     }
 
     & div[class*="messageGroupWrapper-"] {
-        background: rgba(15, 15, 15, 0.5);
+        background: transparent;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .actionButtons-2mNSAB {
+        z-index: 1;
     }
 }
 
@@ -1043,6 +1073,7 @@ div[id*="guild-"] {
 }
 
 .popout-1KHNAq {
+    border: none;
     background: rgba(10, 10, 10, 0.35);
     backdrop-filter: blur(20px);
     & .option-2eIyOn {
@@ -1052,7 +1083,7 @@ div[id*="guild-"] {
             background: rgba(0, 0, 0, 0.35) !important;
         }
         &[aria-selected="true"] {
-            background: rgba(0, 0, 0, 0.00);
+            background: rgba(0, 0, 0, 0.00) !important;
         }
     }
 }
@@ -1427,11 +1458,19 @@ video[class*="ready-"] {
 }
 
 .boostedGuildTierIconBackgroundWithVisibleBanner-2KrNB1 {
+    color: white !important;
     filter: drop-shadow(0 0 var(--default-drop-shadow) white);
 }
 
 .iconTierThree-n2n0gX {
     color: rgba(var(--nitro-pink));
+}
+
+.theme-dark .iconBackgroundTierNone-3M21Zn,
+.theme-dark .iconBackgroundTierOne-1S68CI,
+.theme-dark .iconBackgroundTierThree-2hfNBO,
+.theme-dark .iconBackgroundTierTwo-2XoNXD {
+    color: black;
 }
 
 /* Wide Buttons */
@@ -1568,6 +1607,9 @@ img[class*="requirementsImage-"] {
     background-color: var(--background-secondary) !important;
 }
 
+/* Cancel Nitro */
+.modalHeader-gQTY3L { background: transparent !important;}
+
 /* Folder Icons */
 .expandedFolderIconWrapper-3RwQpD svg {
     &[style="color: rgb(88, 101, 242);"] {
@@ -1645,6 +1687,7 @@ img[class*="requirementsImage-"] {
 }
 div[class*=newBadge-] {
     filter: drop-shadow(0 0 calc(var(--default-drop-shadow) - 1px) rgba(var(--ping-red)));
+    color: white;
     background-color: rgba(var(--ping-red)) !important;
     overflow: visible;
     z-index: 1;
@@ -2029,7 +2072,7 @@ ul[class*="channelAttachmentArea-"] {
     }
 }
 
-form > div[aria-controls] > .wrapper-2SplAX {
+form > .wrapper-2SplAX {
     background: var(--background-secondary);
     border-radius: 7px;
     &::before {
