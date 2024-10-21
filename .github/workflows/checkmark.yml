@@ -1,0 +1,12 @@
+name: checkmark
+
+on: [push]
+
+jobs:
+  getCheckmark:
+    name: Obtain Checkmark
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Acquire Checkmark
+        run: echo "Checkmark acquired"

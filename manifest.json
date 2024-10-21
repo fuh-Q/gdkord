@@ -1,0 +1,20 @@
+{
+  "id": "xyz.gdkid.gdkord",
+  "name": "GDKord",
+  "description": "a personal theme",
+  "author": {
+    "name": "gdkid",
+    "discordID": "596481615253733408",
+    "github": "fuh-Q"
+  },
+  "version": "0.0.1",
+  "updater": {
+    "type": "github",
+    "id": "fuh-Q/gdkord"
+  },
+  "license": "MIT",
+  "type": "replugged-theme",
+  "main": "src/main.scss",
+  "source": "https://github.com/replugged-org/theme-template",
+  "image": ["https://i.imgur.com/14CNs3a.png?CHANGE-THIS-URL"]
+}

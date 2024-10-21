@@ -1,0 +1,48 @@
+# thank u chatgpt
+
+# Ignore all files in node_modules
+node_modules
+
+# Ignore build or output directories
+dist/
+build/
+
+# Ignore log files
+*.log
+
+# Ignore package-lock or yarn.lock files
+package-lock.json
+yarn.lock
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore specific configuration files
+.vscode/
+.idea/
+
+# Ignore minified files
+*.min.js
+
+# Ignore images and binary files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+
+# Ignore specific file types
+*.yaml
+*.yml
+*.md  # Markdown files
+*.json  # JSON files
+
+# Ignore specific directories
+coverage/
+docs/
+
+# Ignore all hidden files (starting with a dot)
+.*
