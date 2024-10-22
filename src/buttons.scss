@@ -1,0 +1,92 @@
+// <-- buttons -->
+@mixin button-styles($color-class, $button-color, $glow: [on by default]) {
+    .lookFilled_dd4f85.#{$color-class} {
+        background: hsl(var($button-color));
+        color: var(--interactive-active);
+        border-color: hsl(var($button-color));
+        @if $glow != NO_GLOW {
+            filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var($button-color)));
+        }
+
+        &:hover {
+            background: hsl(var(#{$button-color}-hover));
+            border-color: hsl(var(#{$button-color}-hover));
+            @if $glow != NO_GLOW {
+                filter: drop-shadow(
+                    0 0 var(--default-drop-shadow) hsl(var(#{$button-color}-hover))
+                );
+            }
+        }
+
+        &:active {
+            background: hsl(var(#{$button-color}-active));
+            border-color: hsl(var(#{$button-color}-active));
+            @if $glow != NO_GLOW {
+                filter: drop-shadow(
+                    0 0 var(--default-drop-shadow) hsl(var(#{$button-color}-active))
+                );
+            }
+        }
+
+        &:disabled {
+            background: hsl(var(#{$button-color}-active));
+            filter: none;
+        }
+    }
+
+    .lookOutlined_dd4f85.#{$color-class} {
+        background: transparent !important;
+        filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var($button-color)));
+
+        .contents_dd4f85 {
+            color: hsla(var($button-color));
+        }
+    }
+}
+
+@include button-styles(colorPrimary_dd4f85, --gray, NO_GLOW);
+@include button-styles(colorBrand_dd4f85, --gdkromatic);
+@include button-styles(colorGreen_dd4f85, --green);
+@include button-styles(colorRed_dd4f85, --red);
+
+// <-- on hover scaling effect -->
+button[class*="color"] {
+    transform: scale(1.0001);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+
+    &:disabled {
+        transform: none;
+        transition: none;
+    }
+}
+
+.container_e426aa {
+    overflow: visible;
+}
+
+// <-- outlined buttons hover effect --> //
+button.lookOutlined_dd4f85 {
+    .contents_dd4f85 {
+        transition: 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: unset;
+
+        .contents_dd4f85 {
+            color: white !important;
+        }
+    }
+}
+
+// <-- circular page buttons (found in channel search) --> //
+.pageControl_b48941 > .activeButton_b48941 {
+    background: rgba(var(--phen-aqua));
+    filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(var(--phen-aqua)));
+}

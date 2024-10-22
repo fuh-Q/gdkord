@@ -1,114 +1,37 @@
+@use "bot-tags";
+@use "buttons";
+@use "embeds";
+@use "reactions";
+@use "serverlist";
+
 :root {
-    --gdkromatic: hsla(300, 100%, 50%);
-    --bg-brand: var(--gdkromatic);
+    --gdkromatic: 300, 100%, 50%;
+    --gdkromatic-hover: 300, 100%, 40%;
+    --gdkromatic-active: 300, 100%, 30%;
+    --bg-brand: hsla(var(--gdkromatic));
+
+    --background-image: url("https://i.vgy.me/SPEMbr.png");
+
+    --gray: 219, 8%, 34%;
+    --gray-hover: 217, 9%, 28%;
+    --gray-active: 215, 11%, 22%;
+
+    --green: 139, 48%, 47%;
+    --green-hover: 139, 49%, 35%;
+    --green-active: 138, 48%, 26%;
+
+    --red: 359, 83%, 59%;
+    --red-hover: 359, 58%, 46%;
+    --red-active: 358, 59%, 37%;
 
     --phen-aqua: 55, 178, 203;
-
-    --embed-background: 40, 40, 40;
     --default-drop-shadow: 6px;
-
-    --black: 0, 0, 0;
 
     --listitem-shadow: 0 0 24px var(--background-tertiary),
         0 0 12px var(--background-tertiary), 0 0 6px var(--background-tertiary);
 }
 
-// <-- bot tags -->
-.zalgo_f9f2ca.cozy_f9f2ca .header_f9f2ca {
-    overflow: visible;
-}
-
-.botTagRegular_a9e77f {
-    background: rgba(var(--phen-aqua));
-    filter: drop-shadow(0 0 4px rgba(var(--phen-aqua)));
-    align-content: center;
-
-    .botText_a9e77f {
-        font-weight: 500;
-        font-size: 11px;
-    }
-}
-
-.memberInner_a31c43.layout_d808b0 > .content_d808b0 {
-    overflow: visible;
-}
-
-// <-- embeds -->
-.embedFull_b0068a {
-    background-color: rgba(var(--embed-background));
-    filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(var(--black), 0.35));
-    transition: 0.2s ease-in-out;
-    border-width: 100px;
-
-    &::before {
-        content: "";
-        left: -100px;
-        width: 100px;
-        height: 100%;
-        position: absolute;
-        background: linear-gradient(
-            to right,
-            transparent 3.9%,
-            rgba(var(--embed-background), 0.6) 4%,
-            rgba(var(--embed-background), 0.7) 5%,
-            rgba(var(--embed-background), 0.85) 15%,
-            rgba(var(--embed-background), 0.95) 35%,
-            rgba(var(--embed-background)) 100%
-        );
-    }
-
-    &:hover {
-        transform: translateX(5px);
-        border-color: transparent !important;
-    }
-
-    &:not([style]) {
-        border-left-color: transparent !important;
-    }
-}
-
-.gridContainer_b0068a {
-    z-index: 1;
-    max-width: 416px;
-}
-
-.grid_b0068a {
-    margin-left: -97px;
-}
-
-// <-- pinned server list items -->
-.tutorialContainer_f9623d {
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    background: var(--background-tertiary);
-    box-shadow: var(--listitem-shadow);
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 69px;
-        top: -15px;
-        background: var(--background-tertiary);
-        box-shadow: var(--listitem-shadow);
-    }
-
-    & ~ div[style*="opacity"] {
-        position: sticky;
-        top: 56px;
-        z-index: 1;
-        background: var(--background-tertiary);
-        box-shadow: var(--listitem-shadow);
-    }
-}
-
-// <-- home button -->
-.tutorialContainer_f9623d .selected_dfb2f8 svg.svg_c5f96a,
-.tutorialContainer_f9623d svg.svg_c5f96a:hover {
-    filter: drop-shadow(0 0 5px var(--gdkromatic));
-
-    .wrapper_f90abb > div {
-        background-color: var(--gdkromatic);
-    }
+// <-- tags on forum posts covering up addon install cards in preview -->
+.textContentFooter_a57509 {
+    background-color: transparent;
 }

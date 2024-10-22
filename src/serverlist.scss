@@ -1,0 +1,36 @@
+// <-- pinned server list items -->
+.tutorialContainer_f9623d {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background: var(--background-tertiary);
+    box-shadow: var(--listitem-shadow);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 69px;
+        top: -15px;
+        background: var(--background-tertiary);
+        box-shadow: var(--listitem-shadow);
+    }
+
+    & ~ div[style*="opacity"] {
+        position: sticky;
+        top: 56px;
+        z-index: 1;
+        background: var(--background-tertiary);
+        box-shadow: var(--listitem-shadow);
+    }
+}
+
+// <-- home button -->
+.tutorialContainer_f9623d .selected_dfb2f8 svg.svg_c5f96a,
+.tutorialContainer_f9623d svg.svg_c5f96a:hover {
+    filter: drop-shadow(0 0 5px hsla(var(--gdkromatic)));
+
+    .wrapper_f90abb > div {
+        background-color: hsla(var(--gdkromatic));
+    }
+}
