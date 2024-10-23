@@ -4,24 +4,51 @@
     top: 0px;
     z-index: 1;
     background: var(--background-tertiary);
-    box-shadow: var(--listitem-shadow);
+    box-shadow: 0 0 12px var(--background-tertiary);
 
     &::before {
         content: "";
         position: absolute;
         width: 100%;
-        height: 69px;
-        top: -15px;
-        background: var(--background-tertiary);
-        box-shadow: var(--listitem-shadow);
+        height: 94px;
+        top: -14px;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            var(--background-tertiary) 70px,
+            transparent 100%
+        );
     }
 
     & ~ div[style*="opacity"] {
         position: sticky;
         top: 56px;
         z-index: 1;
-        background: var(--background-tertiary);
-        box-shadow: var(--listitem-shadow);
+
+        &::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            height: 66px;
+            top: -10px;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                var(--background-tertiary) 10px
+            );
+        }
+
+        &:nth-last-child(6)::before {
+            height: 90px;
+            pointer-events: none;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                var(--background-tertiary) 10px,
+                var(--background-tertiary) 63px,
+                transparent 100%
+            );
+        }
     }
 }
 
