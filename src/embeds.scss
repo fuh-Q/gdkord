@@ -1,10 +1,10 @@
 :root {
-    --embed-background: 40, 40, 40;
+    --embed-bg-gdkord: 40, 40, 40;
 }
 
 // <-- embeds -->
 .embedFull_b0068a {
-    background-color: rgba(var(--embed-background));
+    background-color: rgba(var(--embed-bg-gdkord));
     filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(0, 0, 0, 0.35));
     transition: 0.2s ease-in-out;
     border-width: 100px;
@@ -18,12 +18,12 @@
         background: linear-gradient(
             to right,
             transparent 3.9%,
-            rgba(var(--embed-background), 0.6) 4%,
-            rgba(var(--embed-background), 0.7) 5%,
-            rgba(var(--embed-background), 0.85) 15%,
-            rgba(var(--embed-background), 0.95) 35%,
-            rgba(var(--embed-background)) 100%
-        );
+            rgba(var(--embed-bg-gdkord), 0.6) 4%,
+            rgba(var(--embed-bg-gdkord), 0.7) 5%,
+            rgba(var(--embed-bg-gdkord), 0.85) 15%,
+            rgba(var(--embed-bg-gdkord), 0.95) 35%,
+            rgba(var(--embed-bg-gdkord)) 100%
+        ) !important;
     }
 
     &:hover {
