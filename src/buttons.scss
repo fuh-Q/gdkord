@@ -52,7 +52,7 @@
 // <-- on hover scaling effect -->
 button[class*="color"] {
     transform: scale(1.0001);
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out !important;
 
     &:hover {
         transform: scale(1.04);
@@ -83,6 +83,13 @@ button.lookOutlined_dd4f85 {
             color: white !important;
         }
     }
+}
+
+// <-- friend req button on nitro profiles -->
+.custom-profile-theme .themeColor_f9d37d.primary_f9d37d {
+    filter: drop-shadow(
+        0 0 var(--default-drop-shadow) var(--profile-gradient-button-color)
+    );
 }
 
 // <-- circular page buttons (found in channel search) --> //

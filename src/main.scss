@@ -3,6 +3,7 @@
 @use "embeds";
 @use "reactions";
 @use "serverlist";
+@use "watermark";
 
 :root {
     --gdkromatic: 300, 100%, 50%;
@@ -31,7 +32,7 @@
         0 0 12px var(--background-tertiary), 0 0 6px var(--background-tertiary);
 }
 
-// <-- tags on forum posts covering up addon install cards in preview -->
+// <-- tags on forum posts covering up Replugged install cards in preview -->
 .textContentFooter_a57509 {
     background-color: transparent;
 }
