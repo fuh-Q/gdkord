@@ -85,6 +85,13 @@ button.lookOutlined_dd4f85 {
     }
 }
 
+// <-- vc action row (bottom left, above settings button) -->
+.button_adcaac .buttonColor_adcaac.buttonActive_adcaac,
+.button_adcaac.buttonColor_adcaac.buttonActive_adcaac {
+    background: hsla(var(--green));
+    filter: drop-shadow(0 0 var(--default-drop-shadow) hsla(var(--green)));
+}
+
 // <-- friend req button on nitro profiles -->
 .custom-profile-theme .themeColor_f9d37d.primary_f9d37d {
     filter: drop-shadow(
