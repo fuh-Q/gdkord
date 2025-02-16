@@ -1,5 +1,5 @@
 // <-- pinned server list items -->
-.tutorialContainer_f9623d {
+.tutorialContainer__1f388 {
     position: sticky;
     top: 0px;
     z-index: 5;
@@ -53,11 +53,11 @@
 }
 
 // <-- home button -->
-.tutorialContainer_f9623d .selected_dfb2f8 svg.svg_c5f96a,
-.tutorialContainer_f9623d svg.svg_c5f96a:hover {
+.tutorialContainer__1f388 .selected__91816 svg.svg_cc5dd2,
+.tutorialContainer__1f388 svg.svg_cc5dd2:hover {
     filter: drop-shadow(0 0 5px hsla(var(--gdkromatic)));
 
-    .wrapper_f90abb > div {
+    .wrapper__6e9f8 > div {
         background-color: hsla(var(--gdkromatic));
     }
 }

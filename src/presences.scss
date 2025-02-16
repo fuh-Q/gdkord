@@ -1,0 +1,26 @@
+// <-- friends list -->
+.peopleListItem_cc6179,
+.link__972a0 {
+    overflow: visible;
+}
+
+.userInfo__0a06e {
+    padding: 7px;
+}
+
+// <-- presences -->
+@mixin presence-styles($aria-label, $colour) {
+    .wrapper__44b0c[aria-label$="#{$aria-label}"] svg {
+        filter: drop-shadow(0 0 4px $colour);
+    }
+
+    .memberInner__5d473 .wrapper__44b0c[aria-label$="#{$aria-label}"] svg {
+        width: 46px;
+    }
+}
+
+@include presence-styles("Online", hsla(var(--green), 0.69));
+@include presence-styles("Online via mobile", hsla(var(--green), 0.69));
+@include presence-styles("Idle", hsla(var(--yellow), 0.69));
+@include presence-styles("Do Not Disturb", hsla(var(--red), 0.69));
+@include presence-styles("Streaming", hsla(var(--streaming-purple), 0.69));

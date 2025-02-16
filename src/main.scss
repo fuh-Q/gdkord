@@ -1,6 +1,7 @@
 @use "bot-tags";
 @use "buttons";
 @use "embeds";
+@use "presences";
 @use "reactions";
 @use "serverlist";
 @use "watermark";
@@ -24,6 +25,9 @@
     --red: 359, 83%, 59%;
     --red-hover: 359, 58%, 46%;
     --red-active: 358, 59%, 37%;
+
+    --yellow: 41, 70%, 57%;
+    --streaming-purple: 262, 46%, 50%;
 
     --phen-aqua: 55, 178, 203;
     --default-drop-shadow: 6px;
