@@ -4,6 +4,7 @@
 @use "presences";
 @use "reactions";
 @use "serverlist";
+@use "top-bar";
 @use "watermark";
 
 :root {
@@ -34,6 +35,9 @@
 
     --listitem-shadow: 0 0 24px var(--background-tertiary),
         0 0 12px var(--background-tertiary), 0 0 6px var(--background-tertiary);
+
+    --custom-app-top-bar-height: 0px;
+    --custom-guild-list-width: 60px;
 }
 
 // <-- tags on forum posts covering up Replugged install cards in preview -->

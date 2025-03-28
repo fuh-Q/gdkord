@@ -3,7 +3,8 @@
     .lookFilled__201d5.#{$color-class} {
         background: hsl(var($button-color));
         color: var(--interactive-active);
-        border-color: hsl(var($button-color));
+        border: none;
+        border-radius: 5px;
         @if $glow != NO_GLOW {
             filter: drop-shadow(0 0 var(--default-drop-shadow) hsl(var($button-color)));
         }
@@ -64,8 +65,10 @@ button[class*="color"] {
     }
 }
 
+// <-- message buttons container -->
 .container__5e208 {
     overflow: visible;
+    margin-top: 2px;
 }
 
 // <-- outlined buttons hover effect --> //

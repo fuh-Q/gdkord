@@ -1,0 +1,31 @@
+// <-- top bar -->
+.bar_c38106 {
+    z-index: 1;
+
+    .title_c38106 {
+        display: none;
+    }
+}
+
+// <-- everything below top bar -->
+.content_c48ade {
+    z-index: 0;
+}
+
+// <-- notifications icon -->
+.recentsIcon_c99c29 {
+    // <-- support icon -->
+    & ~ * {
+        display: none;
+    }
+
+    .button__85643 {
+        position: absolute;
+        top: 4em;
+        right: 1em;
+        scale: 1.5;
+        background: var(--background-surface-high);
+        border: 1px solid var(--border-subtle);
+        border-radius: 5px;
+    }
+}

@@ -104,3 +104,7 @@ dist
 .tern-port
 
 /bundle
+
+# Compiled
+style.css
+style.css.map
