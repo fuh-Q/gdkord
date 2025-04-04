@@ -21,6 +21,6 @@
 
 @include presence-styles("Online", hsla(var(--green), 0.69));
 @include presence-styles("Online via mobile", hsla(var(--green), 0.69));
-@include presence-styles("Idle", hsla(var(--yellow), 0.69));
+@include presence-styles("Away", hsla(var(--yellow), 0.69));
 @include presence-styles("Do Not Disturb", hsla(var(--red), 0.69));
 @include presence-styles("Streaming", hsla(var(--streaming-purple), 0.69));
