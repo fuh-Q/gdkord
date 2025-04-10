@@ -1,5 +1,6 @@
 @use "bot-tags";
 @use "buttons";
+@use "chat-text";
 @use "embeds";
 @use "presences";
 @use "reactions";
@@ -38,6 +39,8 @@
 
     --custom-app-top-bar-height: 0px;
     --custom-guild-list-width: 60px;
+
+    --custom-channel-textarea-text-area-height: calc(38px + var(--space-xs));
 }
 
 // <-- tags on forum posts covering up Replugged install cards in preview -->
