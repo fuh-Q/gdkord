@@ -107,3 +107,10 @@ button.lookOutlined__201d5 {
     background: rgba(var(--phen-aqua));
     filter: drop-shadow(0 0 var(--default-drop-shadow) rgba(var(--phen-aqua)));
 }
+
+// <-- nitro profiles -->
+.custom-user-profile-theme .themeColor_fb7f94.primary_fb7f94 {
+    filter: drop-shadow(
+        0 0 var(--default-drop-shadow) var(--profile-gradient-button-color)
+    );
+}
